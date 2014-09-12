@@ -1,0 +1,128 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+  {% if settings.display_favicon %}
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+  {% endif %}
+  <meta charset="utf-8" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+
+  <title>
+    {% if template == 'index' %}{% if page_title contains 'Welcome' %}{{ shop.name }} &ndash; Welcome{% else %}{{ page_title }}{% endif %}{% elsif template == '404' %}Page Not Found{% elsif page_title contains shop.name %}{{ page_title }}{% else %}{{ page_title }} &ndash; {{ shop.name }}{% endif %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description }}" />
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="canonical" href="{{ canonical_url }}" /> 
+
+  {% include 'fb-open-graph-tags' %}
+  {% include 'twitter-card' %}
+
+  {{ 'bootstrap.css'  | asset_url | stylesheet_tag }}
+  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+  
+  {% if settings.header_font contains 'Google' %}
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family={{ settings.header_font | remove: 'Google+' }}:300,400,700">
+  {% endif %}
+  {% if settings.base_font contains 'Google' %}
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family={{ settings.base_font | remove: 'Google+' }}:300,400,700">
+  {% endif %}
+  {{ 'html5shiv.js' | asset_url | script_tag }}
+
+  {{ content_for_header }}
+  
+  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
+  {{ 'jquery-migrate-1.2.0.min.js' | asset_url | script_tag }}
+  
+  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+  {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+
+  {% if template contains 'customers' %}
+  {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+  {% endif %}
+  {{ 'scripts.js' | asset_url | script_tag }}
+  
+</head>
+
+<body>
+  
+  <div class="container-fluid main-container">
+    
+    <!-- Begin header -->
+    <div class="header">
+      <header>
+        <h1 class="logo">The Posters</h1>
+        <nav class="main">
+          {% include 'dropdown' %}
+        </nav>
+
+        <ul class="toolbar">
+          <li class="sign-in-link">
+            <a href="#">Sign in / Register</a>
+          </li>
+          <li class="toolbar-cart {% if cart.item_count != 0 %}has-items{% endif %}">
+            <a href="/cart" class="cart" title="Shopping Cart">
+              <span id="cart-count">{{ cart.item_count }}</span>
+            </a>
+          </li>
+        </ul>
+
+      </header>
+    </div>
+    <div class="header-shadow"></div>
+    <!-- End header -->
+
+
+    <!-- Begin product preview -->
+      <div class="preview-section">
+        <div class="preview-image-container">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/150199/Screen_Shot_2014-08-31_at_7.55.34_PM.png" />
+          <hr class="top" />
+          <hr class="bottom" />
+          <div class="copy date">#001 | January</div>
+          <div class="copy title">Wyatt Khan</div>
+          <div class="copy availability">Available for 10 more days</div>
+          <a href="#/poster" class="button action">See poster</a>
+          <div class="preview-modal"></div>
+        </div>
+      </div>
+
+    <!-- End product preview -->
+
+    <div style="display: none;">
+    {{ content_for_layout }}
+    </div>
+
+    {% include 'we-are-posters' %}
+
+    {% include 'mission' %}
+
+    {% include 'media' %}
+
+    {% include 'footer' %}
+
+
+  </div>
+
+
+  
+    
+  {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
+
+  {% if settings.enable_product_image_zoom %}
+    {{ 'jquery.zoom.js' | asset_url | script_tag }}
+  {% endif %}
+  {{ 'jquery.tweet.js' | asset_url | script_tag }}
+  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
+
+</body>
+</html>
