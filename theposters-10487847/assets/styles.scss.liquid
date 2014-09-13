@@ -14,6 +14,11 @@ a {
         text-decoration: none;
     }
 }
+.btn {
+    border-radius: 0;
+    border: none;
+}
+
 
 html, body { 
     margin: 0; 
@@ -303,26 +308,27 @@ html, body {
                     height: 196px;
                     border: 10px solid #fff;
                     display: inline-block;
+                    background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png);
                     &.wall-st {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px 0;
+                        background-position: -8px 0;
                     }
                     &.ny-times {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px -1182px;
+                        background-position: -8px -1182px;
                     }
                     &.art-forum {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px -205px;
+                        background-position: -8px -205px;
                     }
                     &.vmagazine {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px -402px;
+                        background-position: -8px -402px;
                     }
                     &.art-in-america {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px -592px;
+                        background-position: -8px -592px;
                     }
                     &.bazaar {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px -792px;
+                        background-position: -8px -792px;
                     }
                     &.dazed {
-                        background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/media-logos.png) -8px -992px;
+                        background-position: -8px -992px;
                     }
                 }
                 blockquote {
@@ -341,18 +347,68 @@ html, body {
 
 .footer {
     background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/footer-tear.png) #fff repeat-x;
-    height: 200px;
     footer {
         @include container();
-        padding-top: 40px;
-        .footer-links{
+        padding: 80px 185px 60px 185px;
+
+        .newsletter-bar {
+            float: left;
+            input[type=email] {
+                background: #efefef;
+                padding: 14px 12px 13px;
+                width: 371px;
+                font-size: 90%;
+                color: #999;
+                border: none;
+            }
+            input[type=submit] {
+                text-indent: -9999px;
+                width: 45px;
+                height: 45px;
+                background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/newsletter-go-btn.png) 0 0 no-repeat;
+                margin-top: -1px;
+            }
+        }
+        .social-links {
+            float: left;
+            margin-left: 120px;
+            h4 {
+                float: left;
+                text-transform: uppercase;
+                color: #999;
+                font-size: 80%;
+                position: relative;
+                top: 7px;
+            }
+            a {
+                text-indent: -9999px;
+                width: 45px;
+                height: 45px;
+                float: left;
+                margin-left: 9px;
+                background: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/social-icons.png) 0 0 no-repeat;
+                &.twitter {
+                    background-position: -54px 0;
+                }
+                &.instagram {
+                    background-position: -108px 0;
+                }
+                &.tumblr {
+                    background-position: -162px 0;
+                }
+            }
+        }
+        .footer-links {
+            clear: both;
+            margin-top: 100px;
             li {
                 float: left;
                 margin-left: 40px;
                 color: #999;
-                font-size: 95%;
-                a {
-                    text-transform: uppercase;
+                font-size: 85%;
+                text-transform: uppercase;
+                &:first-child {
+                    margin-left: 0;
                 }
             }
         }

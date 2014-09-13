@@ -1,36 +1,27 @@
 <div class="footer">
  <footer>
 
-        {% if settings.footer_display_newsletter %}
         <!-- Begin newsletter -->
-          <div class="{{ footer_span_size }}">
-            <div class="p30">
-              <h4>{{ settings.footer_newsletter_title }}</h4>
-              <form action="{{ settings.mailing_list_form_action }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                <input type="email" value="" placeholder="Email Address" name="EMAIL" id="mail" /><input type="submit" class="btn newsletter" value="Subscribe" name="subscribe" id="subscribe" />
-              </form>
-            </div>
-          </div>
+        <div class="newsletter-bar">
+          <form action="{{ settings.mailing_list_form_action }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+            <input type="email" value="" placeholder="Enter your email to subscribe to our monthly newsletter" name="EMAIL" id="mail" /><input type="submit" class="btn newsletter" value="Subscribe" name="subscribe" id="subscribe" />
+          </form>
+        </div>
         <!-- End newsletter -->
-        {% endif %}
 
-
-        {% if settings.footer_display_social %}
         <!-- Begin social -->
-          <div class="{{ footer_span_size }}">
+          <div class="social-links">
             <h4>{{ settings.footer_social_title }}</h4>
-            {% if settings.twitter_link != blank %}<a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" class="icon-social twitter">Twitter</a>{% endif %}
-            {% if settings.facebook_link != blank %}<a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" class="icon-social facebook">Facebook</a>{% endif %}
-            {% if settings.instagram_link != blank %}<a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" class="icon-social instagram">Instagram</a>{% endif %}
-            {% if settings.tumblr_link != blank %}<a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" class="icon-social tumblr">Tumblr</a>{% endif %}
+            <a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" class="icon-social facebook">Facebook</a>
+            <a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" class="icon-social twitter">Twitter</a>
+            <a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" class="icon-social instagram">Instagram</a>
+            <a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" class="icon-social tumblr">Tumblr</a>
           </div>
         <!-- End social -->
-        {% endif %}
 
-
-        <ul class="footer-links">
+        <ul class="footer-links clearfix">
             <li>
-                Copyright &copy; {{ 'now' | date: "%Y" }} {{ shop.name }}
+                &copy; {{ 'now' | date: "%Y" }} {{ shop.name }}
             </li>
             {% for link in linklists.footer.links %}
               <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
