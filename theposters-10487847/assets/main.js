@@ -15,10 +15,10 @@
                 return;
             }
             
-            var $window = $(window);
-            var $el = $('.mission-section .fund-hours');
-            var timeoutId;
-            var played = false;
+            var $window = $(window),
+                $el = $('.mission-section .fund-hours'),
+                timeoutId,
+                played = false;
 
             $window.scroll(function(e){
                 // throttle the on scroll handlers
@@ -33,19 +33,21 @@
                     }, 60);
 
                 function playCounter(){
+                    var end = 1276468,
+                        diff = 1000,
+                        start = end - diff,
+                        duration = 2500, // in milliseconds
+                        interval = 90, // in milliseconds
+                        steps = Math.round((end - start) / (duration/interval)),
+                        counter = start,
+                        display = "",
+                        intervalId;
+
                     played = true;
-                    var end = 1276468;
-                    var duration = 1000; // in milliseconds
-                    var interval = 100; // in milliseconds
-                    var variance = 30; // in percent
-                    var start = end * (variance/100);
-                    var steps = (end - start) / (duration/interval);
-                    var counter = start;
-                    var display = "";
-                    var intervalId = setInterval(function(){
+                    intervalId = setInterval(function(){
                                 if(counter < end){
                                     counter += steps;
-                                    counter = Math.round(counter);
+                                    counter = Math.min(counter, end);
                                     display = (counter).toLocaleString();
                                     $el.text(display);
                                 }else{
@@ -57,10 +59,10 @@
 
                 // find whether the element is in view
                 function checkInView(){
-                    var viewPortTop = $window.scrollTop();
-                    var viewPortBottom = viewPortTop + $window.height();
-                    var elTop = $el.offset().top;
-                    var elBottom = elTop + $el.height();
+                    var viewPortTop = $window.scrollTop(),
+                        viewPortBottom = viewPortTop + $window.height(),
+                        elTop = $el.offset().top,
+                        elBottom = elTop + $el.height();
                     return ((elBottom <= viewPortBottom) && (elTop >= viewPortTop));
                 }
                 
