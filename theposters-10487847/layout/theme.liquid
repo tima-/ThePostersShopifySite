@@ -84,21 +84,12 @@
     <!-- End header -->
 
 
-    <!-- Begin product preview -->
-      <div class="preview-section">
-        <div class="preview-image-container">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/150199/Screen_Shot_2014-08-31_at_7.55.34_PM.png" />
-          <hr class="top" />
-          <hr class="bottom" />
-          <div class="copy date">#001 | January</div>
-          <div class="copy title">Wyatt Khan</div>
-          <div class="copy availability">Available for 10 more days</div>
-          <a href="#/poster" class="button action">See poster</a>
-          <div class="preview-modal"></div>
-        </div>
-      </div>
+    <!-- Begin content-->
+      
+          {{ content_for_layout }}
+          
+      <!-- End content-->
 
-    <!-- End product preview -->
 
     <div style="display: none;">
     {{ content_for_layout }}
