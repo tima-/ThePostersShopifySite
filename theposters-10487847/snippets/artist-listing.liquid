@@ -1,0 +1,15 @@
+<div class="container">
+<div class="page-heading">
+	<h1>{{ page.title }}</h1>
+	<p>Every artist featured on The Posters is special. Lorem Ipsum</p>
+</div>
+<ul class="artist-list">
+{% for vendor in shop.vendors %}
+{% for collection in collections %}
+{% if collection.title == vendor %}
+  <li class="artist" style="background-image: url({{ collection | img_url: 'large' }})"><a href="http://theposters.myshopify.com/collections/{{ vendor | handleize }}">{{ vendor }}</a></li>
+{% endif %}
+{% endfor %}
+{% endfor %}
+</ul>
+</div>

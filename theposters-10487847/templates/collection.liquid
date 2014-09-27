@@ -1,89 +1,23 @@
+{% if collection.handle != 'fontpage' and collection.handle != 'all' %}
+  {% include 'artist-profile' %}
+{% else %}
+
 <div id="collection">
 
-  {% paginate collection.products by settings.pagination_limit %}
-  <!-- Begin collection info -->
-  <div class="row">
-    <div class="span12">
+  <div class="container">
+    {% paginate collection.products by settings.pagination_limit %}
 
-      <!-- Begin breadcrumb -->
-      <div class="breadcrumb clearfix">
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span>
-        <span class="arrow-space">&#62;</span>
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>
-
-        {% if current_tags %}
-          {% for tag in current_tags %}
-            <span class="arrow-space">&#62;</span>
-            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}" title="{{ tag | escape }}" itemprop="url"><span itemprop="title">{{ tag }}</span></a></span>
-          {% endfor %}
-        {% endif %}
-
-        {% if paginate.pages != 0 %}
-          <span class="arrow-space">&#62;</span> <strong>Page {{ paginate.current_page }} of {{ paginate.pages }}</strong>
-        {% endif %}
-      </div>
-      <!-- End breadcrumb -->
-
-      <!-- Begin sort collection -->
-      <div class="clearfix">
-        <h1 class="collection-title">{{ collection.title }}</h1>
-        {% if settings.collection_tags %}        
-          {% if collection.all_tags.size > 0 %}
-          <div class="browse-tags">
-          	<label>Browse:</label>
-          	<select id="collection_tags" class="coll-filter">
-          		<option value="">All items</option>
-          		{% for tag in collection.all_tags %}
-          			<option value="{{ tag | handle }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</option>
-          		{% endfor %}
-          	</select>        
-          </div>
-          {% endif %}        
-        {% endif %}
-        {% if settings.collection_sort and collection.products_count > 1 %}
-          <div class="browse-tags">
-            <label>Sort by:</label>
-          	<select class="sort-by">
-          	  <option value="manual">Featured</option>
-              <option value="price-ascending">Price: Low to High</option>
-              <option value="price-descending">Price: High to Low</option>
-              <option value="title-ascending">A-Z</option>
-              <option value="title-descending">Z-A</option>
-              <option value="created-ascending">Oldest to Newest</option>
-              <option value="created-descending">Newest to Oldest</option>
-              <option value="best-selling">Best Selling</option>
-          	</select>           
-          </div>        
-        {% endif %}
-      </div>
-      <!-- End sort collection -->
-
-      <!-- Begin collection description -->
-      {% if collection.description != "" %}
-        {{ collection.description }}
-      {% endif %}
-      <!-- End collection description -->
-
+    <div class="row products">
+      {% for product in collection.products limit: settings.pagination_limit %}
+        {% include 'product-loop' with collection.handle %}
+      {% endfor %}
     </div>
+
+    {% include 'pagination' %}
+
+    {% endpaginate %}
   </div>
-  <!-- End collection info -->
-
-  {% if collection.products.size == 0 %}
-
-    {% include 'helper-default-products' %}
-
-  {% endif %}
-
-  <div class="row products">
-    {% for product in collection.products limit: settings.pagination_limit %}
-      {% include 'product-loop' with collection.handle %}
-    {% endfor %}
-  </div>
-
-  {% include 'pagination' %}
-
-  {% endpaginate %}
-
+  
 </div>
 
 <script>
@@ -133,3 +67,4 @@
       location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
     });
 </script>
+{% endif %}

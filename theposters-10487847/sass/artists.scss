@@ -1,0 +1,141 @@
+.page-heading {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	text-align: center;
+
+	h1 {
+		text-transform: uppercase;
+		text-shadow: 0 3px 1px rgba(#000, 0.75);
+		margin: 0 0 10px;
+	}
+
+	p {
+
+	}
+}
+
+.artist-list {
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	.artist {
+		width: 250px;
+		height: 250px;
+		border: 10px solid #fff;
+		float: left;
+		margin: 15px;
+		line-height: 230px;
+		font-size: 2em;
+		text-align: center;
+		background-position: center center;
+		background-size: cover;
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		filter: grayscale(100%);
+
+		a {
+			margin: 0;
+			display: block;
+			background-color: rgba(#fff, 0.75);
+			color: #000;
+		}
+	}
+}
+
+.artist-profile {
+	.artist-header {
+		border-top: 10px solid #fff;
+		border-bottom: 10px solid #fff;
+		overflow: hidden;
+		background-color: #c2c2c3;
+
+		.artist-image {
+			width: 50%;
+			height: 400px;
+			float: left;
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			background-position: right top;
+		}
+
+		.artist-title {
+			width: 50%;
+			float: left;
+
+			h1 {
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+				text-align: center;
+				padding: 15px;
+				margin: 170px auto 0 auto;;
+				width: 65%;
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.artist-description {
+		width: 50%;
+		margin: 50px 0;
+		float: left;
+		padding: 15px;
+	}
+
+	.artist-products {
+		margin-top: 25px;
+
+		&:nth-child(4) {
+			clear: right;
+		}
+	}
+
+	.artist-video {
+		clear: both;
+		background-color: #c2c2c3;
+
+		.artist-video-content {
+			width: 60%;
+			margin: 0 auto;
+			padding: 90px 0;
+			overflow: hidden;
+
+			iframe {
+				margin: 0 2px 0 15px;
+				float: right;
+				border: 10px solid #fff;
+				outline: 2px solid #000;
+				width: 320px;
+				height: 180px;
+			}
+		}
+	}
+}
+
+.product {
+	display: block;
+	float: left;
+	width: 240px;
+	margin: 20px;
+
+	.image {
+		line-height: 240px;
+		text-align: center;
+
+		img {
+			max-width: 240px;
+			max-height: 240px;
+			border: 10px solid #fff;
+		}
+	}
+
+	.details {
+		text-align: center;
+
+		.price {
+			display: none;
+		}
+	}
+}

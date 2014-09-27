@@ -27,6 +27,7 @@
   {% include 'twitter-card' %}
 
   {{ 'bootstrap.css'  | asset_url | stylesheet_tag }}
+  {{ 'artists.css'  | asset_url | stylesheet_tag }}
   {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
   
   {% if settings.header_font contains 'Google' %}
@@ -85,21 +86,10 @@
 
 
     <!-- Begin content-->
-      
-          {{ content_for_layout }}
-          
-      <!-- End content-->
-
-
-    <div style="display: none;">
-    {{ content_for_layout }}
+    <div id="main-content">
+      {{ content_for_layout }}
     </div>
-
-    {% include 'we-are-posters' %}
-
-    {% include 'mission' %}
-
-    {% include 'media' %}
+    <!-- End content-->
 
     {% include 'footer' %}
 
