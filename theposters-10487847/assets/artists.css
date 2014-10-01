@@ -10,15 +10,22 @@
   text-shadow: 0 3px 1px rgba(0, 0, 0, 0.75);
   margin: 0 0 10px;
 }
+/* line 12, ../sass/artists.scss */
+.page-heading h2 {
+  color: #535353;
+  text-transform: uppercase;
+  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.25);
+  margin: 0 0 10px;
+}
 
-/* line 17, ../sass/artists.scss */
+/* line 24, ../sass/artists.scss */
 .artist-list {
   width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 23, ../sass/artists.scss */
+/* line 30, ../sass/artists.scss */
 .artist-list .artist {
   width: 250px;
   height: 250px;
@@ -34,7 +41,7 @@
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 38, ../sass/artists.scss */
+/* line 45, ../sass/artists.scss */
 .artist-list .artist a {
   margin: 0;
   display: block;
@@ -42,14 +49,14 @@
   color: #000;
 }
 
-/* line 48, ../sass/artists.scss */
+/* line 55, ../sass/artists.scss */
 .artist-profile .artist-header {
   border-top: 10px solid #fff;
   border-bottom: 10px solid #fff;
   overflow: hidden;
   background-color: #c2c2c3;
 }
-/* line 54, ../sass/artists.scss */
+/* line 61, ../sass/artists.scss */
 .artist-profile .artist-header .artist-image {
   width: 50%;
   height: 400px;
@@ -58,12 +65,12 @@
   background-repeat: no-repeat;
   background-position: right top;
 }
-/* line 63, ../sass/artists.scss */
+/* line 70, ../sass/artists.scss */
 .artist-profile .artist-header .artist-title {
   width: 50%;
   float: left;
 }
-/* line 67, ../sass/artists.scss */
+/* line 74, ../sass/artists.scss */
 .artist-profile .artist-header .artist-title h1 {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -74,34 +81,34 @@
   display: block;
   text-transform: uppercase;
 }
-/* line 80, ../sass/artists.scss */
+/* line 87, ../sass/artists.scss */
 .artist-profile .artist-description {
   width: 50%;
   margin: 50px 0;
   float: left;
   padding: 15px;
 }
-/* line 87, ../sass/artists.scss */
+/* line 94, ../sass/artists.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
 }
-/* line 90, ../sass/artists.scss */
+/* line 97, ../sass/artists.scss */
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 95, ../sass/artists.scss */
+/* line 102, ../sass/artists.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #c2c2c3;
 }
-/* line 99, ../sass/artists.scss */
+/* line 106, ../sass/artists.scss */
 .artist-profile .artist-video .artist-video-content {
   width: 60%;
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 105, ../sass/artists.scss */
+/* line 112, ../sass/artists.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: right;
@@ -111,29 +118,29 @@
   height: 180px;
 }
 
-/* line 117, ../sass/artists.scss */
+/* line 124, ../sass/artists.scss */
 .product {
   display: block;
   float: left;
   width: 240px;
   margin: 20px;
 }
-/* line 123, ../sass/artists.scss */
+/* line 130, ../sass/artists.scss */
 .product .image {
   line-height: 240px;
   text-align: center;
 }
-/* line 127, ../sass/artists.scss */
+/* line 134, ../sass/artists.scss */
 .product .image img {
   max-width: 240px;
   max-height: 240px;
   border: 10px solid #fff;
 }
-/* line 134, ../sass/artists.scss */
+/* line 141, ../sass/artists.scss */
 .product .details {
   text-align: center;
 }
-/* line 137, ../sass/artists.scss */
+/* line 144, ../sass/artists.scss */
 .product .details .price {
   display: none;
 }

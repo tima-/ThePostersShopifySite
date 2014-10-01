@@ -4,6 +4,8 @@
 		<div class="col-sm-12 span12 details">
 		{% if page.handle == 'artists'%}
 			{% include 'artist-listing' %}
+		{% elsif page.handle == 'mission' %}
+			{% include 'mission-page' %}
 		{% else %}
 
 		<h1 class="p25">{{ page.title }}</h1>
