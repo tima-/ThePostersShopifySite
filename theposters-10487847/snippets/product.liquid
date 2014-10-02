@@ -1,29 +1,9 @@
-<div id="product" class="{{ product.handle }}">
+<div id="product" class="container {{ product.handle }}">
   
-  <div class="row clearfix">
-    
-    {% if template != 'index' %}
-    <!-- Begin breadcrumb -->
-    <div class="span12">
-      <div class="breadcrumb clearfix">
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"><span itemprop="title">Home</span></a></span> 
-        <span class="arrow-space">&#62;</span>
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-          {% if collection %}
-            <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title }}</a>
-          {% else %}
-            <a href="/collections/all" title="All Products">Products</a>
-          {% endif %}
-        </span>
-        <span class="arrow-space">&#62;</span>
-        <strong>{{ product.title }}</strong>
-      </div>
-    </div>
-    <!-- End breadcrumb -->
-    {% endif %}
+  <div class="product-details">
     
     <!-- Begin product photos -->
-    <div class="span6">
+    <div class="images-pane">
       
       <!-- Begin featured image -->
       <div class="image featured">
@@ -49,13 +29,13 @@
         {% if settings.enable_product_image_zoom %}
         <div class="image span2{% cycle 'last-in-row': '', '', ' last-in-row' %}">
           <a href="{{ image | product_img_url: '1024x1024' }}" class="cloud-zoom-gallery">
-            <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+            <img src="{{ image | product_img_url: 'small' }}" alt="{{ image.alt | escape }}" />
           </a>
         </div>
         {% else %}
         <div class="image span2{% cycle 'last-in-row': '', '', ' last-in-row' %}">
           <a href="{{ image | product_img_url: '1024x1024' }}" data-original-image="{{ image | product_img_url: '1024x1024' }}">
-            <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+            <img src="{{ image | product_img_url: 'small' }}" alt="{{ image.alt | escape }}" />
           </a>
         </div>
         {% endif %}
@@ -75,9 +55,13 @@
     
     
     <!-- Begin description -->
-    <div class="span6">
+    <div class="description-pane">
+      <ul class="title-bar">
+        <li class="title">{{ product.title }}</li>
+        <li class="author">{{ product.vendor }}</li>
+        <li class="available">Available for <span>10</span> more days</li>
+      </ul>
       
-      <h1 class="title">{{ product.title }}</h1>
       {% assign variant = product.selected_or_first_available_variant %}
       <div class="purchase">
         <h2 class="price" id="price-preview">{{ variant.price | money }}{% if variant.price < variant.compare_at_price %} <del>{{ variant.compare_at_price | money }}</del>{% endif %}</h2>
@@ -87,7 +71,12 @@
       {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
         {% assign hide_default_title = true %}
       {% endif %}
-            
+     
+      <div class="description">
+        {{ product.description }}
+      </div>
+
+
       <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
         
         <!-- Begin product options -->
@@ -101,37 +90,27 @@
             </select>
           </div>
 
-          {% if settings.display_quantity_dropdown %}
           <div class="selector-wrapper">
-            <label>Quantity</label>
             <input id="quantity" type="number" name="quantity" value="1" class="tc item-quantity" />
+            <label>QTY</label>
           </div>
-          {% endif %}
 
           <div class="purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
             <div class="purchase">
               {% unless product.available %}
               <p>Sold Out</p>
               {% else %}
-              <input type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to cart" />
+              <input type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to bag" />
               <div id="cart-animation" style="display:none">1</div>
               {% endunless %}
             </div>
           </div>
-
-
-
-
-
 
         </div>
         <!-- End product options -->
 
       </form>
 
-      <div class="description">
-        {{ product.description }}
-      </div>
 
       <!-- Begin social buttons -->
       <div class="social">
@@ -144,11 +123,6 @@
   <div class="span12"><div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div></div>
   </div>
 
-  <!-- Begin related product -->
-  {% if settings.show_related_products %}
-    {% include 'related-products' %}
-  {% endif %}
-  
 </div> 
 
 <div style="display:none" id="preloading">
