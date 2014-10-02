@@ -1,0 +1,148 @@
+/* line 2, ../sass/help.scss */
+.help-tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 8, ../sass/help.scss */
+.help-tabs ul li {
+  float: left;
+  width: 16.6%;
+}
+/* line 12, ../sass/help.scss */
+.help-tabs ul li a {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+/* line 17, ../sass/help.scss */
+.help-tabs ul li a.current {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 28, ../sass/help.scss */
+.help-section h1 {
+  margin: 25px auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.25);
+}
+/* line 38, ../sass/help.scss */
+.help-section img {
+  margin: 25px;
+}
+
+/* line 44, ../sass/help.scss */
+#main-container {
+  position: relative;
+  left: 0%;
+  width: 100%;
+}
+
+/* line 50, ../sass/help.scss */
+#slide-cart {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  right: -20%;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #eaeaeb;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
+}
+/* line 61, ../sass/help.scss */
+#slide-cart .cart-top-btn {
+  width: 50%;
+  float: left;
+  height: 100px;
+  text-align: center;
+  display: block;
+  background-color: #505050;
+  color: #fff;
+  line-height: 100px;
+}
+/* line 71, ../sass/help.scss */
+#slide-cart .cart-top-btn#checkout {
+  background-color: #fb0005;
+}
+/* line 76, ../sass/help.scss */
+#slide-cart .subtotal {
+  width: 100%;
+  clear: both;
+  padding: 20px;
+  background-color: #eaeaeb;
+}
+/* line 82, ../sass/help.scss */
+#slide-cart .subtotal h2 {
+  font-size: 1.2em;
+}
+/* line 85, ../sass/help.scss */
+#slide-cart .subtotal h2 .subtotal-price {
+  float: right;
+}
+/* line 89, ../sass/help.scss */
+#slide-cart .subtotal h2 small {
+  display: block;
+  clear: both;
+  font-size: 0.6em;
+}
+/* line 97, ../sass/help.scss */
+#slide-cart .number-of-items {
+  clear: both;
+  background-color: #d6d6d6;
+  padding: 3px 0;
+  text-align: center;
+}
+/* line 105, ../sass/help.scss */
+#slide-cart .cart-items .cart-item {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaeb;
+  overflow: hidden;
+  font-size: 0.9em;
+  color: #6c6c6c;
+}
+/* line 112, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .image {
+  width: 30%;
+  float: left;
+  padding: 20px 10px 20px 20px;
+}
+/* line 117, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .image img {
+  width: 100%;
+}
+/* line 122, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .info {
+  float: right;
+  width: 70%;
+  padding: 20px 20px 20px 10px;
+}
+/* line 127, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .info .remove-item {
+  float: right;
+  width: 16px;
+  height: 16px;
+}
+/* line 133, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .info h3 {
+  font-size: 1em;
+  margin: 0 0 5px;
+}
+/* line 138, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .info .qty {
+  margin: 0 0 5px;
+}
+/* line 141, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .info .qty input {
+  width: 30px;
+  text-align: center;
+}
+/* line 146, ../sass/help.scss */
+#slide-cart .cart-items .cart-item .info .qty .update-cart {
+  font-size: 0.75em;
+}

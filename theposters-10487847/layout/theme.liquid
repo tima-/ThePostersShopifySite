@@ -29,6 +29,7 @@
   {{ 'bootstrap.css'  | asset_url | stylesheet_tag }}
   {{ 'artists.css'  | asset_url | stylesheet_tag }}
   {{ 'mission.css'  | asset_url | stylesheet_tag }}
+  {{ 'help.css'  | asset_url | stylesheet_tag }}
   {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
   
   {% if settings.header_font contains 'Google' %}
@@ -58,43 +59,83 @@
 </head>
 
 <body>
-  
-  <div class="container-fluid main-container">
-    
-    <!-- Begin header -->
-    <div class="header">
-      <header>
-        <h1 class="logo">The Posters</h1>
-        <nav class="main">
-          {% include 'dropdown' %}
-        </nav>
+  <div id="main-container">
+    <div class="container-fluid main-container">
+      
+      <!-- Begin header -->
+      <div class="header">
+        <header>
+          <h1 class="logo">The Posters</h1>
+          <nav class="main">
+            {% include 'dropdown' %}
+          </nav>
 
-        <ul class="toolbar">
-          <li class="sign-in-link">
-            <a href="#">Sign in / Register</a>
-          </li>
-          <li class="toolbar-cart {% if cart.item_count != 0 %}has-items{% endif %}">
-            <a href="/cart" class="cart" title="Shopping Cart">
-              <span id="cart-count">{{ cart.item_count }}</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="toolbar">
+            <li class="sign-in-link">
+              <a href="#">Sign in / Register</a>
+            </li>
+            <li class="toolbar-cart {% if cart.item_count != 0 %}has-items{% endif %}">
+              <a href="#" class="cart toggle-cart" title="Shopping Cart">
+                <span id="cart-count">{{ cart.item_count }}</span>
+              </a>
+            </li>
+          </ul>
 
-      </header>
+        </header>
+      </div>
+      <div class="header-shadow"></div>
+      <!-- End header -->
+
+
+      <!-- Begin content-->
+      <div id="main-content">
+        {{ content_for_layout }}
+      </div>
+      <!-- End content-->
+
+      {% include 'footer' %}
+
+
     </div>
-    <div class="header-shadow"></div>
-    <!-- End header -->
+  </div>
 
+  <div id="slide-cart">
+    <a href="#" class="cart-top-btn toggle-cart" id="keep-shopping">Keep Shopping</a>
+    <a href="/checkout" class="cart-top-btn" id="checkout">Checkout</a>
 
-    <!-- Begin content-->
-    <div id="main-content">
-      {{ content_for_layout }}
+    <div class="subtotal">
+      <h2>Subtotal <div class="subtotal-price">{{cart.total_price | money}}</div><small>(Tax + Shipping Not Included)</small></h2>
+
+      <div class="gift-card">
+      </div>
+
     </div>
-    <!-- End content-->
-
-    {% include 'footer' %}
-
-
+    {% if cart.item_count == 0 %}
+      <h2>Your cart is empty.</h2>
+    {% else%}
+      <div class="number-of-items">
+        {{ cart.item_count }} {{ cart.item_count | pluralize: 'Item', 'Items' }}
+      </div>
+      <div class="cart-items">
+        {% for item in cart.items %}
+        <div class="cart-item">
+          <div class="image">
+            <img src="{{ item | img_url: 'small' }}"  alt="{{ item.product.title }}" />
+          </div>
+          <div class="info">
+            <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="remove-item">X</a>
+            <h3>{{ item.product.title }}</h3>
+            <div class="qty">
+              QTY <input type="text" size="2" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" /> <a href="#" class="update-cart">Update</a>
+            </div>
+            <div class="price">
+              {{ item.line_price | money }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 
 

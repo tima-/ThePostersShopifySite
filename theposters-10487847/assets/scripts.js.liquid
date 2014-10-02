@@ -1,5 +1,42 @@
 $(document).ready(function(){
 
+    //Toggle Sliding Cart
+    $('.toggle-cart').on('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var cartSlide = $('#slide-cart');
+      var mainSlide = $('#main-container');
+
+      if(cartSlide.hasClass('active')) {
+        cartSlide.removeClass('active');
+        cartSlide.animate({right: '-20%'}, 500);
+        mainSlide.animate({left: 0}, 500, function() {
+          mainSlide.css({width: 'auto'});
+        });
+      } else {
+        cartSlide.addClass('active');
+        cartSlide.animate({right: 0}, 500);
+        mainSlide.animate({left: '-20%', width: $(window).width()}, 500);
+      }
+
+    });
+
+
+    $('#slide-cart').on('click', function(e){
+      e.stopPropagation();
+    });
+
+    $('html').on('click', function(e) {
+      if($('#slide-cart').hasClass('active')) {
+        $('#slide-cart').removeClass('active');
+        $('#slide-cart').animate({right: '-20%'}, 500);
+        $('#main-container').animate({left: 0}, 500, function() {
+          $('#main-container').css({width: 'auto'});
+        });
+      }
+    })
+
    function addItem(form_id) {
       $.ajax({
         type: 'POST',
