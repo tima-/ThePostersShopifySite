@@ -1,0 +1,31 @@
+#product {
+	.images-pane {
+		.featured {
+			text-align: center;
+
+			img {
+				border: 5px solid #fff;
+				max-width: 410px;
+				max-height: 410px;
+			}
+		}
+	}
+
+	.thumbs {
+		margin: 20px 0;
+		text-align: center;
+
+		.image {
+			display: inline-block;
+			width: 125px;
+			height: 125px;
+			border: 5px solid #fff;
+			margin: 0 5px 0 0;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/* line 3, ../sass/product.scss */
+#product .images-pane .featured {
+  text-align: center;
+}
+/* line 6, ../sass/product.scss */
+#product .images-pane .featured img {
+  border: 5px solid #fff;
+  max-width: 410px;
+  max-height: 410px;
+}
+/* line 14, ../sass/product.scss */
+#product .thumbs {
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 18, ../sass/product.scss */
+#product .thumbs .image {
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  border: 5px solid #fff;
+  margin: 0 5px 0 0;
+  overflow: hidden;
+}
+/* line 26, ../sass/product.scss */
+#product .thumbs .image img {
+  width: 100%;
+}

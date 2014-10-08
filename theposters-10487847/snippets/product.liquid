@@ -48,6 +48,12 @@
       .thumbs .last-in-row { padding-right: 0 }
       </style>
       {% endif %}
+
+      <!-- Begin social buttons -->
+      <div class="social">
+        {% include 'like' %}
+      </div>
+      <!-- End social buttons -->
       
     </div>
     <!-- End product photos -->
@@ -61,11 +67,6 @@
         <li class="author">{{ product.vendor }}</li>
         <li class="available">Available for <span>10</span> more days</li>
       </ul>
-      
-      {% assign variant = product.selected_or_first_available_variant %}
-      <div class="purchase">
-        <h2 class="price" id="price-preview">{{ variant.price | money }}{% if variant.price < variant.compare_at_price %} <del>{{ variant.compare_at_price | money }}</del>{% endif %}</h2>
-      </div>
       
       {% assign hide_default_title = false %}
       {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
@@ -90,17 +91,20 @@
             </select>
           </div>
 
-          <div class="selector-wrapper">
+          <div class="quantity-section selector-wrapper">
             <input id="quantity" type="number" name="quantity" value="1" class="tc item-quantity" />
             <label>QTY</label>
           </div>
 
           <div class="purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
+            {% assign variant = product.selected_or_first_available_variant %}
+            <h2 class="price" id="price-preview">{{ variant.price | money }}{% if variant.price < variant.compare_at_price %} <del>{{ variant.compare_at_price | money }}</del>{% endif %}</h2>
+          
             <div class="purchase">
               {% unless product.available %}
               <p>Sold Out</p>
               {% else %}
-              <input type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to bag" />
+              <input type="submit" id="add-to-cart" class="btn addtocart" name="add" value="Add to Bag" />
               <div id="cart-animation" style="display:none">1</div>
               {% endunless %}
             </div>
@@ -111,12 +115,6 @@
 
       </form>
 
-
-      <!-- Begin social buttons -->
-      <div class="social">
-        {% include 'like' %}
-      </div>
-      <!-- End social buttons -->
     
     </div>
     <!-- End description -->

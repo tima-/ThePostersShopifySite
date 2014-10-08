@@ -497,18 +497,36 @@ html, body {
             border-width: 1px 0;
             padding: 20px 0;
         }
-        #quantity {
-            width: 30px;
+        .quantity-section {
+            width: 50%;
+            float: left;
+
+            #quantity {
+                width: 30px;
+            }
+        
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button { 
+              -webkit-appearance: none; 
+              margin: 0; 
+            }
         }
-        input[type=number]::-webkit-inner-spin-button, 
-        input[type=number]::-webkit-outer-spin-button { 
-          -webkit-appearance: none; 
-          margin: 0; 
-        }
-        .addtocart {
-            background-color: #ff0000;
-            color: #fff;
-            text-transform: uppercase;
+
+        .purchase-section {
+            width: 50%;
+            float: right;
+            text-align: right;
+
+            h2.price {
+                display: inline-block;
+                font-size: 1em;
+            }
+
+            .addtocart {
+                background-color: #ff0000;
+                color: #fff;
+                text-transform: uppercase;
+            }
         }
     }
     
