@@ -1,37 +1,71 @@
 <div id="collection" class="artist-profile">
 
-<div class="artist-header">
-  {% if collection.image %}
-    <div class="artist-image" style="background-image: url({{ collection | img_url: 'original' }})">&nbsp;</div>
-  {% endif %}
-  <div class="artist-title">
-    <h1>{{collection.title}}</h1>
+  <div class="artist-header">
+    {% if collection.image %}
+      <div class="artist-image" style="background-image: url({{ collection | img_url: 'original' }})">&nbsp;</div>
+    {% endif %}
+    <div class="artist-title">
+      <h1>{{collection.title}}</h1>
+    </div>
   </div>
-</div>
 
   <div class="container">
-
+    <div class="row">
     {% if collection.description != "" %}
-      <div class="artist-description">
-        {{ collection.description }}
-      </div>
+        <div class="col-sm-6">
+          <div class="artist-description">
+            {{ collection.description }}
+          </div>
+        </div>
+        <div class="col-sm-6">
+    {% else %}
+        <div class="col-sm-12">
     {% endif %}
-
-    <div class="artist-products">
-      {% for product in collection.products limit: settings.pagination_limit %}
-        {% include 'product-loop' with collection.handle %}
-      {% endfor %}
+        <div class="artist-products">
+          {% for product in collection.products limit: settings.pagination_limit %}
+            {% include 'product-loop' with collection.handle %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
-
   </div>
 
+  <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
   <div class="artist-video">
-    <div class="artist-video-content"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="artist-video-description">{{ collection.metafields.artist.videodescription }}</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="artist-video-content">{{ collection.metafields.artist.video }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="social-grid">
+    <div class="socialGrid_wrapper">
+      <div class="socialGrid_container"></div>
+    </div>
+    {% raw %}
+      <script type="text/html" id="grid_container_template">
+        <section 
+          class="grid_container"{{#media.0.large_image_url}} 
+          style="background-image: url({{media.0.large_image_url}})"{{/media.0.large_image_url}}
+          data-gen-url="{{gen_url}}">
+          <h1>{{text_str}}</h1>
+          <p class="userInfo_container">
+            <img class="avatar {{user_id}}" />
+            <span class="likes media-{{id}}"></span>
+            <span class="name">{{name}}</span><br />
+            <span class="created_at">{{#parseDate}}{{created_at}}{{/parseDate}}</span>
+          </p>
+          <div class="modal"></div>
+        </section>
+      </script>
+    {% endraw %}
   </div>
-
 
 </div>
 

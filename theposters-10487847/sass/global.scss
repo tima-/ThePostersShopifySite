@@ -1,0 +1,253 @@
+@import "vars";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: $bgColor;
+	color: $foreColor;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+a {
+	color: $foreColor;
+
+	&:hover {
+		color: $black;
+		text-decoration: none;
+	}
+}
+
+header#main-header {
+	background-color: $white;
+	overflow: hidden;
+
+	nav {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				float: left;
+
+				a {
+					display: block;
+					padding: 85px 20px 15px 20px;
+					text-transform: uppercase;
+
+				}
+
+				&#logo {
+					a {
+						width: 81px;
+						height: 105px;
+						text-indent: -9999px;
+						padding: 0;
+						margin: 10px 0;
+					}
+				}
+			}
+		}
+	}
+
+	#cart-info {
+		padding-top: 85px;
+		text-align: right;
+	}
+}
+
+#main-content {
+	padding: $gap 0;
+}
+
+footer#main-footer {
+	padding-top: $gap;
+	background-color: $white;
+	margin-top: -1*$gap;
+
+	.mailchimp-subscribe {
+		background-color: $bgColor;
+		height: 50px;
+		position: relative;
+
+		input {
+			height: 50px;
+			width: 100%;
+			position: absolute;
+			display: block;
+			background-color: transparent;
+			border: 0;
+			padding: 10px;
+			font-size: 0.9em;
+		}
+
+		button {
+			width: 50px;
+			height: 50px;
+			float: right;
+			border: 0;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	.social-follow-us {
+		text-align: right;
+
+		h2 {
+			display: inline-block;
+			font-size: 1em;
+			line-height: 50px;
+			height: 50px;
+			margin: 0;
+		}
+
+		a.social-icon {
+			margin: 0 5px;
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			background-color: #eaeaea;
+			text-align: center;
+			line-height: 50px;
+
+			img {
+
+			}
+		}
+	}
+
+	nav {
+		margin-top: $gap;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				float: left;
+
+				a {
+					display: block;
+					text-transform: uppercase;
+					padding: 20px;
+					color: $darkGray;
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}
+
+#main-wrapper {
+	width: 100%;
+	left: 0;
+	position: relative;
+}
+
+#cart-flyout {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: fixed;
+	right: -20%;
+	top: 0;
+	width: 20%;
+	height: 100%;
+	background-color: #eaeaeb;
+	box-shadow: 5px 0 10px rgba(#000, 0.1) inset;
+
+	.cart-top-btn {
+		width: 50%;
+		float: left;
+		height: 100px;
+		text-align: center;
+		display: block;
+		background-color: #505050;
+		color: #fff;
+		line-height: 100px;
+
+		&#checkout {
+			background-color: #fb0005;
+		}
+	}
+
+	.subtotal {
+		width: 100%;
+		clear: both;
+		padding: 20px;
+		background-color: #eaeaeb;
+
+		h2 {
+			font-size: 1.2em;
+
+			.subtotal-price {
+				float: right;
+			}
+
+			small {
+				display: block;
+				clear: both;
+				font-size: 0.6em;
+			}
+		}
+	}
+
+	.number-of-items {
+		clear: both;
+		background-color: #d6d6d6;
+		padding: 3px 0;
+		text-align: center;
+	}
+
+	.cart-items {
+		.cart-item {
+			background-color: #fff;
+			border-bottom: 1px solid #eaeaeb;
+			overflow: hidden;
+			font-size: 0.9em;
+			color: #6c6c6c;
+
+			.image {
+				width: 30%;
+				float: left;
+				padding: 20px 10px 20px 20px; 
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.info {
+				float: right;
+				width: 70%;
+				padding: 20px 20px 20px 10px;
+
+				.remove-item {
+					float: right;
+					width: 16px;
+					height: 16px;
+				}
+
+				h3 {
+					font-size: 1em;
+					margin: 0 0 5px;
+				}
+
+				.qty {
+					margin: 0 0 5px;
+
+					input {
+						width: 30px; 
+						text-align: center;
+					}
+
+					.update-cart {
+						font-size: 0.75em;
+					}
+				}
+			}
+		}
+	}
+}

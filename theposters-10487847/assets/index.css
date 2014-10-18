@@ -1,0 +1,237 @@
+/**
+ * Homepage Featured Product
+ */
+/* line 6, ../sass/index.scss */
+.previewImage_container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border: 10px solid #fff;
+  margin-bottom: 80px;
+  -webkit-transform: translateZ(0);
+}
+/* line 15, ../sass/index.scss */
+.previewImage_container:hover {
+  cursor: pointer;
+}
+/* line 18, ../sass/index.scss */
+.previewImage_container:hover hr.bottom {
+  bottom: 35%;
+}
+/* line 22, ../sass/index.scss */
+.previewImage_container:hover hr.top {
+  top: 31%;
+}
+/* line 27, ../sass/index.scss */
+.previewImage_container:hover .button.action {
+  bottom: 40%;
+  opacity: 1;
+}
+/* line 31, ../sass/index.scss */
+.previewImage_container:hover .button.action:hover {
+  background: #d9000d;
+}
+/* line 37, ../sass/index.scss */
+.previewImage_container:hover .copy {
+  opacity: 1;
+}
+/* line 40, ../sass/index.scss */
+.previewImage_container:hover .copy.availability {
+  top: 45.5%;
+}
+/* line 44, ../sass/index.scss */
+.previewImage_container:hover .copy.date {
+  left: 10%;
+}
+/* line 48, ../sass/index.scss */
+.previewImage_container:hover .copy.title {
+  left: 10%;
+}
+/* line 53, ../sass/index.scss */
+.previewImage_container:hover .modal {
+  opacity: 1;
+}
+/* line 58, ../sass/index.scss */
+.previewImage_container hr {
+  background: white;
+  border: 0;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  z-index: 1;
+  -webkit-transition: all .5s;
+}
+/* line 69, ../sass/index.scss */
+.previewImage_container hr.bottom {
+  bottom: -10%;
+}
+/* line 73, ../sass/index.scss */
+.previewImage_container hr.top {
+  top: -10%;
+}
+/* line 80, ../sass/index.scss */
+.previewImage_container img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 87, ../sass/index.scss */
+.previewImage_container .action.button {
+  background: #fc0d1b;
+  bottom: 30%;
+  color: white;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  padding: 10px 10px;
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+  -webkit-transition: all .2s;
+}
+/* line 107, ../sass/index.scss */
+.previewImage_container .copy {
+  color: white;
+  font-family: arial;
+  text-transform: uppercase;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  z-index: 2;
+  -webkit-transition: all .5s;
+}
+/* line 117, ../sass/index.scss */
+.previewImage_container .copy.availability {
+  font-size: .7em;
+  left: 10%;
+  top: 50%;
+}
+/* line 123, ../sass/index.scss */
+.previewImage_container .copy.date {
+  left: -100%;
+  top: 37%;
+}
+/* line 128, ../sass/index.scss */
+.previewImage_container .copy.title {
+  font-size: 2em;
+  left: 100%;
+  top: 40%;
+}
+/* line 137, ../sass/index.scss */
+.previewImage_container .modal {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .2s;
+}
+
+/**
+ * We Are The Posters Section
+ */
+/* line 155, ../sass/index.scss */
+#we-are-the-posters-video {
+  background-position: center top;
+  margin-bottom: 80px;
+}
+/* line 159, ../sass/index.scss */
+#we-are-the-posters-video .video-container {
+  border: 10px solid #fff;
+  margin: 0 auto;
+  width: 580px;
+}
+/* line 164, ../sass/index.scss */
+#we-are-the-posters-video .video-container iframe {
+  margin: 0;
+  border: 0;
+  display: block;
+}
+
+/**
+ * Mission Section with Countdown
+ */
+/* line 176, ../sass/index.scss */
+#mission-section {
+  text-align: center;
+  padding: 75px 0;
+  margin-bottom: 80px;
+}
+/* line 181, ../sass/index.scss */
+#mission-section h2 {
+  color: #999999;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+/* line 187, ../sass/index.scss */
+#mission-section h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+/* line 193, ../sass/index.scss */
+#mission-section hr {
+  width: 50%;
+}
+/* line 197, ../sass/index.scss */
+#mission-section .btn-default {
+  background-color: #535353;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/**
+ * Press Section
+ */
+/* line 208, ../sass/index.scss */
+#press-section {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/* line 213, ../sass/index.scss */
+#press-section ul {
+  list-style: none;
+  margin: 115px 0 0 0;
+  padding: 0;
+}
+/* line 218, ../sass/index.scss */
+#press-section ul li {
+  float: left;
+  width: 200px;
+  min-height: 200px;
+  margin-bottom: 40px;
+}
+/* line 224, ../sass/index.scss */
+#press-section ul li:nth-child(2) {
+  margin-left: 730px;
+}
+/* line 228, ../sass/index.scss */
+#press-section ul li p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.85em;
+  color: #666666;
+}
+/* line 237, ../sass/index.scss */
+#press-section ul li img {
+  width: 100%;
+  border: 10px solid #fff;
+  margin-bottom: 5px;
+}

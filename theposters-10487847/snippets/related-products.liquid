@@ -1,4 +1,4 @@
-{% assign number_of_related_products_to_show = settings.products_per_row %}
+{% assign number_of_related_products_to_show = 3 %}
 
 {% assign number_of_related_products_to_fetch = number_of_related_products_to_show | plus: 1 %}
   
@@ -14,8 +14,13 @@
 
 {% if collection and collection.products_count > 1 %}
     
+<div class="row">
+  <div class="span12">
+    <h3 class="collection-title">Related products</h3>
+  </div>
+</div> 
+    
 <div class="row products">
-    <h3 class="collection-title span12 clearfix">Related products</h3>
 
 {% assign current_product = product %}
 {% assign current_product_found = false %}

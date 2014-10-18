@@ -1,0 +1,247 @@
+/* line 3, ../sass/global.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e2e4;
+  color: #262626;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* line 12, ../sass/global.scss */
+a {
+  color: #262626;
+}
+/* line 15, ../sass/global.scss */
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 21, ../sass/global.scss */
+header#main-header {
+  background-color: #fff;
+  overflow: hidden;
+}
+/* line 26, ../sass/global.scss */
+header#main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 31, ../sass/global.scss */
+header#main-header nav ul li {
+  float: left;
+}
+/* line 34, ../sass/global.scss */
+header#main-header nav ul li a {
+  display: block;
+  padding: 85px 20px 15px 20px;
+  text-transform: uppercase;
+}
+/* line 42, ../sass/global.scss */
+header#main-header nav ul li#logo a {
+  width: 81px;
+  height: 105px;
+  text-indent: -9999px;
+  padding: 0;
+  margin: 10px 0;
+}
+/* line 54, ../sass/global.scss */
+header#main-header #cart-info {
+  padding-top: 85px;
+  text-align: right;
+}
+
+/* line 60, ../sass/global.scss */
+#main-content {
+  padding: 40px 0;
+}
+
+/* line 64, ../sass/global.scss */
+footer#main-footer {
+  padding-top: 40px;
+  background-color: #fff;
+  margin-top: -40px;
+}
+/* line 69, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe {
+  background-color: #e5e2e4;
+  height: 50px;
+  position: relative;
+}
+/* line 74, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  font-size: 0.9em;
+}
+/* line 85, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe button {
+  width: 50px;
+  height: 50px;
+  float: right;
+  border: 0;
+  position: relative;
+  z-index: 1;
+}
+/* line 95, ../sass/global.scss */
+footer#main-footer .social-follow-us {
+  text-align: right;
+}
+/* line 98, ../sass/global.scss */
+footer#main-footer .social-follow-us h2 {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 50px;
+  height: 50px;
+  margin: 0;
+}
+/* line 106, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon {
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #eaeaea;
+  text-align: center;
+  line-height: 50px;
+}
+/* line 121, ../sass/global.scss */
+footer#main-footer nav {
+  margin-top: 40px;
+}
+/* line 124, ../sass/global.scss */
+footer#main-footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 129, ../sass/global.scss */
+footer#main-footer nav ul li {
+  float: left;
+}
+/* line 132, ../sass/global.scss */
+footer#main-footer nav ul li a {
+  display: block;
+  text-transform: uppercase;
+  padding: 20px;
+  color: #666666;
+  font-size: 0.8em;
+}
+
+/* line 144, ../sass/global.scss */
+#main-wrapper {
+  width: 100%;
+  left: 0;
+  position: relative;
+}
+
+/* line 150, ../sass/global.scss */
+#cart-flyout {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  right: -20%;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #eaeaeb;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
+}
+/* line 161, ../sass/global.scss */
+#cart-flyout .cart-top-btn {
+  width: 50%;
+  float: left;
+  height: 100px;
+  text-align: center;
+  display: block;
+  background-color: #505050;
+  color: #fff;
+  line-height: 100px;
+}
+/* line 171, ../sass/global.scss */
+#cart-flyout .cart-top-btn#checkout {
+  background-color: #fb0005;
+}
+/* line 176, ../sass/global.scss */
+#cart-flyout .subtotal {
+  width: 100%;
+  clear: both;
+  padding: 20px;
+  background-color: #eaeaeb;
+}
+/* line 182, ../sass/global.scss */
+#cart-flyout .subtotal h2 {
+  font-size: 1.2em;
+}
+/* line 185, ../sass/global.scss */
+#cart-flyout .subtotal h2 .subtotal-price {
+  float: right;
+}
+/* line 189, ../sass/global.scss */
+#cart-flyout .subtotal h2 small {
+  display: block;
+  clear: both;
+  font-size: 0.6em;
+}
+/* line 197, ../sass/global.scss */
+#cart-flyout .number-of-items {
+  clear: both;
+  background-color: #d6d6d6;
+  padding: 3px 0;
+  text-align: center;
+}
+/* line 205, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaeb;
+  overflow: hidden;
+  font-size: 0.9em;
+  color: #6c6c6c;
+}
+/* line 212, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image {
+  width: 30%;
+  float: left;
+  padding: 20px 10px 20px 20px;
+}
+/* line 217, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image img {
+  width: 100%;
+}
+/* line 222, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info {
+  float: right;
+  width: 70%;
+  padding: 20px 20px 20px 10px;
+}
+/* line 227, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .remove-item {
+  float: right;
+  width: 16px;
+  height: 16px;
+}
+/* line 233, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info h3 {
+  font-size: 1em;
+  margin: 0 0 5px;
+}
+/* line 238, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty {
+  margin: 0 0 5px;
+}
+/* line 241, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty input {
+  width: 30px;
+  text-align: center;
+}
+/* line 246, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty .update-cart {
+  font-size: 0.75em;
+}

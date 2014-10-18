@@ -1,0 +1,33 @@
+@import "vars";
+
+.section-header {
+	text-transform: uppercase;
+	padding: $gap/2 0;
+	margin: $gap;
+	border-top: 1px solid $foreColor;
+	border-bottom: 1px solid $foreColor;
+	color: $foreColor;
+	text-align: center;
+
+	small {
+		display: block;
+		text-transform: none;
+		font-size: 14px;
+		margin-top: 10px;
+	}
+}
+
+.btn {
+	border-radius: 0;
+	border: 0;
+}
+
+#social {
+	padding-top: 15px;
+	float: right;
+
+	> div {
+		float: left;
+		margin: 0 5px;
+	}
+}

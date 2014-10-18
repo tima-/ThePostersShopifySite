@@ -1,31 +1,185 @@
-#product {
-	.images-pane {
-		.featured {
-			text-align: center;
+@import "vars";
 
-			img {
-				border: 5px solid #fff;
-				max-width: 410px;
-				max-height: 410px;
-			}
-		}
+/**
+ * Collection page
+ */
+
+.archive-border {
+	width: 100%;
+	height: 73px;
+}
+
+#archived-products {
+	background-color: #eeeeef;
+
+	.archive-section-header {
+		text-align: center;
+		color: $white;
+		font-size: 3em;
+		width: 255px;
+		height: 372px;
+		padding-top: 100px;
+		line-height: 75px;
+		text-transform: uppercase;
+		font-weight: 700;
 	}
+}
 
-	.thumbs {
-		margin: 20px 0;
+/**
+ * Product Thumb View
+ */
+
+.product {
+	display: block;
+	float: left;
+	width: 240px;
+	margin: 20px;
+
+	.image {
+		line-height: 240px;
 		text-align: center;
 
-		.image {
-			display: inline-block;
-			width: 125px;
-			height: 125px;
-			border: 5px solid #fff;
-			margin: 0 5px 0 0;
-			overflow: hidden;
-
-			img {
-				width: 100%;
-			}
+		img {
+			max-width: 240px;
+			max-height: 240px;
+			border: 10px solid #fff;
 		}
 	}
+
+	.details {
+		text-align: center;
+	}
+}
+
+/**
+ * Product Detail Page
+ */
+
+#zoom-image {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(#000, 0.75);
+	display: none;
+	text-align: center;
+	padding: 5%;
+
+	img {
+		width: 80%;
+		height: auto;
+	}
+}
+
+#product {
+	#product-images {
+		#featured-image {
+			img {
+				width: 100%;
+				border: 10px solid $white;
+			}
+		}
+
+		#thumbs {
+			clear: both;
+
+			.image {
+				border: 10px solid $white;
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+				float: left;
+				margin: 26px 26px 0 0;
+
+				&:last-child {
+					margin: 26px 0 0 0;
+				}
+
+				img {
+					min-width: 200px;
+					min-height: 200px;
+				}
+			}
+		}
+
+		.social {
+			clear: both;
+		}
+	}
+
+	#details {
+		hr { 
+			border-top: 1px solid $foreColor;
+		}
+
+		h1.title {
+			font-size: 1.2em;
+			font-weight: 300;
+			margin: 0 0 5px;
+			text-transform: uppercase;
+		}
+
+		#artist {
+			font-size: 2em;
+			font-weight: 700;
+			margin: 0 0 5px;
+			text-transform: uppercase;
+		}
+
+		#availability {
+			clear: both;
+			display: inline-block;
+			padding: 0 3px;
+			background-color: $white;
+			text-transform: uppercase;
+			font-size: 0.75em;
+			font-weight: 700;
+		}
+
+		.description {
+			font-size: 0.85em;
+			margin: $gap 0;
+		}
+
+		#add-item-form {
+			.quantity-wrapper {
+				width: 40%;
+				float: left;
+
+				input {
+					width: 50px;
+					text-align: center;
+				}
+			}
+
+			.add-to-cart-info {
+				float: right;
+				width: 60%;
+				text-align: right;
+
+				#price {
+					display: inline-block;
+					font-weight: 700;
+					margin-right: 15px;
+					line-height: 30px;
+				}
+
+				#add-to-cart {
+					display: inline-block;
+					background-color: #f00;
+					text-transform: uppercase;
+				}
+			}
+
+
+
+			
+		}
+	}
+}
+
+#about-the-artist {
+	background-color: #eeeeef;
 }

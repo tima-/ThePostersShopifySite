@@ -1,17 +1,8 @@
-<div class="container-fluid">
-	<div id="page" class="row">
-
-		<div class="col-sm-12 span12 details">
-		{% if page.handle == 'artists'%}
-			{% include 'artist-listing' %}
-		{% elsif page.handle == 'mission' %}
-			{% include 'mission-page' %}
-		{% else %}
-
-		<h1 class="p25">{{ page.title }}</h1>
-		{{ page.content }}
-		
-		{% endif %}  
-		</div>
-	</div>
+<div id="page" class="row">
+  
+  <div class="span12 details">
+    <h1 class="p25">{{ page.title }}</h1>
+    {{ page.content }}
+  </div>
+  
 </div>

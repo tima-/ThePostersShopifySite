@@ -1,12 +1,9 @@
 /* line 1, ../sass/mission.scss */
 .mission-page-heading {
-  background-image: url(//cdn.shopify.com/s/files/1/0639/4977/t/1/assets/pageteargray.jpg);
-  background-repeat: repeat-x;
-  background-position: center top;
   background-color: #eeeeef;
   padding: 75px 50px 50px 50px;
 }
-/* line 8, ../sass/mission.scss */
+/* line 5, ../sass/mission.scss */
 .mission-page-heading h2 {
   width: 300px;
   margin: 0 auto;
@@ -18,21 +15,21 @@
   text-shadow: 0 3px 1px rgba(0, 0, 0, 0.25);
 }
 
-/* line 20, ../sass/mission.scss */
+/* line 17, ../sass/mission.scss */
 .mission-page-section {
   clear: both;
   overflow: hidden;
   height: 375px;
 }
-/* line 25, ../sass/mission.scss */
+/* line 22, ../sass/mission.scss */
 .mission-page-section:last-child {
   margin-bottom: 50px;
 }
-/* line 30, ../sass/mission.scss */
+/* line 27, ../sass/mission.scss */
 .mission-page-section:last-child .info .info-content h2 {
   line-height: 22px;
 }
-/* line 37, ../sass/mission.scss */
+/* line 34, ../sass/mission.scss */
 .mission-page-section .image {
   float: left;
   width: 55%;
@@ -40,7 +37,7 @@
   background-color: #fff;
   height: inherit;
 }
-/* line 45, ../sass/mission.scss */
+/* line 42, ../sass/mission.scss */
 .mission-page-section .info {
   float: left;
   width: 45%;
@@ -48,12 +45,12 @@
   color: #fff;
   height: inherit;
 }
-/* line 52, ../sass/mission.scss */
+/* line 49, ../sass/mission.scss */
 .mission-page-section .info .info-content {
   max-width: 500px;
   margin: 75px;
 }
-/* line 56, ../sass/mission.scss */
+/* line 53, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 {
   margin: 0 0 15px;
   padding: 15px 0;
@@ -63,7 +60,7 @@
   text-transform: uppercase;
   font-size: 1.5em;
 }
-/* line 65, ../sass/mission.scss */
+/* line 62, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 span {
   width: 45px;
   height: 45px;
@@ -76,21 +73,21 @@
   margin-bottom: 15px;
   line-height: 45px;
 }
-/* line 79, ../sass/mission.scss */
+/* line 76, ../sass/mission.scss */
 .mission-page-section .info .info-content p {
   margin: 0;
   line-height: 30px;
 }
-/* line 87, ../sass/mission.scss */
+/* line 84, ../sass/mission.scss */
 .mission-page-section.section-right .image {
   float: right;
   text-align: left;
 }
-/* line 92, ../sass/mission.scss */
+/* line 89, ../sass/mission.scss */
 .mission-page-section.section-right .info {
   float: right;
 }
-/* line 95, ../sass/mission.scss */
+/* line 92, ../sass/mission.scss */
 .mission-page-section.section-right .info .info-content {
   float: right;
 }

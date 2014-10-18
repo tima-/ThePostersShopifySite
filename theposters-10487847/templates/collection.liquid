@@ -1,70 +1,39 @@
 {% if collection.handle != 'fontpage' and collection.handle != 'all' %}
   {% include 'artist-profile' %}
 {% else %}
-
 <div id="collection">
-
   <div class="container">
-    {% paginate collection.products by settings.pagination_limit %}
-
     <div class="row products">
-      {% for product in collection.products limit: settings.pagination_limit %}
-        {% include 'product-loop' with collection.handle %}
-      {% endfor %}
+      <div class="col-sm-6 col-sm-offset-3">
+        <h1 class="section-header">On Sale Now</h1>
+      </div>
+      <div class="col-sm-12">
+        {% for product in collection.products %}
+          {% include 'product-loop' with collection.handle %}
+        {% endfor %}
+      </div>
     </div>
-
-    {% include 'pagination' %}
-
-    {% endpaginate %}
   </div>
-  
-</div>
 
-<script>
-  Shopify.queryParams = {};
-  if (location.search.length) {
-    for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
-      aKeyValue = aCouples[i].split('=');
-      if (aKeyValue.length > 1) {
-        Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
-      }
-    }
-  }
-  var collFilters = jQuery('.coll-filter');
-  collFilters.change(function() {
-      var newTags = [];
-      var newURL = '';
-      delete Shopify.queryParams.page;
-      collFilters.each(function() { 
-        if (jQuery(this).val()) {
-          newTags.push(jQuery(this).val());
-        }
-      });
-      {% if collection.handle %}
-      newURL = '/collections/' + '{{ collection.handle }}';
-      if (newTags.length) {
-        newURL += '/' + newTags.join('+');
-      }
-      var search = jQuery.param(Shopify.queryParams);
-      if (search.length) {
-        newURL += '?' + search;
-      }
-      location.href = newURL;    
-      {% else %}
-      if (newTags.length) {
-        Shopify.queryParams.constraint = newTags.join('+');        
-      }
-      else {
-        delete Shopify.queryParams.constraint;
-      }
-      location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
-      {% endif %}      
-  });
-  jQuery('.sort-by')
-    .val('{{ collection.sort_by | default: collection.default_sort_by  }}')
-    .bind('change', function() {
-      Shopify.queryParams.sort_by = jQuery(this).val();
-      location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
-    });
-</script>
+  <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
+  <section id="archived-products">
+    <div class="container">
+      <div class="row products">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h1 class="section-header">The Archive<small>These postters is no longer for sale directly on our site,<br />but copies may be available in our vault or elsewhere around the globe.<br />Email us at anymore@theposters.co for help.</small></h1>
+        </div>
+        <div class="col-sm-3">
+          <div class="archive-section-header" style="background-image: url({{ 'archivesectionheader.png' | asset_url }})">
+            Jan<br />2014
+          </div>
+        </div>
+        <div class="col-sm-9">
+          {% for product in collection.products %}
+            {% include 'product-loop' with collection.handle %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 {% endif %}

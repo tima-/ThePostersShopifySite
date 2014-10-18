@@ -42,7 +42,7 @@
 
       {% endif %}
       <div class="comment_form">
-        {% form article %}
+        {% form "new_comment", article %}
         <h2 class="comment-title">Leave a comment</h2>
 
         {% if form.posted_successfully? %}

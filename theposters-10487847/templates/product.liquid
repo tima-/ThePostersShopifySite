@@ -1,1 +1,105 @@
-{% include 'product' %}
+<div id="zoom-image"></div>
+<div id="product" class="{{ product.handle }}" itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+  <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}" />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <div id="product-images">
+          {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+          <div id="featured-image">
+            <a href="{{ featured_image | img_url: '1024x1024' }}">
+              <img src="{{ featured_image | img_url: '1024x1024' }}" alt="{{ featured_image.alt | escape }}" />
+            </a>
+          </div>
+
+          {% if product.images.size > 1%}
+          <div id="thumbs">
+            {% for image in product.images %}
+             <div class="image">
+                <a href="{{ image | product_img_url: '1024x1024' }}">
+                  <img src="{{ image | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}" />
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="social">
+            {% include 'share' %}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div id="details">
+          <hr />
+          <h1 class="title" itemprop="name">{{ product.title }}</h1>
+          <div id="artist">{{ product.vendor }}</div>
+          <div id="availability">Available for 10 More Days</div>
+          <hr />
+
+          <div class="description" itemprop="description">
+            {{ product.description }}
+          </div>
+
+          <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
+            <select id="product-select" name="id" style="display:none">
+              {% for variant in product.variants %}
+              <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+              {% endfor %}
+            </select>
+
+            <div class="quantity-wrapper">
+              <input id="quantity" type="number" name="quantity" value="1" class="tc item-quantity" />
+              <label>QTY</label>
+            </div>
+
+            <div class="add-to-cart-info">
+              {% assign variant = product.selected_or_first_available_variant %}
+              <p id="price">
+                <span itemprop="price">{{ variant.price | money }}</span>
+              </p>
+
+              <input type="submit" id="add-to-cart" class="btn btn-primary btn-lg addtocart" name="add" value="Add to cart" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
+<section id="about-the-artist">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="section-header">About The Artist</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-grid">
+  <div class="socialGrid_wrapper">
+    <div class="socialGrid_container"></div>
+  </div>
+  {% raw %}
+    <script type="text/html" id="grid_container_template">
+      <section 
+        class="grid_container"{{#media.0.large_image_url}} 
+        style="background-image: url({{media.0.large_image_url}})"{{/media.0.large_image_url}}
+        data-gen-url="{{gen_url}}">
+        <h1>{{text_str}}</h1>
+        <p class="userInfo_container">
+          <img class="avatar {{user_id}}" />
+          <span class="likes media-{{id}}"></span>
+          <span class="name">{{name}}</span><br />
+          <span class="created_at">{{#parseDate}}{{created_at}}{{/parseDate}}</span>
+        </p>
+        <div class="modal"></div>
+      </section>
+    </script>
+  {% endraw %}
+</div>
+</section>

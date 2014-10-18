@@ -5,33 +5,29 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
 
-  {% if settings.display_favicon %}
   <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
-  {% endif %}
   <meta charset="utf-8" />
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
 
   <title>
-    {% if template == 'index' %}{% if page_title contains 'Welcome' %}{{ shop.name }} &ndash; Welcome{% else %}{{ page_title }}{% endif %}{% elsif template == '404' %}Page Not Found{% elsif page_title contains shop.name %}{{ page_title }}{% else %}{{ page_title }} &ndash; {{ shop.name }}{% endif %}
+  {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
 
   {% if page_description %}
-  <meta name="description" content="{{ page_description }}" />
+  <meta name="description" content="{{ page_description | escape }}" />
   {% endif %}
 
-  <meta name="viewport" content="width=1240" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <link rel="canonical" href="{{ canonical_url }}" /> 
 
   {% include 'fb-open-graph-tags' %}
-  {% include 'twitter-card' %}
+  {% include 'twitter-cards' %}
 
-  {{ 'bootstrap.css'  | asset_url | stylesheet_tag }}
-  {{ 'artists.css'  | asset_url | stylesheet_tag }}
-  {{ 'mission.css'  | asset_url | stylesheet_tag }}
-  {{ 'help.css'  | asset_url | stylesheet_tag }}
-  {{ 'product.css'  | asset_url | stylesheet_tag }}
-  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  {{ 'all.css' | asset_url | stylesheet_tag }}
+  <!-- {{ 'styles.css' | asset_url | stylesheet_tag }} -->
   
   {% if settings.header_font contains 'Google' %}
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family={{ settings.header_font | remove: 'Google+' }}:300,400,700">
@@ -43,8 +39,8 @@
 
   {{ content_for_header }}
   
-  {{ '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' | script_tag }}
-  {{ 'jquery-migrate-1.2.0.min.js' | asset_url | script_tag }}
+  {{ '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js' | script_tag }}
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   
   {{ 'option_selection.js' | shopify_asset_url | script_tag }}
   {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
@@ -54,53 +50,80 @@
   {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
   {% endif %}
   {{ 'scripts.js' | asset_url | script_tag }}
-  {{ 'main.js' | asset_url | script_tag }}
-
   
+  <script src="{{ 'hogan-3.0.1.js' | asset_url }}"></script>
+  <script src="{{ 'moment.min.js' | asset_url }}"></script>
+  <script src="{{ 'socialgrid.js' | asset_url }}"></script>
+
 </head>
 
-<body>
-  <div id="main-container">
-    <div class="container-fluid main-container">
-      
-      <!-- Begin header -->
-      <div class="header">
-        <header>
-          <h1 class="logo">The Posters</h1>
-          <nav class="main">
-            {% include 'dropdown' %}
-          </nav>
-
-          <ul class="toolbar">
-            <li class="sign-in-link">
-              <a href="#">Sign in / Register</a>
-            </li>
-            <li class="toolbar-cart {% if cart.item_count != 0 %}has-items{% endif %}">
-              <a href="#" class="cart toggle-cart" title="Shopping Cart">
-                <span id="cart-count">{{ cart.item_count }}</span>
-              </a>
-            </li>
-          </ul>
-
-        </header>
+<body style="background-image: url({{ 'bgtexture.jpg' | asset_url }})">
+  <div id="main-wrapper">
+    <header id="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+            <nav>
+              <ul>
+                <li id="logo"><a href="/" style="background-image: url({{ 'logo.png' | asset_url }})">{{ shop.name }}</a></li>
+                <li><a href="/collections/all">Posters</a></li>
+                <li><a href="/pages/artists">Artists</a></li>
+                <li><a href="/pages/mission">Mission</a></li>
+                <li><a href="/pages/shipping">Help</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-sm-3">
+            <div id="cart-info">
+              <a href="#">Sign In / Register</a>
+              <a href="/cart" class="toggle-cart">{{ cart.item_count }}</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="header-shadow"></div>
-      <!-- End header -->
+    </header>
 
-
-      <!-- Begin content-->
-      <div id="main-content">
-        {{ content_for_layout }}
-      </div>
-      <!-- End content-->
-
-      {% include 'footer' %}
-
-
+    <div id="main-content">
+      {{ content_for_layout }}
     </div>
-  </div>
 
-  <div id="slide-cart">
+    <footer id="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1">
+            <div class="mailchimp-subscribe">
+              <input type="email" name="email_subscribe" placeholder="Enter your email to subscribe to our monthly newsletter" />
+              <button type="submit">></button>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="social-follow-us">
+              <h2>Follow us</h2>
+              <a href="#" class="social-icon"><img src="{{ 'facebook.jpg' | asset_url }}" alt="FaceBook" /></a>
+              <a href="#" class="social-icon"><img src="{{ 'twitter.jpg' | asset_url }}" alt="Twitter" /></a>
+              <a href="#" class="social-icon"><img src="{{ 'instagram.jpg' | asset_url }}" alt="Instagram" /></a>
+              <a href="#" class="social-icon"><img src="{{ 'tumblr.jpg' | asset_url }}" alt="Tumblr" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <nav>
+              <ul>
+                <li><a href="#">&copy; 2014 The Posters</a></li>
+                <li><a href="#">Press Coverage</a></li>
+                <li><a href="#">Poster Submissions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="cart-flyout">
     <a href="#" class="cart-top-btn toggle-cart" id="keep-shopping">Keep Shopping</a>
     <a href="/checkout" class="cart-top-btn" id="checkout">Checkout</a>
 
@@ -138,17 +161,5 @@
       </div>
     {% endif %}
   </div>
-
-
-  
-    
-  {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
-
-  {% if settings.enable_product_image_zoom %}
-    {{ 'jquery.zoom.js' | asset_url | script_tag }}
-  {% endif %}
-  {{ 'jquery.tweet.js' | asset_url | script_tag }}
-  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
-
 </body>
 </html>

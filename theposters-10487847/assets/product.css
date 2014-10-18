@@ -1,28 +1,172 @@
-/* line 3, ../sass/product.scss */
-#product .images-pane .featured {
-  text-align: center;
-}
-/* line 6, ../sass/product.scss */
-#product .images-pane .featured img {
-  border: 5px solid #fff;
-  max-width: 410px;
-  max-height: 410px;
-}
-/* line 14, ../sass/product.scss */
-#product .thumbs {
-  margin: 20px 0;
-  text-align: center;
-}
-/* line 18, ../sass/product.scss */
-#product .thumbs .image {
-  display: inline-block;
-  width: 125px;
-  height: 125px;
-  border: 5px solid #fff;
-  margin: 0 5px 0 0;
-  overflow: hidden;
-}
-/* line 26, ../sass/product.scss */
-#product .thumbs .image img {
+/**
+ * Collection page
+ */
+/* line 7, ../sass/product.scss */
+.archive-border {
   width: 100%;
+  height: 73px;
+}
+
+/* line 12, ../sass/product.scss */
+#archived-products {
+  background-color: #eeeeef;
+}
+/* line 15, ../sass/product.scss */
+#archived-products .archive-section-header {
+  text-align: center;
+  color: #fff;
+  font-size: 3em;
+  width: 255px;
+  height: 372px;
+  padding-top: 100px;
+  line-height: 75px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/**
+ * Product Thumb View
+ */
+/* line 32, ../sass/product.scss */
+.product {
+  display: block;
+  float: left;
+  width: 240px;
+  margin: 20px;
+}
+/* line 38, ../sass/product.scss */
+.product .image {
+  line-height: 240px;
+  text-align: center;
+}
+/* line 42, ../sass/product.scss */
+.product .image img {
+  max-width: 240px;
+  max-height: 240px;
+  border: 10px solid #fff;
+}
+/* line 49, ../sass/product.scss */
+.product .details {
+  text-align: center;
+}
+
+/**
+ * Product Detail Page
+ */
+/* line 58, ../sass/product.scss */
+#zoom-image {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  text-align: center;
+  padding: 5%;
+}
+/* line 70, ../sass/product.scss */
+#zoom-image img {
+  width: 80%;
+  height: auto;
+}
+
+/* line 79, ../sass/product.scss */
+#product #product-images #featured-image img {
+  width: 100%;
+  border: 10px solid #fff;
+}
+/* line 85, ../sass/product.scss */
+#product #product-images #thumbs {
+  clear: both;
+}
+/* line 88, ../sass/product.scss */
+#product #product-images #thumbs .image {
+  border: 10px solid #fff;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+  margin: 26px 26px 0 0;
+}
+/* line 96, ../sass/product.scss */
+#product #product-images #thumbs .image:last-child {
+  margin: 26px 0 0 0;
+}
+/* line 100, ../sass/product.scss */
+#product #product-images #thumbs .image img {
+  min-width: 200px;
+  min-height: 200px;
+}
+/* line 107, ../sass/product.scss */
+#product #product-images .social {
+  clear: both;
+}
+/* line 113, ../sass/product.scss */
+#product #details hr {
+  border-top: 1px solid #262626;
+}
+/* line 117, ../sass/product.scss */
+#product #details h1.title {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+/* line 124, ../sass/product.scss */
+#product #details #artist {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+/* line 131, ../sass/product.scss */
+#product #details #availability {
+  clear: both;
+  display: inline-block;
+  padding: 0 3px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+/* line 141, ../sass/product.scss */
+#product #details .description {
+  font-size: 0.85em;
+  margin: 40px 0;
+}
+/* line 147, ../sass/product.scss */
+#product #details #add-item-form .quantity-wrapper {
+  width: 40%;
+  float: left;
+}
+/* line 151, ../sass/product.scss */
+#product #details #add-item-form .quantity-wrapper input {
+  width: 50px;
+  text-align: center;
+}
+/* line 157, ../sass/product.scss */
+#product #details #add-item-form .add-to-cart-info {
+  float: right;
+  width: 60%;
+  text-align: right;
+}
+/* line 162, ../sass/product.scss */
+#product #details #add-item-form .add-to-cart-info #price {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 15px;
+  line-height: 30px;
+}
+/* line 169, ../sass/product.scss */
+#product #details #add-item-form .add-to-cart-info #add-to-cart {
+  display: inline-block;
+  background-color: #f00;
+  text-transform: uppercase;
+}
+
+/* line 183, ../sass/product.scss */
+#about-the-artist {
+  background-color: #eeeeef;
 }

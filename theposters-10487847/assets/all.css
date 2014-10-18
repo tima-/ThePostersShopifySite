@@ -1,0 +1,1045 @@
+/* line 3, ../sass/typography.scss */
+.section-header {
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 40px;
+  border-top: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+  color: #262626;
+  text-align: center;
+}
+/* line 12, ../sass/typography.scss */
+.section-header small {
+  display: block;
+  text-transform: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* line 20, ../sass/typography.scss */
+.btn {
+  border-radius: 0;
+  border: 0;
+}
+
+/* line 25, ../sass/typography.scss */
+#social {
+  padding-top: 15px;
+  float: right;
+}
+/* line 29, ../sass/typography.scss */
+#social > div {
+  float: left;
+  margin: 0 5px;
+}
+
+/* line 3, ../sass/global.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e2e4;
+  color: #262626;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* line 12, ../sass/global.scss */
+a {
+  color: #262626;
+}
+/* line 15, ../sass/global.scss */
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 21, ../sass/global.scss */
+header#main-header {
+  background-color: #fff;
+  overflow: hidden;
+}
+/* line 26, ../sass/global.scss */
+header#main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 31, ../sass/global.scss */
+header#main-header nav ul li {
+  float: left;
+}
+/* line 34, ../sass/global.scss */
+header#main-header nav ul li a {
+  display: block;
+  padding: 85px 20px 15px 20px;
+  text-transform: uppercase;
+}
+/* line 42, ../sass/global.scss */
+header#main-header nav ul li#logo a {
+  width: 81px;
+  height: 105px;
+  text-indent: -9999px;
+  padding: 0;
+  margin: 10px 0;
+}
+/* line 54, ../sass/global.scss */
+header#main-header #cart-info {
+  padding-top: 85px;
+  text-align: right;
+}
+
+/* line 60, ../sass/global.scss */
+#main-content {
+  padding: 40px 0;
+}
+
+/* line 64, ../sass/global.scss */
+footer#main-footer {
+  padding-top: 40px;
+  background-color: #fff;
+  margin-top: -40px;
+}
+/* line 69, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe {
+  background-color: #e5e2e4;
+  height: 50px;
+  position: relative;
+}
+/* line 74, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe input {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  font-size: 0.9em;
+}
+/* line 85, ../sass/global.scss */
+footer#main-footer .mailchimp-subscribe button {
+  width: 50px;
+  height: 50px;
+  float: right;
+  border: 0;
+  position: relative;
+  z-index: 1;
+}
+/* line 95, ../sass/global.scss */
+footer#main-footer .social-follow-us {
+  text-align: right;
+}
+/* line 98, ../sass/global.scss */
+footer#main-footer .social-follow-us h2 {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 50px;
+  height: 50px;
+  margin: 0;
+}
+/* line 106, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon {
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #eaeaea;
+  text-align: center;
+  line-height: 50px;
+}
+/* line 121, ../sass/global.scss */
+footer#main-footer nav {
+  margin-top: 40px;
+}
+/* line 124, ../sass/global.scss */
+footer#main-footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 129, ../sass/global.scss */
+footer#main-footer nav ul li {
+  float: left;
+}
+/* line 132, ../sass/global.scss */
+footer#main-footer nav ul li a {
+  display: block;
+  text-transform: uppercase;
+  padding: 20px;
+  color: #666666;
+  font-size: 0.8em;
+}
+
+/* line 144, ../sass/global.scss */
+#main-wrapper {
+  width: 100%;
+  left: 0;
+  position: relative;
+}
+
+/* line 150, ../sass/global.scss */
+#cart-flyout {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  right: -20%;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #eaeaeb;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
+}
+/* line 161, ../sass/global.scss */
+#cart-flyout .cart-top-btn {
+  width: 50%;
+  float: left;
+  height: 100px;
+  text-align: center;
+  display: block;
+  background-color: #505050;
+  color: #fff;
+  line-height: 100px;
+}
+/* line 171, ../sass/global.scss */
+#cart-flyout .cart-top-btn#checkout {
+  background-color: #fb0005;
+}
+/* line 176, ../sass/global.scss */
+#cart-flyout .subtotal {
+  width: 100%;
+  clear: both;
+  padding: 20px;
+  background-color: #eaeaeb;
+}
+/* line 182, ../sass/global.scss */
+#cart-flyout .subtotal h2 {
+  font-size: 1.2em;
+}
+/* line 185, ../sass/global.scss */
+#cart-flyout .subtotal h2 .subtotal-price {
+  float: right;
+}
+/* line 189, ../sass/global.scss */
+#cart-flyout .subtotal h2 small {
+  display: block;
+  clear: both;
+  font-size: 0.6em;
+}
+/* line 197, ../sass/global.scss */
+#cart-flyout .number-of-items {
+  clear: both;
+  background-color: #d6d6d6;
+  padding: 3px 0;
+  text-align: center;
+}
+/* line 205, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaeb;
+  overflow: hidden;
+  font-size: 0.9em;
+  color: #6c6c6c;
+}
+/* line 212, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image {
+  width: 30%;
+  float: left;
+  padding: 20px 10px 20px 20px;
+}
+/* line 217, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image img {
+  width: 100%;
+}
+/* line 222, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info {
+  float: right;
+  width: 70%;
+  padding: 20px 20px 20px 10px;
+}
+/* line 227, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .remove-item {
+  float: right;
+  width: 16px;
+  height: 16px;
+}
+/* line 233, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info h3 {
+  font-size: 1em;
+  margin: 0 0 5px;
+}
+/* line 238, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty {
+  margin: 0 0 5px;
+}
+/* line 241, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty input {
+  width: 30px;
+  text-align: center;
+}
+/* line 246, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty .update-cart {
+  font-size: 0.75em;
+}
+
+/**
+ * Homepage Featured Product
+ */
+/* line 6, ../sass/index.scss */
+.previewImage_container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border: 10px solid #fff;
+  margin-bottom: 80px;
+  -webkit-transform: translateZ(0);
+}
+/* line 15, ../sass/index.scss */
+.previewImage_container:hover {
+  cursor: pointer;
+}
+/* line 18, ../sass/index.scss */
+.previewImage_container:hover hr.bottom {
+  bottom: 35%;
+}
+/* line 22, ../sass/index.scss */
+.previewImage_container:hover hr.top {
+  top: 31%;
+}
+/* line 27, ../sass/index.scss */
+.previewImage_container:hover .button.action {
+  bottom: 40%;
+  opacity: 1;
+}
+/* line 31, ../sass/index.scss */
+.previewImage_container:hover .button.action:hover {
+  background: #d9000d;
+}
+/* line 37, ../sass/index.scss */
+.previewImage_container:hover .copy {
+  opacity: 1;
+}
+/* line 40, ../sass/index.scss */
+.previewImage_container:hover .copy.availability {
+  top: 45.5%;
+}
+/* line 44, ../sass/index.scss */
+.previewImage_container:hover .copy.date {
+  left: 10%;
+}
+/* line 48, ../sass/index.scss */
+.previewImage_container:hover .copy.title {
+  left: 10%;
+}
+/* line 53, ../sass/index.scss */
+.previewImage_container:hover .modal {
+  opacity: 1;
+}
+/* line 58, ../sass/index.scss */
+.previewImage_container hr {
+  background: white;
+  border: 0;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  z-index: 1;
+  -webkit-transition: all .5s;
+}
+/* line 69, ../sass/index.scss */
+.previewImage_container hr.bottom {
+  bottom: -10%;
+}
+/* line 73, ../sass/index.scss */
+.previewImage_container hr.top {
+  top: -10%;
+}
+/* line 80, ../sass/index.scss */
+.previewImage_container img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 87, ../sass/index.scss */
+.previewImage_container .action.button {
+  background: #fc0d1b;
+  bottom: 30%;
+  color: white;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  padding: 10px 10px;
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+  -webkit-transition: all .2s;
+}
+/* line 107, ../sass/index.scss */
+.previewImage_container .copy {
+  color: white;
+  font-family: arial;
+  text-transform: uppercase;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  z-index: 2;
+  -webkit-transition: all .5s;
+}
+/* line 117, ../sass/index.scss */
+.previewImage_container .copy.availability {
+  font-size: .7em;
+  left: 10%;
+  top: 50%;
+}
+/* line 123, ../sass/index.scss */
+.previewImage_container .copy.date {
+  left: -100%;
+  top: 37%;
+}
+/* line 128, ../sass/index.scss */
+.previewImage_container .copy.title {
+  font-size: 2em;
+  left: 100%;
+  top: 40%;
+}
+/* line 137, ../sass/index.scss */
+.previewImage_container .modal {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .2s;
+}
+
+/**
+ * We Are The Posters Section
+ */
+/* line 155, ../sass/index.scss */
+#we-are-the-posters-video {
+  background-position: center top;
+  margin-bottom: 80px;
+}
+/* line 159, ../sass/index.scss */
+#we-are-the-posters-video .video-container {
+  border: 10px solid #fff;
+  margin: 0 auto;
+  width: 580px;
+}
+/* line 164, ../sass/index.scss */
+#we-are-the-posters-video .video-container iframe {
+  margin: 0;
+  border: 0;
+  display: block;
+}
+
+/**
+ * Mission Section with Countdown
+ */
+/* line 176, ../sass/index.scss */
+#mission-section {
+  text-align: center;
+  padding: 75px 0;
+  margin-bottom: 80px;
+}
+/* line 181, ../sass/index.scss */
+#mission-section h2 {
+  color: #999999;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+/* line 187, ../sass/index.scss */
+#mission-section h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+/* line 193, ../sass/index.scss */
+#mission-section hr {
+  width: 50%;
+}
+/* line 197, ../sass/index.scss */
+#mission-section .btn-default {
+  background-color: #535353;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/**
+ * Press Section
+ */
+/* line 208, ../sass/index.scss */
+#press-section {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/* line 213, ../sass/index.scss */
+#press-section ul {
+  list-style: none;
+  margin: 115px 0 0 0;
+  padding: 0;
+}
+/* line 218, ../sass/index.scss */
+#press-section ul li {
+  float: left;
+  width: 200px;
+  min-height: 200px;
+  margin-bottom: 40px;
+}
+/* line 224, ../sass/index.scss */
+#press-section ul li:nth-child(2) {
+  margin-left: 730px;
+}
+/* line 228, ../sass/index.scss */
+#press-section ul li p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.85em;
+  color: #666666;
+}
+/* line 237, ../sass/index.scss */
+#press-section ul li img {
+  width: 100%;
+  border: 10px solid #fff;
+  margin-bottom: 5px;
+}
+
+/**
+ * Collection page
+ */
+/* line 7, ../sass/product.scss */
+.archive-border {
+  width: 100%;
+  height: 73px;
+}
+
+/* line 12, ../sass/product.scss */
+#archived-products {
+  background-color: #eeeeef;
+}
+/* line 15, ../sass/product.scss */
+#archived-products .archive-section-header {
+  text-align: center;
+  color: #fff;
+  font-size: 3em;
+  width: 255px;
+  height: 372px;
+  padding-top: 100px;
+  line-height: 75px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/**
+ * Product Thumb View
+ */
+/* line 32, ../sass/product.scss */
+.product {
+  display: block;
+  float: left;
+  width: 240px;
+  margin: 20px;
+}
+/* line 38, ../sass/product.scss */
+.product .image {
+  line-height: 240px;
+  text-align: center;
+}
+/* line 42, ../sass/product.scss */
+.product .image img {
+  max-width: 240px;
+  max-height: 240px;
+  border: 10px solid #fff;
+}
+/* line 49, ../sass/product.scss */
+.product .details {
+  text-align: center;
+}
+
+/**
+ * Product Detail Page
+ */
+/* line 58, ../sass/product.scss */
+#zoom-image {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  text-align: center;
+  padding: 5%;
+}
+/* line 70, ../sass/product.scss */
+#zoom-image img {
+  width: 80%;
+  height: auto;
+}
+
+/* line 79, ../sass/product.scss */
+#product #product-images #featured-image img {
+  width: 100%;
+  border: 10px solid #fff;
+}
+/* line 85, ../sass/product.scss */
+#product #product-images #thumbs {
+  clear: both;
+}
+/* line 88, ../sass/product.scss */
+#product #product-images #thumbs .image {
+  border: 10px solid #fff;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+  margin: 26px 26px 0 0;
+}
+/* line 96, ../sass/product.scss */
+#product #product-images #thumbs .image:last-child {
+  margin: 26px 0 0 0;
+}
+/* line 100, ../sass/product.scss */
+#product #product-images #thumbs .image img {
+  min-width: 200px;
+  min-height: 200px;
+}
+/* line 107, ../sass/product.scss */
+#product #product-images .social {
+  clear: both;
+}
+/* line 113, ../sass/product.scss */
+#product #details hr {
+  border-top: 1px solid #262626;
+}
+/* line 117, ../sass/product.scss */
+#product #details h1.title {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+/* line 124, ../sass/product.scss */
+#product #details #artist {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+/* line 131, ../sass/product.scss */
+#product #details #availability {
+  clear: both;
+  display: inline-block;
+  padding: 0 3px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+/* line 141, ../sass/product.scss */
+#product #details .description {
+  font-size: 0.85em;
+  margin: 40px 0;
+}
+/* line 147, ../sass/product.scss */
+#product #details #add-item-form .quantity-wrapper {
+  width: 40%;
+  float: left;
+}
+/* line 151, ../sass/product.scss */
+#product #details #add-item-form .quantity-wrapper input {
+  width: 50px;
+  text-align: center;
+}
+/* line 157, ../sass/product.scss */
+#product #details #add-item-form .add-to-cart-info {
+  float: right;
+  width: 60%;
+  text-align: right;
+}
+/* line 162, ../sass/product.scss */
+#product #details #add-item-form .add-to-cart-info #price {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 15px;
+  line-height: 30px;
+}
+/* line 169, ../sass/product.scss */
+#product #details #add-item-form .add-to-cart-info #add-to-cart {
+  display: inline-block;
+  background-color: #f00;
+  text-transform: uppercase;
+}
+
+/* line 183, ../sass/product.scss */
+#about-the-artist {
+  background-color: #eeeeef;
+}
+
+/**
+ * Artist Listing Page
+ */
+/* line 5, ../sass/artist.scss */
+.artist-list {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 11, ../sass/artist.scss */
+.artist-list .artist {
+  width: 286px;
+  height: 286px;
+  border: 10px solid #fff;
+  float: left;
+  margin: 15px;
+  line-height: 266px;
+  font-size: 2em;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 26, ../sass/artist.scss */
+.artist-list .artist a {
+  margin: 0;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #000;
+}
+/* line 34, ../sass/artist.scss */
+.artist-list #join-posters {
+  padding-top: 15px;
+}
+
+/**
+ * Artist Profile
+ */
+/* line 44, ../sass/artist.scss */
+.artist-profile .artist-header {
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+  overflow: hidden;
+  background-color: #eeeeef;
+}
+/* line 50, ../sass/artist.scss */
+.artist-profile .artist-header .artist-image {
+  width: 50%;
+  height: 400px;
+  float: left;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+/* line 59, ../sass/artist.scss */
+.artist-profile .artist-header .artist-title {
+  width: 50%;
+  float: left;
+}
+/* line 63, ../sass/artist.scss */
+.artist-profile .artist-header .artist-title h1 {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 15px;
+  margin: 170px auto 0 auto;
+  width: 65%;
+  display: block;
+  text-transform: uppercase;
+}
+/* line 76, ../sass/artist.scss */
+.artist-profile .artist-description {
+  width: 50%;
+  margin: 50px 0;
+  float: left;
+  padding: 15px;
+}
+/* line 83, ../sass/artist.scss */
+.artist-profile .artist-products {
+  margin-top: 25px;
+}
+/* line 86, ../sass/artist.scss */
+.artist-profile .artist-products:nth-child(4) {
+  clear: right;
+}
+/* line 91, ../sass/artist.scss */
+.artist-profile .artist-video {
+  clear: both;
+  background-color: #eeeeef;
+}
+/* line 95, ../sass/artist.scss */
+.artist-profile .artist-video .artist-video-description {
+  padding: 110px 0;
+  text-align: right;
+  width: 80%;
+  float: right;
+  font-size: 0.9em;
+}
+/* line 103, ../sass/artist.scss */
+.artist-profile .artist-video .artist-video-content {
+  margin: 0 auto;
+  padding: 90px 0;
+  overflow: hidden;
+}
+/* line 108, ../sass/artist.scss */
+.artist-profile .artist-video .artist-video-content iframe {
+  margin: 0 2px 0 15px;
+  float: left;
+  border: 10px solid #fff;
+  outline: 2px solid #000;
+  width: 400px;
+  height: 240px;
+}
+
+/* line 1, ../sass/mission.scss */
+.mission-page-heading {
+  background-color: #eeeeef;
+  padding: 75px 50px 50px 50px;
+}
+/* line 5, ../sass/mission.scss */
+.mission-page-heading h2 {
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* line 17, ../sass/mission.scss */
+.mission-page-section {
+  clear: both;
+  overflow: hidden;
+  height: 375px;
+}
+/* line 22, ../sass/mission.scss */
+.mission-page-section:last-child {
+  margin-bottom: 50px;
+}
+/* line 27, ../sass/mission.scss */
+.mission-page-section:last-child .info .info-content h2 {
+  line-height: 22px;
+}
+/* line 34, ../sass/mission.scss */
+.mission-page-section .image {
+  float: left;
+  width: 55%;
+  text-align: right;
+  background-color: #fff;
+  height: inherit;
+}
+/* line 42, ../sass/mission.scss */
+.mission-page-section .info {
+  float: left;
+  width: 45%;
+  background-color: #000;
+  color: #fff;
+  height: inherit;
+}
+/* line 49, ../sass/mission.scss */
+.mission-page-section .info .info-content {
+  max-width: 500px;
+  margin: 75px;
+}
+/* line 53, ../sass/mission.scss */
+.mission-page-section .info .info-content h2 {
+  margin: 0 0 15px;
+  padding: 15px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+/* line 62, ../sass/mission.scss */
+.mission-page-section .info .info-content h2 span {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  line-height: 45px;
+}
+/* line 76, ../sass/mission.scss */
+.mission-page-section .info .info-content p {
+  margin: 0;
+  line-height: 30px;
+}
+/* line 84, ../sass/mission.scss */
+.mission-page-section.section-right .image {
+  float: right;
+  text-align: left;
+}
+/* line 89, ../sass/mission.scss */
+.mission-page-section.section-right .info {
+  float: right;
+}
+/* line 92, ../sass/mission.scss */
+.mission-page-section.section-right .info .info-content {
+  float: right;
+}
+
+/* line 2, ../sass/help.scss */
+.help-tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 8, ../sass/help.scss */
+.help-tabs ul li {
+  float: left;
+  width: 16.6%;
+}
+/* line 12, ../sass/help.scss */
+.help-tabs ul li a {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+/* line 17, ../sass/help.scss */
+.help-tabs ul li a.current {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 27, ../sass/help.scss */
+.help-section {
+  margin-bottom: 40px;
+}
+/* line 30, ../sass/help.scss */
+.help-section img {
+  margin: 25px;
+  float: right;
+}
+
+/* line 1, ../sass/socialgrid.scss */
+body {
+  margin: 0;
+}
+
+/* line 5, ../sass/socialgrid.scss */
+.socialGrid_container {
+  /* http://www.fontspring.com/fonts/fontsite/franklin-gothic-fs */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 10px;
+  height: 400px;
+  width: 1000%;
+}
+/* line 12, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container {
+  background-position: center center;
+  background-size: cover;
+  background-width: 100px;
+  cursor: pointer;
+  float: left;
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+/* line 22, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container h1 {
+  color: white;
+  opacity: 0;
+  position: relative;
+  top: -5px;
+  z-index: 1;
+  -webkit-transition: all .2s;
+}
+/* line 31, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container h1 {
+  line-height: 1.25em;
+  margin: 15px;
+  max-height: 6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 39, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container .avatar {
+  float: left;
+  margin-right: 8px;
+  width: 37px;
+}
+/* line 45, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container .modal {
+  background: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity .3s;
+}
+/* line 56, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container .userInfo_container {
+  bottom: 0px;
+  color: white;
+  font-size: 1.3em;
+  left: 15px;
+  line-height: 1.5em;
+  opacity: 0;
+  position: absolute;
+  right: 15px;
+  z-index: 1;
+  -webkit-transition: opacity .8s;
+}
+/* line 70, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container:hover h1 {
+  opacity: 1;
+  top: 0;
+}
+/* line 75, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container:hover .modal {
+  opacity: 0.7;
+}
+/* line 79, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container:hover .userInfo_container {
+  opacity: 1;
+}
+/* line 85, ../sass/socialgrid.scss */
+.socialGrid_container .grid-1 {
+  float: left;
+}
+/* line 89, ../sass/socialgrid.scss */
+.socialGrid_container .grid-2 {
+  float: left;
+}
+/* line 92, ../sass/socialgrid.scss */
+.socialGrid_container .grid-2 section {
+  clear: left;
+  float: left;
+  height: 200px;
+  width: 200px;
+}
+
+/* line 101, ../sass/socialgrid.scss */
+.socialGrid_wrapper {
+  height: 400px;
+  overflow: scroll;
+  overflow-y: hidden;
+  width: 100%;
+}

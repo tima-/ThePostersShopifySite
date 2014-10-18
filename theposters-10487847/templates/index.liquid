@@ -1,23 +1,45 @@
+{% assign featuredproduct = collections[settings.frontpage_collection].products.first %}
 
-<!-- Start products -->
-{% if settings.frontpage_collection != '' %}
-
-{% for product in collections[settings.frontpage_collection].products limit:1%}
-
-  {% include 'product-homepage' with settings.frontpage_collection %}
-
-  <div class="preview-section">
-    
+{% if settings.enable_featuredproduct == true and featuredproduct.handle != blank  %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="previewImage_container">
+        <img src="{{ featuredproduct.featured_image | product_img_url: 'grande' }}" alt="{{ featuredproduct.title }}" />
+        <hr class="top" />
+        <hr class="bottom" />
+        <div class="copy date">{{ featuredproduct.title }}</div>
+        <div class="copy title">{{ featuredproduct.title }}</div>
+        <div class="copy availability">Available for 10 more days</div>
+        <a href="{{ featuredproduct.url }}" class="button action">See Poster</a>
+        <div class="modal"></div>
+      </div>
+    </div>
   </div>
-
-  {% endfor %}
-
+</div>
 {% endif %}
-<!-- End products -->
-
 
 {% include 'we-are-posters' %}
 
-{% include 'mission' %}
+<div id="mission-section" style="background-image: url({{ 'missionbg.png' | asset_url }})">
+  <hr />
+  <h2>The Posters Has Funded</h2>
+  <h3>1,276,468 Hours</h3>
+  <h2>Of Art Class (And Counting!)</h2>
+  <p><a href="/mission" class="btn btn-default">Learn More About Our Mission</a></p>
+  <hr />
+</div>
 
-{% include 'media' %}
+<div id="press-section" style="background-image: url({{ 'presssat.png' | asset_url }})">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul>
+          {% for article in blogs["press"].articles limit: 5 %}
+            <li><a href="{{ article.title }}">{{ article.content }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

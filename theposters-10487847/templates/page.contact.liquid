@@ -1,10 +1,22 @@
-<div id="page" class="row">
-  
+<div class="container">
+<div class="row">
+  <div class="help-tabs col-sm-8 col-sm-offset-2">
+      <ul>
+      {% for link in linklists.help-navigation.links %}
+        <li>
+            <a href="{{ link.url }}" class="{% if link.active %}current{% endif %}"><span>{{ link.title }}</span></a>
+          </li>
+      {% endfor %}
+      </ul>
+  </div>
   <div class="col-sm-12">
-    <h1>{{ page.title }}</h1>
-    <div class="page-with-contact-form">
-      {{ page.content }}
-            
+    <h1 class="section-header">{{ page.title }}</h1>
+  </div>
+  <div class="col-sm-4">
+    {{ page.content }}
+  </div>
+  <div class="col-sm-8">
+    <div class="page-with-contact-form">            
         {% form 'contact' %}
         {% if form.posted_successfully? %}
         <div class="successForm feedback">
@@ -49,4 +61,5 @@
   
 </div>
 
-
+</div>
+</div>

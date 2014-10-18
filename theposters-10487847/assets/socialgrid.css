@@ -1,0 +1,107 @@
+/* line 1, ../sass/socialgrid.scss */
+body {
+  margin: 0;
+}
+
+/* line 5, ../sass/socialgrid.scss */
+.socialGrid_container {
+  /* http://www.fontspring.com/fonts/fontsite/franklin-gothic-fs */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 10px;
+  height: 400px;
+  width: 1000%;
+}
+/* line 12, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container {
+  background-position: center center;
+  background-size: cover;
+  background-width: 100px;
+  cursor: pointer;
+  float: left;
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+/* line 22, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container h1 {
+  color: white;
+  opacity: 0;
+  position: relative;
+  top: -5px;
+  z-index: 1;
+  -webkit-transition: all .2s;
+}
+/* line 31, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container h1 {
+  line-height: 1.25em;
+  margin: 15px;
+  max-height: 6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 39, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container .avatar {
+  float: left;
+  margin-right: 8px;
+  width: 37px;
+}
+/* line 45, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container .modal {
+  background: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity .3s;
+}
+/* line 56, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container .userInfo_container {
+  bottom: 0px;
+  color: white;
+  font-size: 1.3em;
+  left: 15px;
+  line-height: 1.5em;
+  opacity: 0;
+  position: absolute;
+  right: 15px;
+  z-index: 1;
+  -webkit-transition: opacity .8s;
+}
+/* line 70, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container:hover h1 {
+  opacity: 1;
+  top: 0;
+}
+/* line 75, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container:hover .modal {
+  opacity: 0.7;
+}
+/* line 79, ../sass/socialgrid.scss */
+.socialGrid_container .grid_container:hover .userInfo_container {
+  opacity: 1;
+}
+/* line 85, ../sass/socialgrid.scss */
+.socialGrid_container .grid-1 {
+  float: left;
+}
+/* line 89, ../sass/socialgrid.scss */
+.socialGrid_container .grid-2 {
+  float: left;
+}
+/* line 92, ../sass/socialgrid.scss */
+.socialGrid_container .grid-2 section {
+  clear: left;
+  float: left;
+  height: 200px;
+  width: 200px;
+}
+
+/* line 101, ../sass/socialgrid.scss */
+.socialGrid_wrapper {
+  height: 400px;
+  overflow: scroll;
+  overflow-y: hidden;
+  width: 100%;
+}
