@@ -170,12 +170,20 @@ footer#main-footer nav ul li a {
   background-color: #fb0005;
 }
 /* line 176, ../sass/global.scss */
+<<<<<<< HEAD
+=======
+#cart-flyout .empty-cart {
+  text-align: center;
+}
+/* line 180, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .subtotal {
   width: 100%;
   clear: both;
   padding: 20px;
   background-color: #eaeaeb;
 }
+<<<<<<< HEAD
 /* line 182, ../sass/global.scss */
 #cart-flyout .subtotal h2 {
   font-size: 1.2em;
@@ -185,19 +193,38 @@ footer#main-footer nav ul li a {
   float: right;
 }
 /* line 189, ../sass/global.scss */
+=======
+/* line 186, ../sass/global.scss */
+#cart-flyout .subtotal h2 {
+  font-size: 1.2em;
+}
+/* line 189, ../sass/global.scss */
+#cart-flyout .subtotal h2 .subtotal-price {
+  float: right;
+}
+/* line 193, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .subtotal h2 small {
   display: block;
   clear: both;
   font-size: 0.6em;
 }
+<<<<<<< HEAD
 /* line 197, ../sass/global.scss */
+=======
+/* line 201, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .number-of-items {
   clear: both;
   background-color: #d6d6d6;
   padding: 3px 0;
   text-align: center;
 }
+<<<<<<< HEAD
 /* line 205, ../sass/global.scss */
+=======
+/* line 209, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item {
   background-color: #fff;
   border-bottom: 1px solid #eaeaeb;
@@ -205,43 +232,75 @@ footer#main-footer nav ul li a {
   font-size: 0.9em;
   color: #6c6c6c;
 }
+<<<<<<< HEAD
 /* line 212, ../sass/global.scss */
+=======
+/* line 216, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item .image {
   width: 30%;
   float: left;
   padding: 20px 10px 20px 20px;
 }
+<<<<<<< HEAD
 /* line 217, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image img {
   width: 100%;
 }
 /* line 222, ../sass/global.scss */
+=======
+/* line 221, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .image img {
+  width: 100%;
+}
+/* line 226, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item .info {
   float: right;
   width: 70%;
   padding: 20px 20px 20px 10px;
 }
+<<<<<<< HEAD
 /* line 227, ../sass/global.scss */
+=======
+/* line 231, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item .info .remove-item {
   float: right;
   width: 16px;
   height: 16px;
 }
+<<<<<<< HEAD
 /* line 233, ../sass/global.scss */
+=======
+/* line 237, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item .info h3 {
   font-size: 1em;
   margin: 0 0 5px;
 }
+<<<<<<< HEAD
 /* line 238, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty {
   margin: 0 0 5px;
 }
 /* line 241, ../sass/global.scss */
+=======
+/* line 242, ../sass/global.scss */
+#cart-flyout .cart-items .cart-item .info .qty {
+  margin: 0 0 5px;
+}
+/* line 245, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item .info .qty input {
   width: 30px;
   text-align: center;
 }
+<<<<<<< HEAD
 /* line 246, ../sass/global.scss */
+=======
+/* line 250, ../sass/global.scss */
+>>>>>>> 167cead... ..
 #cart-flyout .cart-items .cart-item .info .qty .update-cart {
   font-size: 0.75em;
 }

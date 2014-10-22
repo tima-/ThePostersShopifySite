@@ -2,6 +2,7 @@
   {% include 'artist-profile' %}
 {% else %}
 <div id="collection">
+<<<<<<< HEAD
   <div class="container">
     <div class="row products">
       <div class="col-sm-6 col-sm-offset-3">
@@ -37,3 +38,80 @@
   </section>
 </div>
 {% endif %}
+=======
+  <div id="active-products">
+    <div class="container">
+      <div class="row products">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h1 class="section-header">On Sale Now</h1>
+        </div>
+        <div class="col-sm-12">
+          {% for product in collection.products %}
+            {% if product.metafields.visibility.expirationdate %}
+              {% include 'product-loop' with collection.handle %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
+  <section id="archived-products">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h1 class="section-header">The Archive<small>These postters is no longer for sale directly on our site,<br />but copies may be available in our vault or elsewhere around the globe.<br />Email us at anymore@theposters.co for help.</small></h1>
+        </div>
+      </div>
+
+      {% assign currMonth = 'Jan' %}
+      {% for product in collection.products %}
+      {% if product.metafields.visibility.expirationdate %}
+        {% assign productMonth = product.metafields.visibility.expirationdate | date: "%b" %}
+        {% assign expMonthYear = (product.metafields.visibility.expirationdate | date: "%Y-%m-30") %}
+
+          {% if currMonth != productMonth %}
+            <div class="row products" data-expmonthyear="{{expMonthYear}}">
+              <div class="col-sm-3">
+                <div class="archive-section-header" style="background-image: url({{ 'archivesectionheader.png' | asset_url }})">
+                  {{ product.metafields.visibility.expirationdate | date: "%b" }}<br />{{ product.metafields.visibility.expirationdate | date: "%Y" }}
+                </div>
+              </div>
+              <div class="col-sm-9">
+          {% endif %}
+
+          
+            {% include 'product-loop' with collection.handle %}
+            {% cycle 'clear-collection-list': '', '', '<div style="clear:both;"></div>' %}
+          
+
+          {% if currMonth != productMonth %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% assign currMonth = productMonth %}
+      {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+{% endif %}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var expirationMonthYear;
+    $('#archived-products .row.products').each(function(index, value) {
+      expirationMonthYear = $(value).data('expmonthyear');
+      console.log(expirationMonthYear, expirationMonthYear === '')
+      if(expirationMonthYear !== '' && moment(expirationMonthYear).format() > moment().format()) {
+        $(value).hide();
+      }
+    });
+
+    $('#archived-products .row.products .availability').hide();
+  });
+</script>
+>>>>>>> 167cead... ..

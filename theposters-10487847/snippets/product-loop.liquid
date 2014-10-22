@@ -9,7 +9,11 @@
   {% endif %}
 {% endcapture %}
 
+<<<<<<< HEAD
 <div class="product">  
+=======
+<div class="product" data-expdate="{{product.metafields.visibility.expirationdate}}">  
+>>>>>>> 167cead... ..
   <div class="image">
     <a href="{{ url }}">
       <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape  }}" />
@@ -17,5 +21,11 @@
   </div>
   <div class="details">
     <a href="{{ url }}">{{ product.title }}</a>
+<<<<<<< HEAD
+=======
+    {% if product.metafields.visibility.expirationdate %}
+      <div class="availability">Available for <span class="days-remaining">--</span> more days</div>
+    {% endif %}
+>>>>>>> 167cead... ..
   </div>
 </div>

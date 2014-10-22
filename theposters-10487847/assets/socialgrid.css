@@ -46,7 +46,11 @@ body {
   width: 37px;
 }
 /* line 45, ../sass/socialgrid.scss */
+<<<<<<< HEAD
 .socialGrid_container .grid_container .modal {
+=======
+.socialGrid_container .grid_container .blackscreen {
+>>>>>>> 167cead... ..
   background: #000;
   bottom: 0;
   left: 0;
@@ -75,7 +79,11 @@ body {
   top: 0;
 }
 /* line 75, ../sass/socialgrid.scss */
+<<<<<<< HEAD
 .socialGrid_container .grid_container:hover .modal {
+=======
+.socialGrid_container .grid_container:hover .blackscreen {
+>>>>>>> 167cead... ..
   opacity: 0.7;
 }
 /* line 79, ../sass/socialgrid.scss */

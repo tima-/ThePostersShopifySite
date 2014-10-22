@@ -17,7 +17,11 @@
   <meta name="description" content="{{ page_description | escape }}" />
   {% endif %}
 
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+=======
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+>>>>>>> 167cead... ..
   
   <link rel="canonical" href="{{ canonical_url }}" /> 
 
@@ -49,10 +53,18 @@
   {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
   {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
   {% endif %}
+<<<<<<< HEAD
   {{ 'scripts.js' | asset_url | script_tag }}
   
   <script src="{{ 'hogan-3.0.1.js' | asset_url }}"></script>
   <script src="{{ 'moment.min.js' | asset_url }}"></script>
+=======
+
+  <script src="{{ 'moment.min.js' | asset_url }}"></script>
+  {{ 'scripts.js' | asset_url | script_tag }}
+  
+  <script src="{{ 'hogan-3.0.1.js' | asset_url }}"></script>
+>>>>>>> 167cead... ..
   <script src="{{ 'socialgrid.js' | asset_url }}"></script>
 
 </head>
@@ -135,7 +147,7 @@
 
     </div>
     {% if cart.item_count == 0 %}
-      <h2>Your cart is empty.</h2>
+      <h2 class="empty-cart">Your cart is empty.</h2>
     {% else%}
       <div class="number-of-items">
         {{ cart.item_count }} {{ cart.item_count | pluralize: 'Item', 'Items' }}
