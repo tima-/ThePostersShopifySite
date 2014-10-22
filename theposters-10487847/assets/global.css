@@ -14,13 +14,13 @@ a {
 }
 /* line 15, ../sass/global.scss */
 a:hover {
-  color: #000;
+  color: black;
   text-decoration: none;
 }
 
 /* line 21, ../sass/global.scss */
 header#main-header {
-  background-color: #fff;
+  background-color: white;
   overflow: hidden;
 }
 /* line 26, ../sass/global.scss */
@@ -61,7 +61,7 @@ header#main-header #cart-info {
 /* line 64, ../sass/global.scss */
 footer#main-footer {
   padding-top: 40px;
-  background-color: #fff;
+  background-color: white;
   margin-top: -40px;
 }
 /* line 69, ../sass/global.scss */
