@@ -76,30 +76,6 @@
   margin: 50px 0;
   padding: 15px;
 }
-<<<<<<< HEAD:theposters-10487847/assets/artist.css
-/* line 83, ../sass/artist.scss */
-.artist-profile .artist-products {
-  margin-top: 25px;
-}
-/* line 86, ../sass/artist.scss */
-.artist-profile .artist-products:nth-child(4) {
-  clear: right;
-}
-/* line 91, ../sass/artist.scss */
-.artist-profile .artist-video {
-  clear: both;
-  background-color: #eeeeef;
-}
-/* line 95, ../sass/artist.scss */
-.artist-profile .artist-video .artist-video-description {
-  padding: 110px 0;
-  text-align: right;
-  width: 80%;
-  float: right;
-  font-size: 0.9em;
-}
-/* line 103, ../sass/artist.scss */
-=======
 /* line 81, ../sass/artist.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
@@ -122,17 +98,12 @@
   font-size: 0.9em;
 }
 /* line 101, ../sass/artist.scss */
->>>>>>> 167cead... ..:theposters-10487847/assets/artist.css
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-<<<<<<< HEAD:theposters-10487847/assets/artist.css
-/* line 108, ../sass/artist.scss */
-=======
 /* line 106, ../sass/artist.scss */
->>>>>>> 167cead... ..:theposters-10487847/assets/artist.css
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;

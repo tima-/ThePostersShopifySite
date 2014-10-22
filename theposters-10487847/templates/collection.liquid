@@ -2,43 +2,6 @@
   {% include 'artist-profile' %}
 {% else %}
 <div id="collection">
-<<<<<<< HEAD
-  <div class="container">
-    <div class="row products">
-      <div class="col-sm-6 col-sm-offset-3">
-        <h1 class="section-header">On Sale Now</h1>
-      </div>
-      <div class="col-sm-12">
-        {% for product in collection.products %}
-          {% include 'product-loop' with collection.handle %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-  <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
-  <section id="archived-products">
-    <div class="container">
-      <div class="row products">
-        <div class="col-sm-10 col-sm-offset-1">
-          <h1 class="section-header">The Archive<small>These postters is no longer for sale directly on our site,<br />but copies may be available in our vault or elsewhere around the globe.<br />Email us at anymore@theposters.co for help.</small></h1>
-        </div>
-        <div class="col-sm-3">
-          <div class="archive-section-header" style="background-image: url({{ 'archivesectionheader.png' | asset_url }})">
-            Jan<br />2014
-          </div>
-        </div>
-        <div class="col-sm-9">
-          {% for product in collection.products %}
-            {% include 'product-loop' with collection.handle %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-{% endif %}
-=======
   <div id="active-products">
     <div class="container">
       <div class="row products">
@@ -114,4 +77,3 @@
     $('#archived-products .row.products .availability').hide();
   });
 </script>
->>>>>>> 167cead... ..

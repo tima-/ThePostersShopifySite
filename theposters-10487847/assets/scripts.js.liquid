@@ -21,14 +21,6 @@ $(document).ready(function(){
      
    });
   
-<<<<<<< HEAD
-    Shopify.onSuccess = function() {
-     
-      var elem = $('.addtocart');
-      elem.removeAttr("disabled");
-
-      openCartFlyout();
-=======
     Shopify.onSuccess = function(addedProduct, response) {
 
       var elem = $('.addtocart');
@@ -48,7 +40,6 @@ $(document).ready(function(){
         },
         error: Shopify.onError
       });
->>>>>>> 167cead... ..
     };
   
     Shopify.onError = function(XMLHttpRequest, textStatus) {
@@ -110,23 +101,6 @@ $(document).ready(function(){
     e.stopPropagation();
     
     var cartSlide = $('#cart-flyout');
-<<<<<<< HEAD
-
-    if(cartSlide.hasClass('active')) {
-      closeCartFlyout();
-    } else {
-      openCartFlyout();
-    }
-
-  });
-
-  $('#slide-cart').on('click', function(e){
-    e.stopPropagation();
-  });
-
-  $('html').on('click', function(e) {
-    closeCartFlyout();
-=======
 
     if(cartSlide.hasClass('active')) {
       closeCartFlyout();
@@ -173,140 +147,8 @@ $(document).ready(function(){
         $(this).find('.days-remaining').html(days);
       }
     } 
->>>>>>> 167cead... ..
   });
-});
 
-<<<<<<< HEAD
-/**
- * Image Swapping on Products
- */
-$(document).ready(function(){
-  var $featuredImage = $('#featured-image');
-  var $thumbnails = $('#thumbs');
-  var $zoomModal = $('#zoom-image');
-
-  $thumbnails.find('a').on('click', switchImage);
-  $featuredImage.find('a').on('click', zoomImage);
-  $zoomModal.on('click', closeZoomImage);
-
-  function switchImage(e) {
-    e.preventDefault();
-    var url = $(e.target).closest('a').attr('href');
-    var featuredImage = $featuredImage.find('img');
-
-    $featuredImage.find('a').attr('href', url);
-    featuredImage.fadeOut(300, function() {
-      featuredImage.attr('src', url).fadeIn(300);
-    });
-  }
-
-  function zoomImage(e) {
-    e.preventDefault();
-    var featuredImage = $featuredImage.find('img');
-    $zoomModal.html(featuredImage.clone());
-    $zoomModal.fadeIn(300);
-  }
-
-  function closeZoomImage(e) {
-    $zoomModal.fadeOut(300);
-  }
-});
-
-
-// jQuery(window).load(function(){
-
-//   if ( $('.slides li').size() > 1 ) {
-
-//     $('.flexslider').flexslider({
-//       animation: "slide",
-//       slideshow: true,
-//       animationDuration: 700,
-//       slideshowSpeed: 6000,
-//       animation: "fade",
-//       controlsContainer: ".flex-controls",
-//       controlNav: false,
-//       keyboardNav: true
-//     }).hover(function(){ $('.flex-direction-nav').fadeIn();}, function(){$('.flex-direction-nav').fadeOut();});
-
-//   }
-
-//   $("select.loc_on_change").change(function(){
-//   	if($(this).attr("value") == "#") return false;
-//   	window.location = $(this).attr("value");
-//   });
-
-  
-// });
-
-// /*============================*/
-// /* Update main product image. */
-// /*============================*/
-// var switchImage = function(newImageSrc, newImage, mainImageDomEl) {
-//   // newImageSrc is the path of the new image in the same size as originalImage is sized.
-//   // newImage is Shopify's object representation of the new image, with various attributes, such as scr, id, position.
-//   // mainImageDomEl is the passed domElement, which has not yet been manipulated. Let's manipulate it now.
-//   jQuery(mainImageDomEl).attr('src', newImageSrc);
-//   {% if settings.enable_product_image_zoom %}
-//   if ($(window).width() > 782) {jQuery(mainImageDomEl).parent().trigger('zoom.destroy').zoom( { url: newImageSrc.replace('_master', '') } );}  
-//   {% else %}
-//   $(mainImageDomEl).parents('a').attr('href', newImageSrc);
-//   {% endif %}
-// };
-
-   
-// jQuery(document).ready(function($){
-    	
-//   $("a.zoom").fancybox({
-//     padding:0,
-//     'titleShow': false,
-//     overlayColor: '#000000',
-//     overlayOpacity: 0.2
-//   });
-  
-//   /* Update main product image when a thumbnail is clicked. */
-//   /*==========================*/
-//   $('#product .thumbs a').on('click', function(e) { 
-//     e.preventDefault();
-//     switchImage($(this).attr('href'), null, $('.featured img')[0]);
-//   } );
-  
-//   {% if settings.enable_product_image_zoom %}
-//   /* Initialize zoom on main product image */
-//   var mainProductImage = $('.featured img');
-//   if (mainProductImage.size()) {
-//     if ($(window).width() > 782) {
-//     var zoomedSrc = $('.featured img').attr('src').replace('_master', '');
-//     $('.featured img')
-//       .wrap('<span style="display:inline-block; max-width: 100%;"></span>')
-//       .css('display', 'block')
-//       .parent()
-//       .zoom( { url: zoomedSrc } );
-// 	}
-//   }
-//   {% endif %}
-//   $("nav.mobile select").change(function(){ window.location = jQuery(this).val(); });
-   
-//   $('input[type="submit"], input.btn, button').click(function(){ // remove ugly outline on input button click
-//     $(this).blur();
-//   })
-  
-//   $("li.dropdown").hover(function(){
-//     $(this).children('.dropdown').show();
-//     $(this).children('.dropdown').stop();
-//     $(this).children('.dropdown').animate({
-//       opacity: 1.0
-//     }, 200);
-//   }, function(){
-//     $(this).children('.dropdown').stop();
-//     $(this).children('.dropdown').animate({
-//       opacity: 0.0
-//     }, 400, function(){
-//       $(this).hide();
-//     });
-//   });
-  
-=======
   $('.artist-products .product').each(function(index, value) {
     if($(value).data('expdate') !== undefined) {
       days = daysRemaining($(value).data('expdate'));
@@ -463,7 +305,6 @@ $(document).ready(function(){
 //     });
 //   });
   
->>>>>>> 167cead... ..
 // }); // end document ready
 
 // /* jQuery css bezier animation support -- Jonah Fox */

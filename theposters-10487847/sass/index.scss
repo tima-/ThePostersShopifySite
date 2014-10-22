@@ -7,15 +7,10 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-<<<<<<< HEAD
-  border: 10px solid $white;
-  margin-bottom: $gap*2;
-=======
   max-width: 500px;
   margin: 0 auto $gap*2 auto;
   
   border: 10px solid $white;
->>>>>>> 167cead... ..
   
   -webkit-transform: translateZ(0);
   
@@ -57,11 +52,7 @@
       }
     }
     
-<<<<<<< HEAD
-    .modal {
-=======
     .blackscreen {
->>>>>>> 167cead... ..
       opacity: 1;
     }
   }
@@ -145,11 +136,7 @@
     -webkit-transition: all .5s;
   }
   
-<<<<<<< HEAD
-  .modal {
-=======
   .blackscreen {
->>>>>>> 167cead... ..
     background: rgba(0, 0, 0, 0.8);
     bottom: 0;
     opacity: 0;
@@ -224,10 +211,7 @@
 	overflow: hidden;
 	background-repeat: no-repeat;
 	background-position: center top;
-<<<<<<< HEAD
-=======
   margin-bottom: $gap;
->>>>>>> 167cead... ..
 
 	ul {
 		list-style: none;
@@ -238,19 +222,12 @@
 			float: left;
 			width: 200px;
 			min-height: 200px;
-<<<<<<< HEAD
-			margin-bottom: $gap;
-
-			&:nth-child(2) {
-				margin-left: 730px;
-=======
 			margin-bottom: $gap/2;
       margin-right: 28px;
 
 			&:nth-child(2) {
 				margin-left: 730px - 47px;
         margin-right: 0;
->>>>>>> 167cead... ..
 			}
 
 			p {

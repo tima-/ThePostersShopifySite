@@ -6,25 +6,6 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-<<<<<<< HEAD
-  border: 10px solid #fff;
-  margin-bottom: 80px;
-  -webkit-transform: translateZ(0);
-}
-/* line 15, ../sass/index.scss */
-.previewImage_container:hover {
-  cursor: pointer;
-}
-/* line 18, ../sass/index.scss */
-.previewImage_container:hover hr.bottom {
-  bottom: 35%;
-}
-/* line 22, ../sass/index.scss */
-.previewImage_container:hover hr.top {
-  top: 31%;
-}
-/* line 27, ../sass/index.scss */
-=======
   max-width: 500px;
   margin: 0 auto 80px auto;
   border: 10px solid #fff;
@@ -43,38 +24,10 @@
   top: 31%;
 }
 /* line 29, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container:hover .button.action {
   bottom: 40%;
   opacity: 1;
 }
-<<<<<<< HEAD
-/* line 31, ../sass/index.scss */
-.previewImage_container:hover .button.action:hover {
-  background: #d9000d;
-}
-/* line 37, ../sass/index.scss */
-.previewImage_container:hover .copy {
-  opacity: 1;
-}
-/* line 40, ../sass/index.scss */
-.previewImage_container:hover .copy.availability {
-  top: 45.5%;
-}
-/* line 44, ../sass/index.scss */
-.previewImage_container:hover .copy.date {
-  left: 10%;
-}
-/* line 48, ../sass/index.scss */
-.previewImage_container:hover .copy.title {
-  left: 10%;
-}
-/* line 53, ../sass/index.scss */
-.previewImage_container:hover .modal {
-  opacity: 1;
-}
-/* line 58, ../sass/index.scss */
-=======
 /* line 33, ../sass/index.scss */
 .previewImage_container:hover .button.action:hover {
   background: #d9000d;
@@ -100,7 +53,6 @@
   opacity: 1;
 }
 /* line 60, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container hr {
   background: white;
   border: 0;
@@ -113,17 +65,6 @@
   z-index: 1;
   -webkit-transition: all .5s;
 }
-<<<<<<< HEAD
-/* line 69, ../sass/index.scss */
-.previewImage_container hr.bottom {
-  bottom: -10%;
-}
-/* line 73, ../sass/index.scss */
-.previewImage_container hr.top {
-  top: -10%;
-}
-/* line 80, ../sass/index.scss */
-=======
 /* line 71, ../sass/index.scss */
 .previewImage_container hr.bottom {
   bottom: -10%;
@@ -133,18 +74,13 @@
   top: -10%;
 }
 /* line 82, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container img {
   display: inline-block;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-<<<<<<< HEAD
-/* line 87, ../sass/index.scss */
-=======
 /* line 89, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container .action.button {
   background: #fc0d1b;
   bottom: 30%;
@@ -163,11 +99,7 @@
   z-index: 2;
   -webkit-transition: all .2s;
 }
-<<<<<<< HEAD
-/* line 107, ../sass/index.scss */
-=======
 /* line 109, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container .copy {
   color: white;
   font-family: arial;
@@ -179,42 +111,25 @@
   z-index: 2;
   -webkit-transition: all .5s;
 }
-<<<<<<< HEAD
-/* line 117, ../sass/index.scss */
-=======
 /* line 119, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container .copy.availability {
   font-size: .7em;
   left: 10%;
   top: 50%;
 }
-<<<<<<< HEAD
-/* line 123, ../sass/index.scss */
-=======
 /* line 125, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container .copy.date {
   left: -100%;
   top: 37%;
 }
-<<<<<<< HEAD
-/* line 128, ../sass/index.scss */
-=======
 /* line 130, ../sass/index.scss */
->>>>>>> 167cead... ..
 .previewImage_container .copy.title {
   font-size: 2em;
   left: 100%;
   top: 40%;
 }
-<<<<<<< HEAD
-/* line 137, ../sass/index.scss */
-.previewImage_container .modal {
-=======
 /* line 139, ../sass/index.scss */
 .previewImage_container .blackscreen {
->>>>>>> 167cead... ..
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   opacity: 0;
@@ -230,30 +145,18 @@
 /**
  * We Are The Posters Section
  */
-<<<<<<< HEAD
-/* line 155, ../sass/index.scss */
-=======
 /* line 157, ../sass/index.scss */
->>>>>>> 167cead... ..
 #we-are-the-posters-video {
   background-position: center top;
   margin-bottom: 80px;
 }
-<<<<<<< HEAD
-/* line 159, ../sass/index.scss */
-=======
 /* line 161, ../sass/index.scss */
->>>>>>> 167cead... ..
 #we-are-the-posters-video .video-container {
   border: 10px solid #fff;
   margin: 0 auto;
   width: 580px;
 }
-<<<<<<< HEAD
-/* line 164, ../sass/index.scss */
-=======
 /* line 166, ../sass/index.scss */
->>>>>>> 167cead... ..
 #we-are-the-posters-video .video-container iframe {
   margin: 0;
   border: 0;
@@ -263,49 +166,29 @@
 /**
  * Mission Section with Countdown
  */
-<<<<<<< HEAD
-/* line 176, ../sass/index.scss */
-=======
 /* line 178, ../sass/index.scss */
->>>>>>> 167cead... ..
 #mission-section {
   text-align: center;
   padding: 75px 0;
   margin-bottom: 80px;
 }
-<<<<<<< HEAD
-/* line 181, ../sass/index.scss */
-=======
 /* line 183, ../sass/index.scss */
->>>>>>> 167cead... ..
 #mission-section h2 {
   color: #999999;
   text-transform: uppercase;
   margin: 0 0 20px;
 }
-<<<<<<< HEAD
-/* line 187, ../sass/index.scss */
-=======
 /* line 189, ../sass/index.scss */
->>>>>>> 167cead... ..
 #mission-section h3 {
   color: #fff;
   text-transform: uppercase;
   margin: 0 0 20px;
 }
-<<<<<<< HEAD
-/* line 193, ../sass/index.scss */
-#mission-section hr {
-  width: 50%;
-}
-/* line 197, ../sass/index.scss */
-=======
 /* line 195, ../sass/index.scss */
 #mission-section hr {
   width: 50%;
 }
 /* line 199, ../sass/index.scss */
->>>>>>> 167cead... ..
 #mission-section .btn-default {
   background-color: #535353;
   color: #fff;
@@ -315,46 +198,24 @@
 /**
  * Press Section
  */
-<<<<<<< HEAD
-/* line 208, ../sass/index.scss */
-=======
 /* line 210, ../sass/index.scss */
->>>>>>> 167cead... ..
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
-<<<<<<< HEAD
-}
-/* line 213, ../sass/index.scss */
-=======
   margin-bottom: 40px;
 }
 /* line 216, ../sass/index.scss */
->>>>>>> 167cead... ..
 #press-section ul {
   list-style: none;
   margin: 115px 0 0 0;
   padding: 0;
 }
-<<<<<<< HEAD
-/* line 218, ../sass/index.scss */
-=======
 /* line 221, ../sass/index.scss */
->>>>>>> 167cead... ..
 #press-section ul li {
   float: left;
   width: 200px;
   min-height: 200px;
-<<<<<<< HEAD
-  margin-bottom: 40px;
-}
-/* line 224, ../sass/index.scss */
-#press-section ul li:nth-child(2) {
-  margin-left: 730px;
-}
-/* line 228, ../sass/index.scss */
-=======
   margin-bottom: 20px;
   margin-right: 28px;
 }
@@ -364,7 +225,6 @@
   margin-right: 0;
 }
 /* line 233, ../sass/index.scss */
->>>>>>> 167cead... ..
 #press-section ul li p {
   display: block;
   margin: 0;
@@ -373,11 +233,7 @@
   font-size: 0.85em;
   color: #666666;
 }
-<<<<<<< HEAD
-/* line 237, ../sass/index.scss */
-=======
 /* line 242, ../sass/index.scss */
->>>>>>> 167cead... ..
 #press-section ul li img {
   width: 100%;
   border: 10px solid #fff;

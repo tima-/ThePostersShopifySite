@@ -36,11 +36,7 @@
           <hr />
           <h1 class="title" itemprop="name">{{ product.title }}</h1>
           <div id="artist">{{ product.vendor }}</div>
-<<<<<<< HEAD
-          <div id="availability">Available for 10 More Days</div>
-=======
           <div id="availability" data-expdate="{{product.metafields.visibility.expirationdate}}">Available for <span class="days-remaining">--</span> More Days</div>
->>>>>>> 167cead... ..
           <hr />
 
           <div class="description" itemprop="description">
@@ -101,11 +97,7 @@
           <span class="name">{{name}}</span><br />
           <span class="created_at">{{#parseDate}}{{created_at}}{{/parseDate}}</span>
         </p>
-<<<<<<< HEAD
-        <div class="modal"></div>
-=======
         <div class="blackscreen"></div>
->>>>>>> 167cead... ..
       </section>
     </script>
   {% endraw %}
