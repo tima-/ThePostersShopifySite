@@ -39,6 +39,10 @@
   background-color: #fff;
   height: inherit;
 }
+/* line 38, ../sass/mission.scss */
+.mission-page-section .image img {
+  max-height: 330px;
+}
 @media screen and (max-width: 768px) {
   /* line 31, ../sass/mission.scss */
   .mission-page-section .image {
@@ -46,14 +50,11 @@
     text-align: center;
     float: none;
   }
-  /* line 43, ../sass/mission.scss */
+  /* line 47, ../sass/mission.scss */
   .mission-page-section .image img {
+    max-height: none;
     width: 100%;
   }
-}
-/* line 48, ../sass/mission.scss */
-.mission-page-section .image img {
-  max-height: 330px;
 }
 /* line 54, ../sass/mission.scss */
 .mission-page-section .info {
@@ -80,9 +81,10 @@
   .mission-page-section .info .info-content {
     padding: 35px;
     margin: 0;
+    max-width: 100%;
   }
 }
-/* line 75, ../sass/mission.scss */
+/* line 76, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 {
   margin: 0 0 15px;
   padding: 15px 0;
@@ -92,7 +94,7 @@
   text-transform: uppercase;
   font-size: 1em;
 }
-/* line 84, ../sass/mission.scss */
+/* line 85, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 span {
   width: 45px;
   height: 45px;
@@ -105,21 +107,21 @@
   margin-bottom: 15px;
   line-height: 45px;
 }
-/* line 98, ../sass/mission.scss */
+/* line 99, ../sass/mission.scss */
 .mission-page-section .info .info-content p {
   margin: 0;
   line-height: 30px;
 }
-/* line 106, ../sass/mission.scss */
+/* line 107, ../sass/mission.scss */
 .mission-page-section.section-right .image {
   float: right;
   text-align: left;
 }
-/* line 111, ../sass/mission.scss */
+/* line 112, ../sass/mission.scss */
 .mission-page-section.section-right .info {
   float: right;
 }
-/* line 114, ../sass/mission.scss */
+/* line 115, ../sass/mission.scss */
 .mission-page-section.section-right .info .info-content {
   float: right;
 }

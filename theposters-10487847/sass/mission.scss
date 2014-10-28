@@ -35,20 +35,20 @@
 		background-color: #fff;
 		height: inherit;
 
+		img {
+			max-height: 330px;
+		}
+		
 		@media screen and (max-width: 768px) {
 			width: 100%;
 			text-align: center;
 			float: none;
 
 			img {
+				max-height: none;
 				width: 100%;
 			}
 		}
-
-		img {
-			max-height: 330px;
-		}
-
 	}
 
 	.info {
@@ -70,6 +70,7 @@
 			@media screen and (max-width: 768px) {
 				padding: 35px;
 				margin: 0;
+				max-width: 100%;
 			}
 
 			h2 {

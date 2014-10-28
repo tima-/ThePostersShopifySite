@@ -121,6 +121,7 @@ header#main-header nav ul li a:hover {
 }
 /* line 59, ../sass/global.scss */
 header#main-header nav ul li#logo a {
+  border: 0;
   bottom: initial;
   height: 105px;
   margin: 10px 0;
@@ -128,59 +129,64 @@ header#main-header nav ul li#logo a {
   text-indent: -9999px;
   width: 81px;
 }
-/* line 72, ../sass/global.scss */
+/* line 73, ../sass/global.scss */
 header#main-header #cart-info {
   padding-top: 85px;
   text-align: right;
 }
-/* line 76, ../sass/global.scss */
+/* line 77, ../sass/global.scss */
 header#main-header #cart-info .login {
-  font-size: 0.85em;
-  margin-right: 10px;
-  font-style: italic;
   color: #6c6b6c;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-right: 10px;
+  position: relative;
+  top: -6px;
 }
-/* line 83, ../sass/global.scss */
+/* line 87, ../sass/global.scss */
 header#main-header #cart-info .toggle-cart {
-  width: 29px;
-  height: 35px;
   display: inline-block;
-  text-align: center;
+  height: 35px;
   line-height: 45px;
+  position: relative;
+  text-align: center;
+  top: -3px;
+  width: 29px;
 }
 
-/* line 93, ../sass/global.scss */
+/* line 99, ../sass/global.scss */
 .shadow-header {
   text-shadow: 2px 2px 0px #fff, 3px 3px 0px #777, 1px 3px 0px #777,3px 1px 0px #777;
 }
-/* line 96, ../sass/global.scss */
+/* line 102, ../sass/global.scss */
 .shadow-header small {
   text-shadow: none;
 }
 
-/* line 101, ../sass/global.scss */
+/* line 107, ../sass/global.scss */
 .shadow-header-inverted {
   text-shadow: 2px 2px 0px #777, 3px 3px 0px #fff, 1px 3px 0px #fff,3px 1px 0px #fff;
 }
 
-/* line 105, ../sass/global.scss */
+/* line 111, ../sass/global.scss */
 #main-content {
   padding: 20px 0;
 }
 
-/* line 109, ../sass/global.scss */
+/* line 115, ../sass/global.scss */
 footer#main-footer {
   padding-top: 40px;
   background-color: white;
   margin-top: -40px;
 }
-/* line 114, ../sass/global.scss */
+/* line 120, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe {
   background-color: #e5e2e4;
   height: 50px;
   position: relative;
 }
-/* line 119, ../sass/global.scss */
+/* line 125, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input {
   height: 50px;
   width: 100%;
@@ -191,7 +197,7 @@ footer#main-footer .mailchimp-subscribe input {
   padding: 10px;
   font-size: 0.9em;
 }
-/* line 130, ../sass/global.scss */
+/* line 136, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe button {
   width: 50px;
   height: 50px;
@@ -200,11 +206,11 @@ footer#main-footer .mailchimp-subscribe button {
   position: relative;
   z-index: 1;
 }
-/* line 140, ../sass/global.scss */
+/* line 146, ../sass/global.scss */
 footer#main-footer .social-follow-us {
   text-align: right;
 }
-/* line 143, ../sass/global.scss */
+/* line 149, ../sass/global.scss */
 footer#main-footer .social-follow-us h2 {
   display: inline-block;
   font-size: 1em;
@@ -212,7 +218,7 @@ footer#main-footer .social-follow-us h2 {
   height: 50px;
   margin: 0;
 }
-/* line 151, ../sass/global.scss */
+/* line 157, ../sass/global.scss */
 footer#main-footer .social-follow-us a.social-icon {
   margin: 0 5px;
   width: 50px;
@@ -222,21 +228,21 @@ footer#main-footer .social-follow-us a.social-icon {
   text-align: center;
   line-height: 50px;
 }
-/* line 166, ../sass/global.scss */
+/* line 172, ../sass/global.scss */
 footer#main-footer nav {
   margin-top: 40px;
 }
-/* line 169, ../sass/global.scss */
+/* line 175, ../sass/global.scss */
 footer#main-footer nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 174, ../sass/global.scss */
+/* line 180, ../sass/global.scss */
 footer#main-footer nav ul li {
   float: left;
 }
-/* line 177, ../sass/global.scss */
+/* line 183, ../sass/global.scss */
 footer#main-footer nav ul li a {
   display: block;
   text-transform: uppercase;
@@ -244,126 +250,130 @@ footer#main-footer nav ul li a {
   color: #666666;
   font-size: 0.8em;
 }
-/* line 186, ../sass/global.scss */
+/* line 192, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) a {
   padding-left: 0;
 }
-/* line 192, ../sass/global.scss */
+/* line 198, ../sass/global.scss */
 footer#main-footer nav ul li:last-child a {
   padding-right: 0;
 }
 
-/* line 201, ../sass/global.scss */
+/* line 207, ../sass/global.scss */
 #main-wrapper {
-  width: 100%;
   left: 0;
   position: relative;
+  width: 100%;
 }
 
-/* line 207, ../sass/global.scss */
+/* line 213, ../sass/global.scss */
 #cart-flyout {
+  background-color: #eaeaeb;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   position: fixed;
   right: -20%;
   top: 0;
   width: 20%;
-  height: 100%;
-  background-color: #eaeaeb;
-  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
 }
-/* line 218, ../sass/global.scss */
+/* line 224, ../sass/global.scss */
 #cart-flyout .cart-top-btn {
-  width: 50%;
+  background-color: #505050;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: block;
   float: left;
   height: 100px;
-  text-align: center;
-  display: block;
-  background-color: #505050;
-  color: #fff;
   line-height: 100px;
+  text-align: center;
+  width: 50%;
 }
-/* line 228, ../sass/global.scss */
+/* line 235, ../sass/global.scss */
 #cart-flyout .cart-top-btn#checkout {
   background-color: #fb0005;
 }
-/* line 233, ../sass/global.scss */
+/* line 240, ../sass/global.scss */
 #cart-flyout .empty-cart {
   text-align: center;
 }
-/* line 237, ../sass/global.scss */
+/* line 244, ../sass/global.scss */
 #cart-flyout .subtotal {
-  width: 100%;
+  background-color: #eaeaeb;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
   clear: both;
   padding: 20px;
-  background-color: #eaeaeb;
+  width: 100%;
 }
-/* line 243, ../sass/global.scss */
+/* line 251, ../sass/global.scss */
 #cart-flyout .subtotal h2 {
   font-size: 1.2em;
 }
-/* line 246, ../sass/global.scss */
+/* line 254, ../sass/global.scss */
 #cart-flyout .subtotal h2 .subtotal-price {
   float: right;
 }
-/* line 250, ../sass/global.scss */
+/* line 258, ../sass/global.scss */
 #cart-flyout .subtotal h2 small {
-  display: block;
   clear: both;
+  display: block;
   font-size: 0.6em;
 }
-/* line 258, ../sass/global.scss */
+/* line 266, ../sass/global.scss */
 #cart-flyout .number-of-items {
   clear: both;
   background-color: #d6d6d6;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
   padding: 3px 0;
   text-align: center;
 }
-/* line 266, ../sass/global.scss */
+/* line 275, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item {
   background-color: #fff;
   border-bottom: 1px solid #eaeaeb;
+  box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   font-size: 0.9em;
   color: #6c6c6c;
 }
-/* line 273, ../sass/global.scss */
+/* line 283, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image {
   width: 30%;
   float: left;
   padding: 20px 10px 20px 20px;
 }
-/* line 278, ../sass/global.scss */
+/* line 288, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image img {
   width: 100%;
 }
-/* line 283, ../sass/global.scss */
+/* line 293, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info {
   float: right;
   width: 70%;
   padding: 20px 20px 20px 10px;
 }
-/* line 288, ../sass/global.scss */
+/* line 298, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .remove-item {
   float: right;
   width: 16px;
   height: 16px;
 }
-/* line 294, ../sass/global.scss */
+/* line 304, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info h3 {
   font-size: 1em;
   margin: 0 0 5px;
 }
-/* line 299, ../sass/global.scss */
+/* line 309, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty {
   margin: 0 0 5px;
 }
-/* line 302, ../sass/global.scss */
+/* line 312, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty input {
   width: 30px;
   text-align: center;
 }
-/* line 307, ../sass/global.scss */
+/* line 317, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty .update-cart {
   font-size: 0.75em;
 }
@@ -1001,6 +1011,10 @@ footer#main-footer nav ul li:last-child a {
   background-color: #fff;
   height: inherit;
 }
+/* line 38, ../sass/mission.scss */
+.mission-page-section .image img {
+  max-height: 330px;
+}
 @media screen and (max-width: 768px) {
   /* line 31, ../sass/mission.scss */
   .mission-page-section .image {
@@ -1008,14 +1022,11 @@ footer#main-footer nav ul li:last-child a {
     text-align: center;
     float: none;
   }
-  /* line 43, ../sass/mission.scss */
+  /* line 47, ../sass/mission.scss */
   .mission-page-section .image img {
+    max-height: none;
     width: 100%;
   }
-}
-/* line 48, ../sass/mission.scss */
-.mission-page-section .image img {
-  max-height: 330px;
 }
 /* line 54, ../sass/mission.scss */
 .mission-page-section .info {
@@ -1042,9 +1053,10 @@ footer#main-footer nav ul li:last-child a {
   .mission-page-section .info .info-content {
     padding: 35px;
     margin: 0;
+    max-width: 100%;
   }
 }
-/* line 75, ../sass/mission.scss */
+/* line 76, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 {
   margin: 0 0 15px;
   padding: 15px 0;
@@ -1054,7 +1066,7 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   font-size: 1em;
 }
-/* line 84, ../sass/mission.scss */
+/* line 85, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 span {
   width: 45px;
   height: 45px;
@@ -1067,21 +1079,21 @@ footer#main-footer nav ul li:last-child a {
   margin-bottom: 15px;
   line-height: 45px;
 }
-/* line 98, ../sass/mission.scss */
+/* line 99, ../sass/mission.scss */
 .mission-page-section .info .info-content p {
   margin: 0;
   line-height: 30px;
 }
-/* line 106, ../sass/mission.scss */
+/* line 107, ../sass/mission.scss */
 .mission-page-section.section-right .image {
   float: right;
   text-align: left;
 }
-/* line 111, ../sass/mission.scss */
+/* line 112, ../sass/mission.scss */
 .mission-page-section.section-right .info {
   float: right;
 }
-/* line 114, ../sass/mission.scss */
+/* line 115, ../sass/mission.scss */
 .mission-page-section.section-right .info .info-content {
   float: right;
 }

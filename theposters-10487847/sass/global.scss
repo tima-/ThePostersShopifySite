@@ -57,6 +57,7 @@ header#main-header {
 
 				&#logo {
 					a {
+						border: 0;
 						bottom: initial;
 						height: 105px;
 						margin: 10px 0;
@@ -74,18 +75,23 @@ header#main-header {
 		text-align: right;
 
 		.login {
-			font-size: 0.85em;
-			margin-right: 10px;
-			font-style: italic;
 			color: #6c6b6c;
+			font-size: 14px;
+			font-style: italic;
+			letter-spacing: 0.05em;
+			margin-right: 10px;
+			position: relative;
+			top: -6px;
 		}
 
 		.toggle-cart {
-			width: 29px;
-			height: 35px;
 			display: inline-block;
-			text-align: center;
+			height: 35px;
 			line-height: 45px;
+			position: relative;
+			text-align: center;
+			top: -3px;
+			width: 29px;
 		}
 	}
 }
@@ -199,31 +205,32 @@ footer#main-footer {
 }
 
 #main-wrapper {
-	width: 100%;
 	left: 0;
 	position: relative;
+	width: 100%;
 }
 
 #cart-flyout {
+	background-color: #eaeaeb;
+	box-shadow: 5px 0 10px rgba(#000, 0.1) inset;
+	height: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	position: fixed;
 	right: -20%;
 	top: 0;
 	width: 20%;
-	height: 100%;
-	background-color: #eaeaeb;
-	box-shadow: 5px 0 10px rgba(#000, 0.1) inset;
 
 	.cart-top-btn {
-		width: 50%;
+		background-color: #505050;
+		box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
+		color: #fff;
+		display: block;
 		float: left;
 		height: 100px;
-		text-align: center;
-		display: block;
-		background-color: #505050;
-		color: #fff;
 		line-height: 100px;
+		text-align: center;
+		width: 50%;
 
 		&#checkout {
 			background-color: #fb0005;
@@ -235,10 +242,11 @@ footer#main-footer {
 	}
 
 	.subtotal {
-		width: 100%;
+		background-color: #eaeaeb;
+		box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
 		clear: both;
 		padding: 20px;
-		background-color: #eaeaeb;
+		width: 100%;
 
 		h2 {
 			font-size: 1.2em;
@@ -248,8 +256,8 @@ footer#main-footer {
 			}
 
 			small {
-				display: block;
 				clear: both;
+				display: block;
 				font-size: 0.6em;
 			}
 		}
@@ -258,6 +266,7 @@ footer#main-footer {
 	.number-of-items {
 		clear: both;
 		background-color: #d6d6d6;
+		box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
 		padding: 3px 0;
 		text-align: center;
 	}
@@ -266,6 +275,7 @@ footer#main-footer {
 		.cart-item {
 			background-color: #fff;
 			border-bottom: 1px solid #eaeaeb;
+			box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
 			overflow: hidden;
 			font-size: 0.9em;
 			color: #6c6c6c;
