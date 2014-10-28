@@ -24,81 +24,101 @@ a:hover {
 /* line 24, ../sass/global.scss */
 header#main-header {
   background-color: white;
+  border-bottom: 3px solid #c6c5c3;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
-/* line 29, ../sass/global.scss */
+/* line 31, ../sass/global.scss */
 header#main-header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 34, ../sass/global.scss */
+/* line 36, ../sass/global.scss */
 header#main-header nav ul li {
   float: left;
 }
-/* line 37, ../sass/global.scss */
+/* line 39, ../sass/global.scss */
 header#main-header nav ul li a {
+  bottom: -10px;
   display: block;
-  letter-spacing: 0;
-  margin: 0 15px 15px 15px;
-  padding: 85px 5px 0 5px;
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 0.8em;
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  line-height: 1.3em;
+  margin: 0 15px 15px 15px;
+  padding: 85px 0 0 0;
+  position: relative;
+  text-transform: uppercase;
 }
-/* line 47, ../sass/global.scss */
+/* line 52, ../sass/global.scss */
 header#main-header nav ul li a:hover {
-  border-bottom: 5px solid #000;
+  border-bottom: 4px solid #000;
   margin: 0 15px 10px 15px;
 }
-/* line 54, ../sass/global.scss */
+/* line 59, ../sass/global.scss */
 header#main-header nav ul li#logo a {
-  width: 81px;
+  bottom: initial;
   height: 105px;
-  text-indent: -9999px;
-  padding: 0;
   margin: 10px 0;
+  padding: 0;
+  text-indent: -9999px;
+  width: 81px;
 }
-/* line 66, ../sass/global.scss */
+/* line 72, ../sass/global.scss */
 header#main-header #cart-info {
   padding-top: 85px;
   text-align: right;
 }
-/* line 70, ../sass/global.scss */
+/* line 76, ../sass/global.scss */
 header#main-header #cart-info .login {
   font-size: 0.85em;
   margin-right: 10px;
   font-style: italic;
   color: #6c6b6c;
 }
-/* line 77, ../sass/global.scss */
+/* line 83, ../sass/global.scss */
 header#main-header #cart-info .toggle-cart {
   width: 29px;
   height: 35px;
   display: inline-block;
   text-align: center;
-  line-height: 40px;
+  line-height: 45px;
 }
 
-/* line 87, ../sass/global.scss */
+/* line 93, ../sass/global.scss */
+.shadow-header {
+  text-shadow: 2px 2px 0px #fff, 3px 3px 0px #777, 1px 3px 0px #777,3px 1px 0px #777;
+}
+/* line 96, ../sass/global.scss */
+.shadow-header small {
+  text-shadow: none;
+}
+
+/* line 101, ../sass/global.scss */
+.shadow-header-inverted {
+  text-shadow: 2px 2px 0px #777, 3px 3px 0px #fff, 1px 3px 0px #fff,3px 1px 0px #fff;
+}
+
+/* line 105, ../sass/global.scss */
 #main-content {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
-/* line 91, ../sass/global.scss */
+/* line 109, ../sass/global.scss */
 footer#main-footer {
   padding-top: 40px;
   background-color: white;
   margin-top: -40px;
 }
-/* line 96, ../sass/global.scss */
+/* line 114, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe {
   background-color: #e5e2e4;
   height: 50px;
   position: relative;
 }
-/* line 101, ../sass/global.scss */
+/* line 119, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input {
   height: 50px;
   width: 100%;
@@ -109,7 +129,7 @@ footer#main-footer .mailchimp-subscribe input {
   padding: 10px;
   font-size: 0.9em;
 }
-/* line 112, ../sass/global.scss */
+/* line 130, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe button {
   width: 50px;
   height: 50px;
@@ -118,11 +138,11 @@ footer#main-footer .mailchimp-subscribe button {
   position: relative;
   z-index: 1;
 }
-/* line 122, ../sass/global.scss */
+/* line 140, ../sass/global.scss */
 footer#main-footer .social-follow-us {
   text-align: right;
 }
-/* line 125, ../sass/global.scss */
+/* line 143, ../sass/global.scss */
 footer#main-footer .social-follow-us h2 {
   display: inline-block;
   font-size: 1em;
@@ -130,7 +150,7 @@ footer#main-footer .social-follow-us h2 {
   height: 50px;
   margin: 0;
 }
-/* line 133, ../sass/global.scss */
+/* line 151, ../sass/global.scss */
 footer#main-footer .social-follow-us a.social-icon {
   margin: 0 5px;
   width: 50px;
@@ -140,21 +160,21 @@ footer#main-footer .social-follow-us a.social-icon {
   text-align: center;
   line-height: 50px;
 }
-/* line 148, ../sass/global.scss */
+/* line 166, ../sass/global.scss */
 footer#main-footer nav {
   margin-top: 40px;
 }
-/* line 151, ../sass/global.scss */
+/* line 169, ../sass/global.scss */
 footer#main-footer nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 156, ../sass/global.scss */
+/* line 174, ../sass/global.scss */
 footer#main-footer nav ul li {
   float: left;
 }
-/* line 159, ../sass/global.scss */
+/* line 177, ../sass/global.scss */
 footer#main-footer nav ul li a {
   display: block;
   text-transform: uppercase;
@@ -162,15 +182,23 @@ footer#main-footer nav ul li a {
   color: #666666;
   font-size: 0.8em;
 }
+/* line 186, ../sass/global.scss */
+footer#main-footer nav ul li:nth-child(1) a {
+  padding-left: 0;
+}
+/* line 192, ../sass/global.scss */
+footer#main-footer nav ul li:last-child a {
+  padding-right: 0;
+}
 
-/* line 171, ../sass/global.scss */
+/* line 201, ../sass/global.scss */
 #main-wrapper {
   width: 100%;
   left: 0;
   position: relative;
 }
 
-/* line 177, ../sass/global.scss */
+/* line 207, ../sass/global.scss */
 #cart-flyout {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -182,7 +210,7 @@ footer#main-footer nav ul li a {
   background-color: #eaeaeb;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
 }
-/* line 188, ../sass/global.scss */
+/* line 218, ../sass/global.scss */
 #cart-flyout .cart-top-btn {
   width: 50%;
   float: left;
@@ -193,43 +221,43 @@ footer#main-footer nav ul li a {
   color: #fff;
   line-height: 100px;
 }
-/* line 198, ../sass/global.scss */
+/* line 228, ../sass/global.scss */
 #cart-flyout .cart-top-btn#checkout {
   background-color: #fb0005;
 }
-/* line 203, ../sass/global.scss */
+/* line 233, ../sass/global.scss */
 #cart-flyout .empty-cart {
   text-align: center;
 }
-/* line 207, ../sass/global.scss */
+/* line 237, ../sass/global.scss */
 #cart-flyout .subtotal {
   width: 100%;
   clear: both;
   padding: 20px;
   background-color: #eaeaeb;
 }
-/* line 213, ../sass/global.scss */
+/* line 243, ../sass/global.scss */
 #cart-flyout .subtotal h2 {
   font-size: 1.2em;
 }
-/* line 216, ../sass/global.scss */
+/* line 246, ../sass/global.scss */
 #cart-flyout .subtotal h2 .subtotal-price {
   float: right;
 }
-/* line 220, ../sass/global.scss */
+/* line 250, ../sass/global.scss */
 #cart-flyout .subtotal h2 small {
   display: block;
   clear: both;
   font-size: 0.6em;
 }
-/* line 228, ../sass/global.scss */
+/* line 258, ../sass/global.scss */
 #cart-flyout .number-of-items {
   clear: both;
   background-color: #d6d6d6;
   padding: 3px 0;
   text-align: center;
 }
-/* line 236, ../sass/global.scss */
+/* line 266, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item {
   background-color: #fff;
   border-bottom: 1px solid #eaeaeb;
@@ -237,43 +265,43 @@ footer#main-footer nav ul li a {
   font-size: 0.9em;
   color: #6c6c6c;
 }
-/* line 243, ../sass/global.scss */
+/* line 273, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image {
   width: 30%;
   float: left;
   padding: 20px 10px 20px 20px;
 }
-/* line 248, ../sass/global.scss */
+/* line 278, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image img {
   width: 100%;
 }
-/* line 253, ../sass/global.scss */
+/* line 283, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info {
   float: right;
   width: 70%;
   padding: 20px 20px 20px 10px;
 }
-/* line 258, ../sass/global.scss */
+/* line 288, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .remove-item {
   float: right;
   width: 16px;
   height: 16px;
 }
-/* line 264, ../sass/global.scss */
+/* line 294, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info h3 {
   font-size: 1em;
   margin: 0 0 5px;
 }
-/* line 269, ../sass/global.scss */
+/* line 299, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty {
   margin: 0 0 5px;
 }
-/* line 272, ../sass/global.scss */
+/* line 302, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty input {
   width: 30px;
   text-align: center;
 }
-/* line 277, ../sass/global.scss */
+/* line 307, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty .update-cart {
   font-size: 0.75em;
 }

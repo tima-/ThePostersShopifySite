@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div id="login" class="col-sm-6">
-        <h2 class="section-header">Sign In</h2>
+        <h2 class="shadow-header section-header">Sign In</h2>
         {% form 'customer_login' %}
               {{ form.errors | default_errors }}
 
@@ -29,7 +29,7 @@
 
           {% if shop.checkout.guest_login %}
           <div id="guest">
-            <h2 class="section-header">Guest Login</h2>
+            <h2 class="shadow-header section-header">Guest Login</h2>
             {% form 'guest_login' %}
               <input class="btn" type="submit" value="Continue as Guest" />
             {% endform %}
@@ -37,7 +37,7 @@
           {% endif %}
       </div>
       <div id="recover-password" style="display:none;" class="col-sm-6">
-          <h2 class="section-header">Reset Password</h2>
+          <h2 class="shadow-header section-header">Reset Password</h2>
           <p class="note">We will send you an email to reset your password.</p>
 
           {% form 'recover_customer_password' %}
@@ -51,7 +51,7 @@
           {% endform %}
       </div>
       <div class="col-sm-6">
-        <h2 class="section-header">Create Account</h2>
+        <h2 class="shadow-header section-header">Create Account</h2>
         {% form 'create_customer' %}
               {{ form.errors | default_errors }}
 

@@ -33,6 +33,13 @@
   float: right;
 }
 /* line 35, ../sass/help.scss */
+.help-section p {
+  color: #666;
+  font-size: 0.8em;
+  letter-spacing: 0.03em;
+  line-height: 1.4em;
+}
+/* line 42, ../sass/help.scss */
 .help-section .section-header {
   margin: 40px 0;
 }
