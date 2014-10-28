@@ -36,11 +36,12 @@ header#main-header {
 
 				a {
 					display: block;
-					padding: 85px 5px 0 5px;
+					letter-spacing: 0;
 					margin: 0 15px 15px 15px;
+					padding: 85px 5px 0 5px;
 					text-transform: uppercase;
 					font-weight: 700;
-					font-size: 0.95em;
+					font-size: 0.8em;
 					font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 					&:hover {

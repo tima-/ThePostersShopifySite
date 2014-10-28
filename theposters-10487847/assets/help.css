@@ -8,16 +8,18 @@
 /* line 8, ../sass/help.scss */
 .help-tabs ul li {
   float: left;
-  width: 16.6%;
 }
-/* line 12, ../sass/help.scss */
+/* line 11, ../sass/help.scss */
 .help-tabs ul li a {
-  display: block;
+  font-size: .8em;
   text-align: center;
-  padding: 5px 0;
+  margin: 0 8px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
-/* line 17, ../sass/help.scss */
-.help-tabs ul li a.current {
+/* line 19, ../sass/help.scss */
+.help-tabs ul li a.current, .help-tabs ul li a:hover {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -29,4 +31,8 @@
 .help-section img {
   margin: 25px;
   float: right;
+}
+/* line 35, ../sass/help.scss */
+.help-section .section-header {
+  margin: 40px 0;
 }

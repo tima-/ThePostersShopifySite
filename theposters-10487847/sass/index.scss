@@ -182,21 +182,35 @@
 
 	h2 {
 		color: $lightGray;
-		text-transform: uppercase;
-		margin: 0 0 $gap/4;
-    font-size: 2em;
+        font-size: 1.8em;
+        margin: 0;
+        text-transform: uppercase;
+        
+        &.mission-footer {
+            font-size: 1.47em;
+        }
 	}
 
 	h3 {
 		color: $white;
-		text-transform: uppercase;
-		margin: 0 0 $gap/2;
-    font-size: 2.75em;
+        font-size: 2.75em;
+        margin: 0 0 -2px;
+        text-transform: uppercase;
 	}
 
 	hr {
-		width: 50%;
+        border-color: #888;
+        min-width: 440px;
+		width: 33%;
+        
+        &.bottom {
+            margin-top: 30px;
+        }
 	}
+    
+    p {
+        margin-top: 38px;
+    }
 
 	.btn-default {
 		background-color: #535353;
