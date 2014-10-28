@@ -1,3 +1,18 @@
+{% if blog.handle == 'press' %}
+<div class="container">
+<div class="row">
+<div id="press-blog" class="col-sm-12">
+<h1 class="section-header">Press for the Posters</h1>
+<ul>
+  <li class="satimage"><img src="{{ 'presssat.png' | asset_url }}" /></li>
+  {% for article in blog.articles %}
+    <li><a href="{{ article.title }}">{{ article.content }}</a></li>
+  {% endfor %}
+</ul>
+</div>
+</div>
+</div>
+{% else %}
 <div id="blog">
   
   <div class="row title">
@@ -34,3 +49,4 @@
   <!-- End content -->
   
 </div>
+{% endif %}

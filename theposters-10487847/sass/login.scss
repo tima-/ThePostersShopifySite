@@ -1,0 +1,28 @@
+@import "vars";
+
+#login-signup {
+	.label {
+		display: block;
+		color: #888;
+		text-align: left;
+		padding: 5px 0;
+		font-size: 1em;
+	}
+
+	input {
+		border: 1px solid #888;
+		width: 100%;
+		margin-bottom: 15px;
+
+		&[type="submit"] {
+			width: 150px;
+		}
+	}
+
+	.btn-primary {
+		background-color: #000;
+		text-transform: uppercase;
+		float: right;
+	}
+
+}

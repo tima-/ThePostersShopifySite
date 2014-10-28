@@ -8,7 +8,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto 80px auto;
-  border: 10px solid white;
+  border: 10px solid #fff;
   -webkit-transform: translateZ(0);
 }
 /* line 17, ../sass/index.scss */
@@ -91,11 +91,11 @@
   text-align: center;
   text-transform: uppercase;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -100px;
   opacity: 0;
   padding: 10px 10px;
   position: absolute;
-  width: 150px;
+  width: 200px;
   z-index: 2;
   -webkit-transition: all .2s;
 }
@@ -120,7 +120,7 @@
 /* line 125, ../sass/index.scss */
 .previewImage_container .copy.date {
   left: -100%;
-  top: 37%;
+  top: 35%;
 }
 /* line 130, ../sass/index.scss */
 .previewImage_container .copy.title {
@@ -152,7 +152,7 @@
 }
 /* line 161, ../sass/index.scss */
 #we-are-the-posters-video .video-container {
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin: 0 auto;
   width: 580px;
 }
@@ -176,42 +176,50 @@
 #mission-section h2 {
   color: #999999;
   text-transform: uppercase;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
+  font-size: 2em;
 }
-/* line 189, ../sass/index.scss */
+/* line 190, ../sass/index.scss */
 #mission-section h3 {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   margin: 0 0 20px;
+  font-size: 2.75em;
 }
-/* line 195, ../sass/index.scss */
+/* line 197, ../sass/index.scss */
 #mission-section hr {
   width: 50%;
 }
-/* line 199, ../sass/index.scss */
+/* line 201, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
 }
 
 /**
  * Press Section
  */
-/* line 210, ../sass/index.scss */
+/* line 212, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 40px;
 }
-/* line 216, ../sass/index.scss */
+/* line 218, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 115px 0 0 0;
   padding: 0;
 }
-/* line 221, ../sass/index.scss */
+@media screen and (max-width: 1200px) {
+  /* line 218, ../sass/index.scss */
+  #press-section ul {
+    margin: 375px 0 0 0;
+  }
+}
+/* line 227, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -219,12 +227,19 @@
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 228, ../sass/index.scss */
+/* line 234, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
-/* line 233, ../sass/index.scss */
+@media screen and (max-width: 1200px) {
+  /* line 240, ../sass/index.scss */
+  #press-section ul li:nth-child(2) {
+    margin-left: 0;
+    margin-right: 28px;
+  }
+}
+/* line 246, ../sass/index.scss */
 #press-section ul li p {
   display: block;
   margin: 0;
@@ -232,10 +247,11 @@
   text-align: center;
   font-size: 0.85em;
   color: #666666;
+  line-height: 20px;
 }
-/* line 242, ../sass/index.scss */
+/* line 256, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
 }

@@ -17,18 +17,15 @@
 .mission-page-section {
 	clear: both;
 	overflow: hidden;
-	height: 375px;
+	background-color: #fff;
+
+
+	@media screen and (max-width: 768px) {
+		height: auto;
+	}
 
 	&:last-child {
 		margin-bottom: 50px;
-
-		.info {
-			.info-content {
-				h2 {
-					line-height: 22px;
-				}
-			}
-		}
 	}
 
 	.image {
@@ -37,6 +34,21 @@
 		text-align: right;
 		background-color: #fff;
 		height: inherit;
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			text-align: center;
+			float: none;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		img {
+			max-height: 330px;
+		}
+
 	}
 
 	.info {
@@ -46,9 +58,19 @@
 		color: #fff;
 		height: inherit;
 
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			float: none;
+		}
+
 		.info-content {
 			max-width: 500px;
-			margin: 75px;
+			margin: 35px 75px;
+
+			@media screen and (max-width: 768px) {
+				padding: 35px;
+				margin: 0;
+			}
 
 			h2 {
 				margin: 0 0 15px;
@@ -57,7 +79,7 @@
 				border-bottom: 1px solid #fff;
 				line-height: 45px;
 				text-transform: uppercase;
-				font-size: 1.5em;
+				font-size: 1em;
 
 				span {
 					width: 45px;

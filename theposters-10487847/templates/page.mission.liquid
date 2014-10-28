@@ -1,3 +1,7 @@
+
+
+
+
 {% include 'we-are-posters' %}
 
 <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
@@ -5,38 +9,26 @@
 	<h2>Our Philosphy</h2>
 </div>
 
-<div class="mission-page-section section-left">
-	<div class="image">
-		<img src="{{ 'missionpage1.jpg'  | asset_url }}" />
-	</div>
-	<div class="info">
-		<div class="info-content">
-			<h2><span>1</span> Art Belongs Everywhere</h2>
-			<p>Lorem ipsum dolor sit amet, pri reque scripta minimum ne, at per choro decore discere, natum eloquentiam nec et. Salutatus democritum sit eu. Cu ius iusto errem veniam. Albucius perpetua eos ad, vel elit dolore meliore ne. Et sed mollis elaboraret. Tota appareat per id.</p>
+
+<div class="container-fluid">
+
+{% for article in blogs.mission.articles %}	
+	<div class="mission-page-section row {% cycle 'section-left', 'section-right' %}">
+	  <div class="image"></div>
+	  <div class="info">
+	  	<div class="info-content">
+		  	<h2><span>{% cycle '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' %}</span>{{ article.title }}</h2>
+		    {{ article.content }}
 		</div>
+	  </div>
 	</div>
+{% endfor %} 
 </div>
 
-<div class="mission-page-section section-right">
-	<div class="image">
-		<img src="{{ 'missionpage2.jpg'  | asset_url }}" />
-	</div>
-	<div class="info">
-		<div class="info-content">
-			<h2><span>2</span> Art Helps Everyone</h2>
-			<p>Lorem ipsum dolor sit amet, pri reque scripta minimum ne, at per choro decore discere, natum eloquentiam nec et. Salutatus democritum sit eu. Cu ius iusto errem veniam. Albucius perpetua eos ad, vel elit dolore meliore ne. Et sed mollis elaboraret. Tota appareat per id.</p>
-		</div>
-	</div>
-</div>
-
-<div class="mission-page-section section-left">
-	<div class="image">
-		<img src="{{ 'missionpage3.jpg'  | asset_url }}" />
-	</div>
-	<div class="info">
-		<div class="info-content">
-			<h2><span>3</span> Honest Posters,<br />Honest Prices</h2>
-			<p>Lorem ipsum dolor sit amet, pri reque scripta minimum ne, at per choro decore discere, natum eloquentiam nec et. Salutatus democritum sit eu. Cu ius iusto errem veniam. Albucius perpetua eos ad, vel elit dolore meliore ne. Et sed mollis elaboraret. Tota appareat per id.</p>
-		</div>
-	</div>
-</div>
+<script type="text/javascript">
+	(function(){
+		$('.info img').each(function(){
+			$(this).appendTo($(this).closest('.row').find('.image'));
+		});
+	})();
+</script>

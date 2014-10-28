@@ -5,8 +5,11 @@ html, body {
 	padding: 0;
 	background-color: $bgColor;
 	color: $foreColor;
-	font-size: 16px;
+	font-size: 20px;
+	letter-spacing: 1px;
 	line-height: 28px;
+	font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 300;
 }
 
 a {
@@ -33,9 +36,17 @@ header#main-header {
 
 				a {
 					display: block;
-					padding: 85px 20px 15px 20px;
+					padding: 85px 5px 0 5px;
+					margin: 0 15px 15px 15px;
 					text-transform: uppercase;
+					font-weight: 700;
+					font-size: 0.95em;
+					font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
+					&:hover {
+						border-bottom: 5px solid #000;
+						margin: 0 15px 10px 15px;
+					}
 				}
 
 				&#logo {
@@ -54,6 +65,21 @@ header#main-header {
 	#cart-info {
 		padding-top: 85px;
 		text-align: right;
+
+		.login {
+			font-size: 0.85em;
+			margin-right: 10px;
+			font-style: italic;
+			color: #6c6b6c;
+		}
+
+		.toggle-cart {
+			width: 29px;
+			height: 35px;
+			display: inline-block;
+			text-align: center;
+			line-height: 40px;
+		}
 	}
 }
 

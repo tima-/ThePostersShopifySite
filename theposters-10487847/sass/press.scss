@@ -1,0 +1,45 @@
+@import "vars";
+
+#press-blog {
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center top;
+  	margin-bottom: $gap;
+
+	ul {
+		list-style: none;
+		margin: $gap 0;
+		padding: 0;
+
+		li {
+			float: left;
+			width: 250px;
+			min-height: 250px;
+			margin-bottom: $gap/2;
+      		margin-right: 28px;
+
+      		&.satimage {
+      			width: 530px;
+
+      			img {
+      				border: 0;
+      			}
+      		}
+
+			p {
+				display: block;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				font-size: 0.85em;
+				color: $darkGray;
+			}
+
+			img {
+				width: 100%;
+				border: 10px solid $white;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

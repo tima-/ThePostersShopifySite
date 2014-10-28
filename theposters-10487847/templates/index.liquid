@@ -1,6 +1,6 @@
 {% assign featuredproduct = collections[settings.frontpage_collection].products.first %}
 
-{% if settings.enable_featuredproduct == true and featuredproduct.handle != blank  %}
+{% if featuredproduct.handle != blank  %}
 <div class="container">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
@@ -10,7 +10,7 @@
         <hr class="bottom" />
         <div class="copy date">{{ featuredproduct.title }}</div>
         <div class="copy title">{{ featuredproduct.title }}</div>
-        <div class="copy availability">Available for 10 more days</div>
+        <div class="copy availability">Available for <span>--</span> more days</div>
         <a href="{{ featuredproduct.url }}" class="button action">See Poster</a>
         <div class="blackscreen"></div>
       </div>

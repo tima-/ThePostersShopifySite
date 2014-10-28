@@ -7,8 +7,11 @@
   border-bottom: 1px solid #262626;
   color: #262626;
   text-align: center;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.25em;
 }
-/* line 12, ../sass/typography.scss */
+/* line 15, ../sass/typography.scss */
 .section-header small {
   display: block;
   text-transform: none;
@@ -16,19 +19,43 @@
   margin-top: 10px;
 }
 
-/* line 20, ../sass/typography.scss */
+/* line 23, ../sass/typography.scss */
 .btn {
   border-radius: 0;
   border: 0;
 }
 
-/* line 25, ../sass/typography.scss */
+/* line 28, ../sass/typography.scss */
 #social {
   padding-top: 15px;
   float: right;
+  line-height: 30px;
 }
-/* line 29, ../sass/typography.scss */
-#social > div {
+/* line 33, ../sass/typography.scss */
+#social > h2 {
+  float: left;
+  font-size: 1em;
+  margin: 3px 10px 0 0;
+  color: #999999;
+}
+/* line 40, ../sass/typography.scss */
+#social > a {
+  width: 24px;
+  height: 25px;
+  display: block;
   float: left;
   margin: 0 5px;
+  border: 1px solid #878787;
+}
+/* line 48, ../sass/typography.scss */
+#social > a img {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+
+/* line 56, ../sass/typography.scss */
+h1, h2, h3, h4 {
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }

@@ -25,6 +25,21 @@
   {% include 'twitter-cards' %}
 
   <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  @font-face {
+    font-family: 'FranklinGothicMdCd';
+    src: url({{ 'FranklinGothicCaps-MedCd-webfont.eot' | asset_url }});
+    src: url({{ 'FranklinGothicCaps-MedCd-webfont.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+         url({{ 'FranklinGothicCaps-MedCd-webfont.woff2' | asset_url }}) format('woff2'),
+         url({{ 'FranklinGothicCaps-MedCd-webfont.woff' | asset_url }}) format('woff'),
+         url({{ 'FranklinGothicCaps-MedCd-webfont.ttf' | asset_url }}) format('truetype'),
+         url({{ 'FranklinGothicCaps-MedCd-webfont.svg#franklin_gothic_fs_capsMdCn' | asset_url }}) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+  </style>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   {{ 'all.css' | asset_url | stylesheet_tag }}
   <!-- {{ 'styles.css' | asset_url | stylesheet_tag }} -->
@@ -76,8 +91,8 @@
           </div>
           <div class="col-sm-3">
             <div id="cart-info">
-              <a href="#">Sign In / Register</a>
-              <a href="/cart" class="toggle-cart">{{ cart.item_count }}</a>
+              <a href="/account/login" class="login">Sign In / Register</a>
+              <a href="/cart" class="toggle-cart" style="background-image: url({{ 'icon-bag.png' | asset_url }})">{{ cart.item_count }}</a>
             </div>
           </div>
         </div>
@@ -112,11 +127,11 @@
             <nav>
               <ul>
                 <li><a href="#">&copy; 2014 The Posters</a></li>
-                <li><a href="#">Press Coverage</a></li>
-                <li><a href="#">Poster Submissions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/blogs/press">Press Coverage</a></li>
+                <li><a href="/pages/submissions">Poster Submissions</a></li>
+                <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/pages/terms-of-use">Terms of Use</a></li>
+                <li><a href="/pages/contact-us">Contact Us</a></li>
               </ul>
             </nav>
           </div>
@@ -136,7 +151,12 @@
 
     </div>
     {% if cart.item_count == 0 %}
+    <div class="number-of-items">
+        {{ cart.item_count }} {{ cart.item_count | pluralize: 'Item', 'Items' }}
+      </div>
+    <div class="cart-items">
       <h2 class="empty-cart">Your cart is empty.</h2>
+    </div>
     {% else%}
       <div class="number-of-items">
         {{ cart.item_count }} {{ cart.item_count | pluralize: 'Item', 'Items' }}
@@ -148,10 +168,10 @@
             <img src="{{ item | img_url: 'small' }}"  alt="{{ item.product.title }}" />
           </div>
           <div class="info">
-            <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="remove-item">X</a>
+            <a href="/cart/change?line={{ forloop.index }}&quantity=0" data-lid="{{ forloop.index }}" class="remove-item">X</a>
             <h3>{{ item.product.title }}</h3>
             <div class="qty">
-              QTY <input type="text" size="2" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" /> <a href="#" class="update-cart">Update</a>
+              QTY <input type="text" size="2" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" /> <a href="#" class="update-cart" data-lid="{{ forloop.index }}">Update</a>
             </div>
             <div class="price">
               {{ item.line_price | money }}

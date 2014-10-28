@@ -31,11 +31,7 @@ $(document).ready(function(){
         url: '/cart.js',
         dataType: 'json',
         success: function(response) {
-          $('#cart-flyout .cart-items').html('');
-          for(var i=0; i<response.items.length; i++) {
-            $('#cart-flyout .cart-items').append('<div class="cart-item"><div class="image"><img src="'+response.items[i].image+'" alt="'+response.items[i].title + ' - ' + response.items[i].vendor +'"></div><div class="info"><a href="/cart/change?line=1&amp;quantity=0" class="remove-item">X</a><h3>'+response.items[i].title+'</h3><div class="qty">QTY <input type="text" size="2" name="updates[]" id="updates_834788403" value="'+response.items[i].quantity+'" onfocus="this.select();" class="tc item-quantity"> <a href="#" class="update-cart">Update</a></div><div class="price">'+response.items[i].price+'</div></div></div>');
-          }
-
+          renderCart(response);
           openCartFlyout();
         },
         error: Shopify.onError
@@ -95,6 +91,35 @@ function closeCartFlyout() {
   }
 }
 
+function updateCartItem(lineID, qty) {
+  var data = {line: lineID, quantity: qty};
+
+  $.ajax({
+    type: 'POST',
+    url: '/cart/change.js',
+    dataType: 'json',
+    data: data,
+    success: function(response) {
+      console.log('response', response)
+      renderCart(response);
+    },
+    error: Shopify.onError
+  });
+}
+
+function renderCart(response) {
+  var itemsText = response.item_count;
+  itemsText += (response.item_count === 1) ?  ' Item' : ' Items';
+  $('#cart-flyout .number-of-items').text(itemsText);
+  $('#main-header #cart-info .toggle-cart').text(response.item_count);
+  $('#cart-flyout .subtotal-price').text('$' + (response.total_price/100).toFixed(2));
+
+  $('#cart-flyout .cart-items').html('');
+  for(var i=0; i<response.items.length; i++) {
+    $('#cart-flyout .cart-items').append('<div class="cart-item"><div class="image"><img src="'+response.items[i].image+'" alt="'+response.items[i].title + ' - ' + response.items[i].vendor +'"></div><div class="info"><a href="/cart/change?line=1&amp;quantity=0" class="remove-item" data-lid="'+i+'">X</a><h3>'+response.items[i].title+'</h3><div class="qty">QTY <input type="text" size="2" name="updates[]" id="updates_834788403" value="'+response.items[i].quantity+'" onfocus="this.select();" class="tc item-quantity"> <a href="#" class="update-cart" data-lid="'+i+'">Update</a></div><div class="price">$'+(response.items[i].price / 100).toFixed(2)+'</div></div></div>');
+  }
+}
+
 $(document).ready(function(){
   $('.toggle-cart').on('click', function(e) {
     e.preventDefault();
@@ -116,6 +141,19 @@ $(document).ready(function(){
 
   $('html').on('click', function(e) {
     closeCartFlyout();
+  });
+
+  $('body').on('click', '#cart-flyout .remove-item', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    updateCartItem($(this).closest('a').data('lid'), 0);
+  });
+
+  $('body').on('click', '#cart-flyout .update-cart', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var qty = $(this).closest('a').siblings('.item-quantity').val();
+    updateCartItem($(this).closest('a').data('lid'), qty);
   });
 });
 
@@ -203,8 +241,16 @@ $(document).ready(function(){
   function zoomImage(e) {
     e.preventDefault();
     var featuredImage = $featuredImage.find('img');
-    $zoomModal.html(featuredImage.clone());
+    $zoomModal.css({backgroundImage: 'url('+featuredImage.attr('src')+')', height: $(window).height(), width: $(window).width()});
     $zoomModal.fadeIn(300);
+
+    $zoomModal.mousemove(function(e){
+      var x = ((e.pageX * 100) / $(window).width());
+      var y = ((e.pageY * 100) / $(window).height());
+
+      $zoomModal.css({backgroundPosition: x + '% ' + y + '%'});
+      console.log($zoomModal.css('backgroundPosition'))
+    });
   }
 
   function closeZoomImage(e) {

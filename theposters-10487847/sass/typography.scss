@@ -8,6 +8,9 @@
 	border-bottom: 1px solid $foreColor;
 	color: $foreColor;
 	text-align: center;
+	font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 2.25em;
 
 	small {
 		display: block;
@@ -25,9 +28,32 @@
 #social {
 	padding-top: 15px;
 	float: right;
+	line-height: 30px;
 
-	> div {
+	> h2 {
+		float: left;
+		font-size: 1em;
+		margin: 3px 10px 0 0;
+		color: $lightGray;
+	}
+
+	> a {
+		width: 24px;
+		height: 25px;
+		display: block;
 		float: left;
 		margin: 0 5px;
+		border: 1px solid #878787;
+
+		img {
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
 	}
+}
+
+h1, h2, h3, h4 {
+	font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 700;
 }
