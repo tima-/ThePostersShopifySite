@@ -148,13 +148,13 @@ header#main-header {
 }
 
 footer#main-footer {
-	padding-top: $gap;
+	padding-top: 60px;
 	background-color: $white;
-	margin-top: -1*$gap;
+	margin-top: 0;
 
 	.mailchimp-subscribe {
 		background-color: $bgColor;
-		height: 50px;
+		height: 45px;
 		position: relative;
 		
 		input {
@@ -164,7 +164,7 @@ footer#main-footer {
 			display: block;
 			font-size: 0.9em;
 			font-style: italic;
-			height: 50px;
+			height: 45px;
 			padding: 10px;
 			position: absolute;
 			width: 100%;
@@ -209,8 +209,8 @@ footer#main-footer {
 		}
 
 		button {
-			width: 50px;
-			height: 50px;
+			width: 45px;
+			height: 45px;
 			float: right;
 			border: 0;
 			position: relative;
@@ -219,7 +219,9 @@ footer#main-footer {
 	}
 
 	.social-follow-us {
+		position: relative;
 		text-align: right;
+		top: -4px;
 
 		h2 {
 			color: #999;
@@ -241,7 +243,9 @@ footer#main-footer {
 	}
 
 	nav {
-		margin-top: $gap;
+		margin-bottom: 60px;
+		margin-top: 60px;
+		overflow: hidden;
 
 		ul {
 			list-style: none;
@@ -252,11 +256,15 @@ footer#main-footer {
 				float: left;
 				
 				a {
+					color: #999;
 					display: block;
-					text-transform: uppercase;
-					padding: 20px;
-					color: $darkGray;
 					font-size: 0.8em;
+					padding: 0 20px;
+					text-transform: uppercase;
+					
+					&:hover {
+						color: #000
+					}
 				}
 				
 				&:nth-child(1) {
