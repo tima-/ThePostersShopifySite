@@ -11,35 +11,36 @@
 }
 /* line 11, ../sass/help.scss */
 .help-tabs ul li a {
-  font-size: .8em;
+  font-size: 0.8em;
+  font-weight: 700;
   text-align: center;
   margin: 0 8px;
   padding: 5px 10px;
   text-transform: uppercase;
   white-space: nowrap;
 }
-/* line 19, ../sass/help.scss */
+/* line 20, ../sass/help.scss */
 .help-tabs ul li a.current, .help-tabs ul li a:hover {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-/* line 27, ../sass/help.scss */
+/* line 28, ../sass/help.scss */
 .help-section {
   margin-bottom: 40px;
 }
-/* line 30, ../sass/help.scss */
+/* line 31, ../sass/help.scss */
 .help-section img {
   margin: 25px;
   float: right;
 }
-/* line 35, ../sass/help.scss */
+/* line 36, ../sass/help.scss */
 .help-section p {
   color: #666;
   font-size: 0.8em;
   letter-spacing: 0.03em;
   line-height: 1.4em;
 }
-/* line 42, ../sass/help.scss */
+/* line 43, ../sass/help.scss */
 .help-section .section-header {
   margin: 40px 0;
 }

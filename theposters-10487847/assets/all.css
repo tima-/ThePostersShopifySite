@@ -79,13 +79,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -207,7 +207,7 @@ header#main-header #cart-info .toggle-cart {
 /* line 150, ../sass/global.scss */
 footer#main-footer {
   padding-top: 40px;
-  background-color: white;
+  background-color: #fff;
   margin-top: -40px;
 }
 /* line 155, ../sass/global.scss */
@@ -452,12 +452,12 @@ footer#main-footer nav ul li:last-child a {
  */
 /* line 6, ../sass/index.scss */
 .previewImage_container {
-  border: 20px solid white;
+  border: 20px solid #fff;
   margin: 0 auto 80px auto;
   max-width: 500px;
+  width: 100%;
   overflow: hidden;
   position: relative;
-  width: 100%;
   -webkit-transform: translateZ(0);
 }
 /* line 15, ../sass/index.scss */
@@ -615,61 +615,79 @@ footer#main-footer nav ul li:last-child a {
   border: 0;
   display: block;
 }
+/* line 175, ../sass/index.scss */
+#we-are-the-posters-video .small-social {
+  width: 580px;
+  margin: 0 auto;
+  text-align: right;
+}
+/* line 180, ../sass/index.scss */
+#we-are-the-posters-video .small-social a {
+  margin: 0 3px;
+}
+/* line 184, ../sass/index.scss */
+#we-are-the-posters-video .small-social h2 {
+  display: none;
+}
+/* line 188, ../sass/index.scss */
+#we-are-the-posters-video .small-social .pinterest {
+  display: none;
+}
 
 /**
  * Mission Section with Countdown
  */
-/* line 180, ../sass/index.scss */
+/* line 198, ../sass/index.scss */
 #mission-section {
   text-align: center;
   padding: 75px 0;
   margin-bottom: 80px;
 }
-/* line 185, ../sass/index.scss */
+/* line 203, ../sass/index.scss */
 #mission-section h2 {
   color: #999999;
   font-size: 1.8em;
   margin: 0;
   text-transform: uppercase;
 }
-/* line 191, ../sass/index.scss */
+/* line 209, ../sass/index.scss */
 #mission-section h2.mission-footer {
   font-size: 1.47em;
   margin-top: 5px;
 }
-/* line 197, ../sass/index.scss */
+/* line 215, ../sass/index.scss */
 #mission-section h3 {
-  color: white;
+  color: #fff;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
 }
-/* line 204, ../sass/index.scss */
+/* line 222, ../sass/index.scss */
 #mission-section hr {
   border-color: #888;
   min-width: 440px;
   width: 33%;
 }
-/* line 209, ../sass/index.scss */
+/* line 227, ../sass/index.scss */
 #mission-section hr.bottom {
   margin-top: 30px;
 }
-/* line 214, ../sass/index.scss */
+/* line 232, ../sass/index.scss */
 #mission-section p {
   margin-bottom: 35px;
   margin-top: 30px;
 }
-/* line 219, ../sass/index.scss */
+/* line 237, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 228, ../sass/index.scss */
+/* line 246, ../sass/index.scss */
 #mission-section .btn-default:hover {
   color: #333;
   background: #fff;
@@ -678,26 +696,26 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Press Section
  */
-/* line 239, ../sass/index.scss */
+/* line 257, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 40px;
 }
-/* line 245, ../sass/index.scss */
+/* line 263, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 115px 0 0 0;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 245, ../sass/index.scss */
+  /* line 263, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 254, ../sass/index.scss */
+/* line 272, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -705,19 +723,19 @@ footer#main-footer nav ul li:last-child a {
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 261, ../sass/index.scss */
+/* line 279, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 267, ../sass/index.scss */
+  /* line 285, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 273, ../sass/index.scss */
+/* line 291, ../sass/index.scss */
 #press-section ul li p {
   display: block;
   margin: 0;
@@ -727,10 +745,10 @@ footer#main-footer nav ul li:last-child a {
   color: #666666;
   line-height: 20px;
 }
-/* line 283, ../sass/index.scss */
+/* line 301, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
 }
 
@@ -750,7 +768,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 15, ../sass/product.scss */
 #archived-products .archive-section-header {
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 3em;
   width: 255px;
   height: 372px;
@@ -788,7 +806,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 53, ../sass/product.scss */
 .product .details .availability {
-  background-color: white;
+  background-color: #fff;
   clear: both;
   color: #666;
   display: inline-block;
@@ -831,7 +849,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 97, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
 }
 /* line 103, ../sass/product.scss */
 #product #product-images #thumbs {
@@ -839,7 +857,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 106, ../sass/product.scss */
 #product #product-images #thumbs .image {
-  border: 10px solid white;
+  border: 10px solid #fff;
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -884,7 +902,7 @@ footer#main-footer nav ul li:last-child a {
   clear: both;
   display: inline-block;
   padding: 0 4px;
-  background-color: white;
+  background-color: #fff;
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: 700;
@@ -1198,35 +1216,36 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 11, ../sass/help.scss */
 .help-tabs ul li a {
-  font-size: .8em;
+  font-size: 0.8em;
+  font-weight: 700;
   text-align: center;
   margin: 0 8px;
   padding: 5px 10px;
   text-transform: uppercase;
   white-space: nowrap;
 }
-/* line 19, ../sass/help.scss */
+/* line 20, ../sass/help.scss */
 .help-tabs ul li a.current, .help-tabs ul li a:hover {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-/* line 27, ../sass/help.scss */
+/* line 28, ../sass/help.scss */
 .help-section {
   margin-bottom: 40px;
 }
-/* line 30, ../sass/help.scss */
+/* line 31, ../sass/help.scss */
 .help-section img {
   margin: 25px;
   float: right;
 }
-/* line 35, ../sass/help.scss */
+/* line 36, ../sass/help.scss */
 .help-section p {
   color: #666;
   font-size: 0.8em;
   letter-spacing: 0.03em;
   line-height: 1.4em;
 }
-/* line 42, ../sass/help.scss */
+/* line 43, ../sass/help.scss */
 .help-section .section-header {
   margin: 40px 0;
 }
@@ -1412,6 +1431,6 @@ body {
 /* line 38, ../sass/press.scss */
 #press-blog ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
 }

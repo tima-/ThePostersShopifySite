@@ -17,13 +17,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -145,7 +145,7 @@ header#main-header #cart-info .toggle-cart {
 /* line 150, ../sass/global.scss */
 footer#main-footer {
   padding-top: 40px;
-  background-color: white;
+  background-color: #fff;
   margin-top: -40px;
 }
 /* line 155, ../sass/global.scss */

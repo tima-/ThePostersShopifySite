@@ -158,6 +158,29 @@ $(document).ready(function(){
 });
 
 /**
+ * Homepage Featured Product
+ */
+
+$(document).ready(function(){
+  $(window).resize(function(){
+    homepageFeatureProductSize();
+  });
+
+  function homepageFeatureProductSize() {
+    var $image = $('.previewImage_container');
+    var ratio = $image.width()/$image.height();
+
+    if((($(window).height() - 250) * ratio) <= 500 && (($(window).height() - 250) * ratio) <= $(window).height() - 250) {
+      $image.css({maxWidth: 'auto'});
+      $image.width(($(window).height() - 250) * ratio);
+      $image.height($image.width() * (1/ratio));
+    }
+  }
+
+  homepageFeatureProductSize();
+});
+
+/**
  * Product Expiration Dates
  * Expected expDate format "YYYY-MM-DD"
  */

@@ -7,9 +7,9 @@
   border: 20px solid $white;
   margin: 0 auto $gap*2 auto;
   max-width: 500px;
+  width: 100%;
   overflow: hidden;
   position: relative;
-  width: 100%;
   -webkit-transform: translateZ(0);
   
   &:hover {
@@ -154,15 +154,15 @@
  */
 #we-are-the-posters-video {
 	background-position: center top;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 	margin-bottom: 30px;
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 
 	.video-container {
-        background: white;
+    background: white;
 		border: 1px solid #000;
 		margin: 0 auto;
-        padding: 10px;
+    padding: 10px;
 		width: 580px;
 
 		iframe {
@@ -171,6 +171,24 @@
 			display: block;
 		}
 	}
+
+  .small-social {
+    width: 580px;
+    margin: 0 auto;
+    text-align: right;
+
+    a {
+      margin: 0 3px;
+    }
+
+    h2 {
+      display: none;
+    }
+
+    .pinterest {
+      display: none;
+    }
+  }
 }
 
 

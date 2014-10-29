@@ -11,8 +11,6 @@
 	(function(){
 		var hasDoneMissionScroll = false;
 		$(window).scroll(function(e){
-			console.log($(window).scrollTop(), $('.funded-hours').offset().top);
-			
 			if(($(window).scrollTop() > ($('.funded-hours').offset().top - 500)) && !hasDoneMissionScroll) {
 				hasDoneMissionScroll = true;
 			    doMissionScroll();
