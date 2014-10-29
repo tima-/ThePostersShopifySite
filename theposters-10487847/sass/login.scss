@@ -1,18 +1,26 @@
 @import "vars";
 
+#login {
+	.section-header {
+		margin: 40px 0;
+	}
+}
+
 #login-signup {
 	.label {
-		display: block;
 		color: #888;
+		display: block;
+		font-size: 0.9em;
+		letter-spacing: 0em;
+		padding: 5px 0 0 0;
 		text-align: left;
-		padding: 5px 0;
-		font-size: 1em;
 	}
 
 	input {
 		border: 1px solid #888;
-		width: 100%;
 		margin-bottom: 15px;
+		padding: 0 5px;
+		width: 100%;
 
 		&[type="submit"] {
 			width: 150px;
