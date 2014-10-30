@@ -24,7 +24,13 @@
 
 .btn {
 	border-radius: 0;
-	border: 0;
+	border: 1px solid #fff;
+	outline: 1px solid #f00;
+
+	&.btn-default {
+		border: 1px solid #fff;
+		outline: 1px solid #414141;
+	}
 }
 
 #social {

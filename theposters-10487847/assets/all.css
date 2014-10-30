@@ -24,23 +24,29 @@
 /* line 25, ../sass/typography.scss */
 .btn {
   border-radius: 0;
-  border: 0;
+  border: 1px solid #fff;
+  outline: 1px solid #f00;
+}
+/* line 30, ../sass/typography.scss */
+.btn.btn-default {
+  border: 1px solid #fff;
+  outline: 1px solid #414141;
 }
 
-/* line 30, ../sass/typography.scss */
+/* line 36, ../sass/typography.scss */
 #social {
   float: right;
   line-height: 30px;
   padding-top: 15px;
 }
-/* line 35, ../sass/typography.scss */
+/* line 41, ../sass/typography.scss */
 #social > h2 {
   float: left;
   font-size: 1em;
   margin: 3px 10px 0 0;
   color: #999999;
 }
-/* line 42, ../sass/typography.scss */
+/* line 48, ../sass/typography.scss */
 #social > a {
   border: 1px solid #878787;
   display: block;
@@ -49,14 +55,14 @@
   margin: 0 5px;
   width: 20px;
 }
-/* line 50, ../sass/typography.scss */
+/* line 56, ../sass/typography.scss */
 #social > a img {
   width: 100%;
   display: block;
   margin: 0;
 }
 
-/* line 58, ../sass/typography.scss */
+/* line 64, ../sass/typography.scss */
 h1, h2, h3, h4 {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -81,13 +87,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -126,7 +132,7 @@ header#main-header nav ul li a {
   text-transform: uppercase;
 }
 /* line 61, ../sass/global.scss */
-header#main-header nav ul li a:hover {
+header#main-header nav ul li a:hover, header#main-header nav ul li a.active {
   border-bottom: 3px solid #000;
   margin: 0 15px 10px 15px;
 }
@@ -222,16 +228,17 @@ header#main-header #cart-info .toggle-cart {
 /* line 159, ../sass/global.scss */
 footer#main-footer {
   padding-top: 60px;
-  background-color: white;
+  background-color: #fff;
   margin-top: 0;
+  overflow: hidden;
 }
-/* line 164, ../sass/global.scss */
+/* line 165, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe {
   background-color: #e5e2e4;
   height: 45px;
   position: relative;
 }
-/* line 169, ../sass/global.scss */
+/* line 170, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input {
   background-color: #EEE;
   border: 0;
@@ -245,43 +252,43 @@ footer#main-footer .mailchimp-subscribe input {
   width: 100%;
   -webkit-transition: all .2s;
 }
-/* line 182, ../sass/global.scss */
+/* line 183, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input::-webkit-input-placeholder {
   font-style: italic;
 }
-/* line 186, ../sass/global.scss */
+/* line 187, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:-moz-placeholder {
   font-style: italic;
 }
-/* line 190, ../sass/global.scss */
+/* line 191, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input::-moz-placeholder {
   font-style: italic;
 }
-/* line 194, ../sass/global.scss */
+/* line 195, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:-ms-input-placeholder {
   font-style: italic;
 }
-/* line 199, ../sass/global.scss */
+/* line 200, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus {
   color: #000;
 }
-/* line 202, ../sass/global.scss */
+/* line 203, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus::-webkit-input-placeholder {
   color: #000;
 }
-/* line 206, ../sass/global.scss */
+/* line 207, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus:-moz-placeholder {
   color: #000;
 }
-/* line 210, ../sass/global.scss */
+/* line 211, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus::-moz-placeholder {
   color: #000;
 }
-/* line 214, ../sass/global.scss */
+/* line 215, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus:-ms-input-placeholder {
   color: #000;
 }
-/* line 220, ../sass/global.scss */
+/* line 221, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe button {
   width: 45px;
   height: 45px;
@@ -290,13 +297,13 @@ footer#main-footer .mailchimp-subscribe button {
   position: relative;
   z-index: 1;
 }
-/* line 230, ../sass/global.scss */
+/* line 231, ../sass/global.scss */
 footer#main-footer .social-follow-us {
   position: relative;
   text-align: right;
   top: -4px;
 }
-/* line 235, ../sass/global.scss */
+/* line 236, ../sass/global.scss */
 footer#main-footer .social-follow-us h2 {
   color: #999;
   display: inline-block;
@@ -308,30 +315,30 @@ footer#main-footer .social-follow-us h2 {
   margin: 0;
   text-transform: uppercase;
 }
-/* line 247, ../sass/global.scss */
+/* line 248, ../sass/global.scss */
 footer#main-footer .social-follow-us a.social-icon {
   background-color: #eaeaea;
   display: inline-block;
   margin: 0 5px;
   text-align: center;
 }
-/* line 255, ../sass/global.scss */
+/* line 256, ../sass/global.scss */
 footer#main-footer nav {
   margin-bottom: 60px;
   margin-top: 60px;
   overflow: hidden;
 }
-/* line 260, ../sass/global.scss */
+/* line 261, ../sass/global.scss */
 footer#main-footer nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 265, ../sass/global.scss */
+/* line 266, ../sass/global.scss */
 footer#main-footer nav ul li {
   float: left;
 }
-/* line 268, ../sass/global.scss */
+/* line 269, ../sass/global.scss */
 footer#main-footer nav ul li a {
   color: #999;
   display: block;
@@ -339,27 +346,27 @@ footer#main-footer nav ul li a {
   padding: 0 20px;
   text-transform: uppercase;
 }
-/* line 275, ../sass/global.scss */
+/* line 276, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
-  color: black;
+  color: #000;
 }
-/* line 281, ../sass/global.scss */
+/* line 282, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) a {
   padding-left: 0;
 }
-/* line 287, ../sass/global.scss */
+/* line 288, ../sass/global.scss */
 footer#main-footer nav ul li:last-child a {
   padding-right: 0;
 }
 
-/* line 296, ../sass/global.scss */
+/* line 297, ../sass/global.scss */
 #main-wrapper {
   left: 0;
   position: relative;
   width: 100%;
 }
 
-/* line 302, ../sass/global.scss */
+/* line 303, ../sass/global.scss */
 #cart-flyout {
   background-color: #eaeaeb;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
@@ -371,7 +378,7 @@ footer#main-footer nav ul li:last-child a {
   top: 0;
   width: 20%;
 }
-/* line 313, ../sass/global.scss */
+/* line 314, ../sass/global.scss */
 #cart-flyout .cart-top-btn {
   background-color: #505050;
   box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
@@ -383,16 +390,17 @@ footer#main-footer nav ul li:last-child a {
   text-align: center;
   width: 50%;
   text-transform: uppercase;
+  font-size: 1vw;
 }
-/* line 325, ../sass/global.scss */
+/* line 327, ../sass/global.scss */
 #cart-flyout .cart-top-btn#checkout {
   background-color: #fb0005;
 }
-/* line 330, ../sass/global.scss */
+/* line 332, ../sass/global.scss */
 #cart-flyout .empty-cart {
   text-align: center;
 }
-/* line 334, ../sass/global.scss */
+/* line 336, ../sass/global.scss */
 #cart-flyout .subtotal {
   background-color: #eaeaeb;
   box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
@@ -400,21 +408,21 @@ footer#main-footer nav ul li:last-child a {
   padding: 20px;
   width: 100%;
 }
-/* line 341, ../sass/global.scss */
+/* line 343, ../sass/global.scss */
 #cart-flyout .subtotal h2 {
   font-size: 1.2em;
 }
-/* line 344, ../sass/global.scss */
+/* line 346, ../sass/global.scss */
 #cart-flyout .subtotal h2 .subtotal-price {
   float: right;
 }
-/* line 348, ../sass/global.scss */
+/* line 350, ../sass/global.scss */
 #cart-flyout .subtotal h2 small {
   clear: both;
   display: block;
   font-size: 0.6em;
 }
-/* line 356, ../sass/global.scss */
+/* line 358, ../sass/global.scss */
 #cart-flyout .number-of-items {
   clear: both;
   background-color: #d6d6d6;
@@ -422,7 +430,7 @@ footer#main-footer nav ul li:last-child a {
   padding: 3px 0;
   text-align: center;
 }
-/* line 365, ../sass/global.scss */
+/* line 367, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item {
   background-color: #fff;
   border-bottom: 1px solid #eaeaeb;
@@ -431,43 +439,43 @@ footer#main-footer nav ul li:last-child a {
   font-size: 0.9em;
   color: #6c6c6c;
 }
-/* line 373, ../sass/global.scss */
+/* line 375, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image {
   width: 30%;
   float: left;
   padding: 20px 10px 20px 20px;
 }
-/* line 378, ../sass/global.scss */
+/* line 380, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image img {
   width: 100%;
 }
-/* line 383, ../sass/global.scss */
+/* line 385, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info {
   float: right;
   width: 70%;
   padding: 20px 20px 20px 10px;
 }
-/* line 388, ../sass/global.scss */
+/* line 390, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .remove-item {
   float: right;
   width: 16px;
   height: 16px;
 }
-/* line 394, ../sass/global.scss */
+/* line 396, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info h3 {
   font-size: 1em;
   margin: 0 0 5px;
 }
-/* line 399, ../sass/global.scss */
+/* line 401, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty {
   margin: 0 0 5px;
 }
-/* line 402, ../sass/global.scss */
+/* line 404, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty input {
   width: 30px;
   text-align: center;
 }
-/* line 407, ../sass/global.scss */
+/* line 409, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty .update-cart {
   font-size: 0.75em;
 }
@@ -477,7 +485,7 @@ footer#main-footer nav ul li:last-child a {
  */
 /* line 6, ../sass/index.scss */
 .previewImage_container {
-  border: 20px solid white;
+  border: 20px solid #fff;
   margin: 0 auto 80px auto;
   max-width: 500px;
   width: 100%;
@@ -558,6 +566,7 @@ footer#main-footer nav ul li:last-child a {
 .previewImage_container .action.button {
   background: #fc0d1b;
   bottom: 30%;
+  border: 1px solid #fff;
   color: white;
   display: block;
   text-decoration: none;
@@ -566,13 +575,14 @@ footer#main-footer nav ul li:last-child a {
   left: 50%;
   margin-left: -100px;
   opacity: 0;
+  outline: 1px solid #f00;
   padding: 10px 10px;
   position: absolute;
   width: 200px;
   z-index: 2;
   -webkit-transition: all .2s;
 }
-/* line 106, ../sass/index.scss */
+/* line 108, ../sass/index.scss */
 .previewImage_container .copy {
   color: white;
   opacity: 0;
@@ -583,26 +593,26 @@ footer#main-footer nav ul li:last-child a {
   z-index: 2;
   -webkit-transition: all .5s;
 }
-/* line 115, ../sass/index.scss */
+/* line 117, ../sass/index.scss */
 .previewImage_container .copy.availability {
   color: #CCC;
   font-size: .7em;
   left: 10%;
   top: 50%;
 }
-/* line 122, ../sass/index.scss */
+/* line 124, ../sass/index.scss */
 .previewImage_container .copy.date {
   color: #CCC;
   left: -100%;
   top: 35%;
 }
-/* line 128, ../sass/index.scss */
+/* line 130, ../sass/index.scss */
 .previewImage_container .copy.title {
   font-size: 2em;
   left: 100%;
   top: 40%;
 }
-/* line 137, ../sass/index.scss */
+/* line 139, ../sass/index.scss */
 .previewImage_container .blackscreen {
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
@@ -619,13 +629,13 @@ footer#main-footer nav ul li:last-child a {
 /**
  * We Are The Posters Section
  */
-/* line 156, ../sass/index.scss */
+/* line 158, ../sass/index.scss */
 #we-are-the-posters .we-are-the-posters-header {
   margin: 0 auto;
   width: 663px;
 }
 
-/* line 162, ../sass/index.scss */
+/* line 164, ../sass/index.scss */
 #we-are-the-posters-video {
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -633,7 +643,7 @@ footer#main-footer nav ul li:last-child a {
   padding-bottom: 50px;
   padding-top: 95px;
 }
-/* line 169, ../sass/index.scss */
+/* line 171, ../sass/index.scss */
 #we-are-the-posters-video .video-container {
   background: white;
   border: 1px solid #000;
@@ -643,13 +653,13 @@ footer#main-footer nav ul li:last-child a {
   top: -75px;
   width: 580px;
 }
-/* line 178, ../sass/index.scss */
+/* line 180, ../sass/index.scss */
 #we-are-the-posters-video .video-container iframe {
   margin: 0;
   border: 0;
   display: block;
 }
-/* line 185, ../sass/index.scss */
+/* line 187, ../sass/index.scss */
 #we-are-the-posters-video .small-social {
   margin: 0 auto;
   position: relative;
@@ -658,15 +668,15 @@ footer#main-footer nav ul li:last-child a {
   top: -80px;
   width: 580px;
 }
-/* line 193, ../sass/index.scss */
+/* line 195, ../sass/index.scss */
 #we-are-the-posters-video .small-social a {
   margin: 0 3px;
 }
-/* line 197, ../sass/index.scss */
+/* line 199, ../sass/index.scss */
 #we-are-the-posters-video .small-social h2 {
   display: none;
 }
-/* line 201, ../sass/index.scss */
+/* line 203, ../sass/index.scss */
 #we-are-the-posters-video .small-social .pinterest {
   display: none;
 }
@@ -674,57 +684,57 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Mission Section with Countdown
  */
-/* line 211, ../sass/index.scss */
+/* line 213, ../sass/index.scss */
 #mission-section {
   text-align: center;
   padding: 75px 0;
   margin-bottom: 60px;
 }
-/* line 216, ../sass/index.scss */
+/* line 218, ../sass/index.scss */
 #mission-section h2 {
   color: #999999;
   font-size: 1.8em;
   margin: 0;
   text-transform: uppercase;
 }
-/* line 222, ../sass/index.scss */
+/* line 224, ../sass/index.scss */
 #mission-section h2.mission-footer {
   font-size: 1.47em;
   margin-top: 5px;
 }
-/* line 228, ../sass/index.scss */
+/* line 230, ../sass/index.scss */
 #mission-section h3 {
-  color: white;
+  color: #fff;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
 }
-/* line 235, ../sass/index.scss */
+/* line 237, ../sass/index.scss */
 #mission-section hr {
   border-color: #888;
   min-width: 440px;
   width: 33%;
 }
-/* line 240, ../sass/index.scss */
+/* line 242, ../sass/index.scss */
 #mission-section hr.bottom {
   margin-top: 30px;
 }
-/* line 245, ../sass/index.scss */
+/* line 247, ../sass/index.scss */
 #mission-section p {
   margin-bottom: 35px;
   margin-top: 30px;
 }
-/* line 250, ../sass/index.scss */
+/* line 252, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 259, ../sass/index.scss */
+/* line 261, ../sass/index.scss */
 #mission-section .btn-default:hover {
   color: #333;
   background: #fff;
@@ -733,26 +743,26 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Press Section
  */
-/* line 270, ../sass/index.scss */
+/* line 272, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 10px;
 }
-/* line 276, ../sass/index.scss */
+/* line 278, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 145px 0 0 0;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 276, ../sass/index.scss */
+  /* line 278, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 285, ../sass/index.scss */
+/* line 287, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -760,28 +770,28 @@ footer#main-footer nav ul li:last-child a {
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 293, ../sass/index.scss */
+/* line 295, ../sass/index.scss */
 #press-section ul li:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 298, ../sass/index.scss */
+/* line 300, ../sass/index.scss */
 #press-section ul li:hover p {
   color: black;
 }
-/* line 303, ../sass/index.scss */
+/* line 305, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 309, ../sass/index.scss */
+  /* line 311, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 315, ../sass/index.scss */
+/* line 317, ../sass/index.scss */
 #press-section ul li p {
   color: #999;
   display: block;
@@ -795,10 +805,10 @@ footer#main-footer nav ul li:last-child a {
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 329, ../sass/index.scss */
+/* line 331, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 10px;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -835,7 +845,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 30, ../sass/product.scss */
 #archived-products .archive-section-header {
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 3em;
   width: 255px;
   height: 372px;
@@ -878,24 +888,29 @@ footer#main-footer nav ul li:last-child a {
   width: 287px;
 }
 /* line 76, ../sass/product.scss */
+.product .image a {
+  display: block;
+}
+/* line 80, ../sass/product.scss */
 .product .image img {
   max-width: 287px;
   max-height: 287px;
   border: 10px solid #fff;
 }
-/* line 83, ../sass/product.scss */
+/* line 87, ../sass/product.scss */
 .product .details {
   text-align: center;
 }
-/* line 86, ../sass/product.scss */
+/* line 90, ../sass/product.scss */
 .product .details a {
   color: #666;
   font-size: 1.45em;
   text-transform: uppercase;
+  display: block;
 }
-/* line 92, ../sass/product.scss */
+/* line 97, ../sass/product.scss */
 .product .details .availability {
-  background-color: white;
+  background-color: #fff;
   clear: both;
   color: #666;
   display: inline-block;
@@ -909,16 +924,16 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   top: -8px;
 }
-/* line 107, ../sass/product.scss */
+/* line 112, ../sass/product.scss */
 .product .details .availability .days-remaining {
   color: #f00;
 }
 
-/* line 115, ../sass/product.scss */
+/* line 120, ../sass/product.scss */
 #active-products .for-sale-collection {
   text-align: center;
 }
-/* line 119, ../sass/product.scss */
+/* line 124, ../sass/product.scss */
 #active-products .for-sale-header {
   margin: 0 auto;
   width: 463px;
@@ -927,7 +942,7 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Product Detail Page
  */
-/* line 128, ../sass/product.scss */
+/* line 133, ../sass/product.scss */
 #zoom-image {
   position: fixed;
   z-index: 100;
@@ -943,53 +958,53 @@ footer#main-footer nav ul li:last-child a {
   background-repeat: no-repeat;
 }
 
-/* line 145, ../sass/product.scss */
+/* line 150, ../sass/product.scss */
 #product #product-images #featured-image {
   text-align: center;
 }
-/* line 148, ../sass/product.scss */
+/* line 153, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
 }
-/* line 154, ../sass/product.scss */
+/* line 159, ../sass/product.scss */
 #product #product-images #thumbs {
   clear: both;
 }
-/* line 157, ../sass/product.scss */
+/* line 162, ../sass/product.scss */
 #product #product-images #thumbs .image {
-  border: 10px solid white;
+  border: 10px solid #fff;
   width: 200px;
   height: 200px;
   overflow: hidden;
   float: left;
   margin: 26px 26px 0 0;
 }
-/* line 165, ../sass/product.scss */
+/* line 170, ../sass/product.scss */
 #product #product-images #thumbs .image:last-child {
   margin: 26px 0 0 0;
 }
-/* line 169, ../sass/product.scss */
+/* line 174, ../sass/product.scss */
 #product #product-images #thumbs .image img {
   min-width: 200px;
   min-height: 200px;
 }
-/* line 176, ../sass/product.scss */
+/* line 181, ../sass/product.scss */
 #product #product-images .social {
   clear: both;
 }
-/* line 182, ../sass/product.scss */
+/* line 187, ../sass/product.scss */
 #product #details hr {
   border-top: 1px solid #262626;
 }
-/* line 186, ../sass/product.scss */
+/* line 191, ../sass/product.scss */
 #product #details h1.title {
   font-size: 1.2em;
   font-weight: 300;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 193, ../sass/product.scss */
+/* line 198, ../sass/product.scss */
 #product #details #artist {
   font-size: 2em;
   font-weight: 700;
@@ -998,12 +1013,12 @@ footer#main-footer nav ul li:last-child a {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 202, ../sass/product.scss */
+/* line 207, ../sass/product.scss */
 #product #details #availability {
   clear: both;
   display: inline-block;
   padding: 0 4px;
-  background-color: white;
+  background-color: #fff;
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: 700;
@@ -1014,34 +1029,34 @@ footer#main-footer nav ul li:last-child a {
   height: 18px;
   line-height: 19px;
 }
-/* line 217, ../sass/product.scss */
+/* line 222, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
   top: -2px;
 }
-/* line 224, ../sass/product.scss */
+/* line 229, ../sass/product.scss */
 #product #details .description {
   font-size: 0.85em;
   margin: 40px 0;
 }
-/* line 230, ../sass/product.scss */
+/* line 235, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 234, ../sass/product.scss */
+/* line 239, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   width: 50px;
   text-align: center;
 }
-/* line 240, ../sass/product.scss */
+/* line 245, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
   width: 60%;
   text-align: right;
 }
-/* line 245, ../sass/product.scss */
+/* line 250, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
   font-weight: 700;
@@ -1049,14 +1064,14 @@ footer#main-footer nav ul li:last-child a {
   line-height: 30px;
   font-size: 1.25em;
 }
-/* line 253, ../sass/product.scss */
+/* line 258, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
   text-transform: uppercase;
 }
 
-/* line 267, ../sass/product.scss */
+/* line 272, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
 }
@@ -1359,12 +1374,25 @@ body {
 /* line 5, ../sass/socialgrid.scss */
 .socialGrid_container {
   /* http://www.fontspring.com/fonts/fontsite/franklin-gothic-fs */
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 10px;
   height: 400px;
   width: 1000%;
+  position: relative;
 }
-/* line 12, ../sass/socialgrid.scss */
+/* line 13, ../sass/socialgrid.scss */
+.socialGrid_container .loading {
+  width: 100vw;
+  left: 50vw;
+  max-width: 1170px;
+  margin-left: -585px;
+  position: absolute;
+  height: inherit;
+  line-height: 400px;
+  text-align: center;
+  font-size: 3em;
+}
+/* line 25, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container {
   background-position: center center;
   background-size: cover;
@@ -1375,7 +1403,7 @@ body {
   position: relative;
   width: 400px;
 }
-/* line 22, ../sass/socialgrid.scss */
+/* line 35, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container h1 {
   color: white;
   font-size: 19px;
@@ -1386,7 +1414,7 @@ body {
   z-index: 1;
   -webkit-transition: all .2s;
 }
-/* line 33, ../sass/socialgrid.scss */
+/* line 46, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container h1 {
   line-height: 1.25em;
   margin: 15px;
@@ -1394,13 +1422,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 41, ../sass/socialgrid.scss */
+/* line 54, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container .avatar {
   float: left;
   margin-right: 8px;
   width: 37px;
 }
-/* line 47, ../sass/socialgrid.scss */
+/* line 60, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container .blackscreen {
   background: #000;
   bottom: 0;
@@ -1411,7 +1439,7 @@ body {
   top: 0;
   -webkit-transition: opacity .3s;
 }
-/* line 58, ../sass/socialgrid.scss */
+/* line 71, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container .userInfo_container {
   bottom: 0px;
   color: white;
@@ -1424,28 +1452,28 @@ body {
   z-index: 1;
   -webkit-transition: opacity .8s;
 }
-/* line 72, ../sass/socialgrid.scss */
+/* line 85, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container:hover h1 {
   opacity: 1;
   top: 0;
 }
-/* line 77, ../sass/socialgrid.scss */
+/* line 90, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container:hover .blackscreen {
   opacity: 0.7;
 }
-/* line 81, ../sass/socialgrid.scss */
+/* line 94, ../sass/socialgrid.scss */
 .socialGrid_container .grid_container:hover .userInfo_container {
   opacity: 1;
 }
-/* line 87, ../sass/socialgrid.scss */
+/* line 100, ../sass/socialgrid.scss */
 .socialGrid_container .grid-1 {
   float: left;
 }
-/* line 91, ../sass/socialgrid.scss */
+/* line 104, ../sass/socialgrid.scss */
 .socialGrid_container .grid-2 {
   float: left;
 }
-/* line 94, ../sass/socialgrid.scss */
+/* line 107, ../sass/socialgrid.scss */
 .socialGrid_container .grid-2 section {
   clear: left;
   float: left;
@@ -1453,7 +1481,7 @@ body {
   width: 200px;
 }
 
-/* line 103, ../sass/socialgrid.scss */
+/* line 116, ../sass/socialgrid.scss */
 .socialGrid_wrapper {
   height: 400px;
   overflow: scroll;
@@ -1534,6 +1562,6 @@ body {
 /* line 38, ../sass/press.scss */
 #press-blog ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
 }

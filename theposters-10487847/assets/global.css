@@ -17,13 +17,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -62,7 +62,7 @@ header#main-header nav ul li a {
   text-transform: uppercase;
 }
 /* line 61, ../sass/global.scss */
-header#main-header nav ul li a:hover {
+header#main-header nav ul li a:hover, header#main-header nav ul li a.active {
   border-bottom: 3px solid #000;
   margin: 0 15px 10px 15px;
 }
@@ -152,22 +152,23 @@ header#main-header #cart-info .toggle-cart {
 
 /* line 155, ../sass/global.scss */
 #main-content {
-  padding: 60px 0 0;
+  padding: 60px 0 0 0;
 }
 
 /* line 159, ../sass/global.scss */
 footer#main-footer {
   padding-top: 60px;
-  background-color: white;
+  background-color: #fff;
   margin-top: 0;
+  overflow: hidden;
 }
-/* line 164, ../sass/global.scss */
+/* line 165, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe {
   background-color: #e5e2e4;
   height: 45px;
   position: relative;
 }
-/* line 169, ../sass/global.scss */
+/* line 170, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input {
   background-color: #EEE;
   border: 0;
@@ -181,43 +182,43 @@ footer#main-footer .mailchimp-subscribe input {
   width: 100%;
   -webkit-transition: all .2s;
 }
-/* line 182, ../sass/global.scss */
+/* line 183, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input::-webkit-input-placeholder {
   font-style: italic;
 }
-/* line 186, ../sass/global.scss */
+/* line 187, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:-moz-placeholder {
   font-style: italic;
 }
-/* line 190, ../sass/global.scss */
+/* line 191, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input::-moz-placeholder {
   font-style: italic;
 }
-/* line 194, ../sass/global.scss */
+/* line 195, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:-ms-input-placeholder {
   font-style: italic;
 }
-/* line 199, ../sass/global.scss */
+/* line 200, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus {
   color: #000;
 }
-/* line 202, ../sass/global.scss */
+/* line 203, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus::-webkit-input-placeholder {
   color: #000;
 }
-/* line 206, ../sass/global.scss */
+/* line 207, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus:-moz-placeholder {
   color: #000;
 }
-/* line 210, ../sass/global.scss */
+/* line 211, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus::-moz-placeholder {
   color: #000;
 }
-/* line 214, ../sass/global.scss */
+/* line 215, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe input:focus:-ms-input-placeholder {
   color: #000;
 }
-/* line 220, ../sass/global.scss */
+/* line 221, ../sass/global.scss */
 footer#main-footer .mailchimp-subscribe button {
   width: 45px;
   height: 45px;
@@ -226,13 +227,13 @@ footer#main-footer .mailchimp-subscribe button {
   position: relative;
   z-index: 1;
 }
-/* line 230, ../sass/global.scss */
+/* line 231, ../sass/global.scss */
 footer#main-footer .social-follow-us {
   position: relative;
   text-align: right;
   top: -4px;
 }
-/* line 235, ../sass/global.scss */
+/* line 236, ../sass/global.scss */
 footer#main-footer .social-follow-us h2 {
   color: #999;
   display: inline-block;
@@ -244,30 +245,30 @@ footer#main-footer .social-follow-us h2 {
   margin: 0;
   text-transform: uppercase;
 }
-/* line 247, ../sass/global.scss */
+/* line 248, ../sass/global.scss */
 footer#main-footer .social-follow-us a.social-icon {
   background-color: #eaeaea;
   display: inline-block;
   margin: 0 5px;
   text-align: center;
 }
-/* line 255, ../sass/global.scss */
+/* line 256, ../sass/global.scss */
 footer#main-footer nav {
   margin-bottom: 60px;
   margin-top: 60px;
   overflow: hidden;
 }
-/* line 260, ../sass/global.scss */
+/* line 261, ../sass/global.scss */
 footer#main-footer nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 265, ../sass/global.scss */
+/* line 266, ../sass/global.scss */
 footer#main-footer nav ul li {
   float: left;
 }
-/* line 268, ../sass/global.scss */
+/* line 269, ../sass/global.scss */
 footer#main-footer nav ul li a {
   color: #999;
   display: block;
@@ -275,27 +276,27 @@ footer#main-footer nav ul li a {
   padding: 0 20px;
   text-transform: uppercase;
 }
-/* line 275, ../sass/global.scss */
+/* line 276, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
-  color: black;
+  color: #000;
 }
-/* line 281, ../sass/global.scss */
+/* line 282, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) a {
   padding-left: 0;
 }
-/* line 287, ../sass/global.scss */
+/* line 288, ../sass/global.scss */
 footer#main-footer nav ul li:last-child a {
   padding-right: 0;
 }
 
-/* line 296, ../sass/global.scss */
+/* line 297, ../sass/global.scss */
 #main-wrapper {
   left: 0;
   position: relative;
   width: 100%;
 }
 
-/* line 302, ../sass/global.scss */
+/* line 303, ../sass/global.scss */
 #cart-flyout {
   background-color: #eaeaeb;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
@@ -307,7 +308,7 @@ footer#main-footer nav ul li:last-child a {
   top: 0;
   width: 20%;
 }
-/* line 313, ../sass/global.scss */
+/* line 314, ../sass/global.scss */
 #cart-flyout .cart-top-btn {
   background-color: #505050;
   box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
@@ -319,16 +320,17 @@ footer#main-footer nav ul li:last-child a {
   text-align: center;
   width: 50%;
   text-transform: uppercase;
+  font-size: 1vw;
 }
-/* line 325, ../sass/global.scss */
+/* line 327, ../sass/global.scss */
 #cart-flyout .cart-top-btn#checkout {
   background-color: #fb0005;
 }
-/* line 330, ../sass/global.scss */
+/* line 332, ../sass/global.scss */
 #cart-flyout .empty-cart {
   text-align: center;
 }
-/* line 334, ../sass/global.scss */
+/* line 336, ../sass/global.scss */
 #cart-flyout .subtotal {
   background-color: #eaeaeb;
   box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
@@ -336,21 +338,21 @@ footer#main-footer nav ul li:last-child a {
   padding: 20px;
   width: 100%;
 }
-/* line 341, ../sass/global.scss */
+/* line 343, ../sass/global.scss */
 #cart-flyout .subtotal h2 {
   font-size: 1.2em;
 }
-/* line 344, ../sass/global.scss */
+/* line 346, ../sass/global.scss */
 #cart-flyout .subtotal h2 .subtotal-price {
   float: right;
 }
-/* line 348, ../sass/global.scss */
+/* line 350, ../sass/global.scss */
 #cart-flyout .subtotal h2 small {
   clear: both;
   display: block;
   font-size: 0.6em;
 }
-/* line 356, ../sass/global.scss */
+/* line 358, ../sass/global.scss */
 #cart-flyout .number-of-items {
   clear: both;
   background-color: #d6d6d6;
@@ -358,7 +360,7 @@ footer#main-footer nav ul li:last-child a {
   padding: 3px 0;
   text-align: center;
 }
-/* line 365, ../sass/global.scss */
+/* line 367, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item {
   background-color: #fff;
   border-bottom: 1px solid #eaeaeb;
@@ -367,43 +369,43 @@ footer#main-footer nav ul li:last-child a {
   font-size: 0.9em;
   color: #6c6c6c;
 }
-/* line 373, ../sass/global.scss */
+/* line 375, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image {
   width: 30%;
   float: left;
   padding: 20px 10px 20px 20px;
 }
-/* line 378, ../sass/global.scss */
+/* line 380, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image img {
   width: 100%;
 }
-/* line 383, ../sass/global.scss */
+/* line 385, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info {
   float: right;
   width: 70%;
   padding: 20px 20px 20px 10px;
 }
-/* line 388, ../sass/global.scss */
+/* line 390, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .remove-item {
   float: right;
   width: 16px;
   height: 16px;
 }
-/* line 394, ../sass/global.scss */
+/* line 396, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info h3 {
   font-size: 1em;
   margin: 0 0 5px;
 }
-/* line 399, ../sass/global.scss */
+/* line 401, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty {
   margin: 0 0 5px;
 }
-/* line 402, ../sass/global.scss */
+/* line 404, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty input {
   width: 30px;
   text-align: center;
 }
-/* line 407, ../sass/global.scss */
+/* line 409, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty .update-cart {
   font-size: 0.75em;
 }

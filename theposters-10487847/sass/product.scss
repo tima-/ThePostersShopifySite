@@ -73,6 +73,10 @@
 		margin-bottom: 24px;
 		width: 287px;
 
+		a {
+			display: block;
+		}
+
 		img {
 			max-width: 287px;
 			max-height: 287px;
@@ -87,6 +91,7 @@
 			color: #666;
 			font-size: 1.45em;
 			text-transform: uppercase;
+			display: block;
 		}
 		
 		.availability {

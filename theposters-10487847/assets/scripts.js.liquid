@@ -63,6 +63,15 @@ $(document).ready(function () {
 });
 
 /**
+ * Footer Functions
+ */
+
+$(document).ready(function () {
+  var windowHeightMinusFooterHieght = ($(window).height() - $('#main-wrapper').height()) + $('#main-footer').height();
+  $('#main-footer').css({minHeight: windowHeightMinusFooterHieght + 58});
+});
+
+/**
  * Cart functions
  */
 function openCartFlyout() {

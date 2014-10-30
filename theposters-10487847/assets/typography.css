@@ -24,23 +24,29 @@
 /* line 25, ../sass/typography.scss */
 .btn {
   border-radius: 0;
-  border: 0;
+  border: 1px solid #fff;
+  outline: 1px solid #f00;
+}
+/* line 30, ../sass/typography.scss */
+.btn.btn-default {
+  border: 1px solid #fff;
+  outline: 1px solid #414141;
 }
 
-/* line 30, ../sass/typography.scss */
+/* line 36, ../sass/typography.scss */
 #social {
   float: right;
   line-height: 30px;
   padding-top: 15px;
 }
-/* line 35, ../sass/typography.scss */
+/* line 41, ../sass/typography.scss */
 #social > h2 {
   float: left;
   font-size: 1em;
   margin: 3px 10px 0 0;
   color: #999999;
 }
-/* line 42, ../sass/typography.scss */
+/* line 48, ../sass/typography.scss */
 #social > a {
   border: 1px solid #878787;
   display: block;
@@ -49,14 +55,14 @@
   margin: 0 5px;
   width: 20px;
 }
-/* line 50, ../sass/typography.scss */
+/* line 56, ../sass/typography.scss */
 #social > a img {
   width: 100%;
   display: block;
   margin: 0;
 }
 
-/* line 58, ../sass/typography.scss */
+/* line 64, ../sass/typography.scss */
 h1, h2, h3, h4 {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;

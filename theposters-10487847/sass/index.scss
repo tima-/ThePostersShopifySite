@@ -87,6 +87,7 @@
   .action.button {
     background: #fc0d1b;
     bottom: 30%;
+    border: 1px solid #fff;
     color: white;
     display: block;
     text-decoration: none;
@@ -95,6 +96,7 @@
     left: 50%;
     margin-left: -100px;
     opacity: 0;
+    outline: 1px solid #f00;
     padding: 10px 10px;
     position: absolute;
     width: 200px;

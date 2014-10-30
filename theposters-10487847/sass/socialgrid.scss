@@ -4,10 +4,23 @@ body {
 
 .socialGrid_container {
 	/* http://www.fontspring.com/fonts/fontsite/franklin-gothic-fs */
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	height: 400px;
 	width: 1000%;
+	position: relative;
+
+	.loading {
+		width: 100vw;
+		left: 50vw;
+		max-width: 1170px;
+		margin-left: -585px;
+		position: absolute;
+		height: inherit;
+		line-height: 400px;
+		text-align: center;
+		font-size: 3em;
+	}
 	
 	.grid_container {
 		background-position: center center;

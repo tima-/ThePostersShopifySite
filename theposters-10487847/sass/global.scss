@@ -58,7 +58,7 @@ header#main-header {
 					position: relative;
 					text-transform: uppercase;
 
-					&:hover {
+					&:hover, &.active {
 						border-bottom: 3px solid #000;
 						margin: 0 15px 10px 15px;
 					}
@@ -160,6 +160,7 @@ footer#main-footer {
 	padding-top: 60px;
 	background-color: $white;
 	margin-top: 0;
+	overflow: hidden;
 
 	.mailchimp-subscribe {
 		background-color: $bgColor;
@@ -321,6 +322,7 @@ footer#main-footer {
 		text-align: center;
 		width: 50%;
 		text-transform: uppercase;
+		font-size: 1vw;
 
 		&#checkout {
 			background-color: #fb0005;

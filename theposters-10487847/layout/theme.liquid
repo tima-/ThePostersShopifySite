@@ -118,10 +118,24 @@
             <nav>
               <ul>
                 <li id="logo"><a href="/" style="background-image: url({{ 'logo.png' | asset_url }})">{{ shop.name }}</a></li>
-                <li><a href="/collections/all">Posters</a></li>
-                <li><a href="/pages/artists">Artists</a></li>
-                <li><a href="/pages/mission">Mission</a></li>
-                <li><a href="/pages/shipping">Help</a></li>
+                {% for link in linklists.main-menu.links %}
+                {% assign current = false %}
+                {% if template == 'index' and link.url == '/' %}
+                  {% assign current = true %}
+                {% else %}{% if collection.url == link.url %}
+                  {% assign current = true %}
+                {% else %}{% if page.url == link.url %}
+                  {% assign current = true %}
+                {% else %}{% if page_title == link.title %}
+                  {% assign current = true %}
+                {% else %}{% if template == 'list-collections' and link.url == '/collections' %}
+                  {% assign current = true %}
+                {% else %}{% if page_title == 'Products' and link.url == '/collections/all' %}
+                  {% assign current = true %}
+                {% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+                
+                <li><a{% if current %} class="active"{% endif %} href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
               </ul>
             </nav>
           </div>
