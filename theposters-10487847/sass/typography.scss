@@ -10,12 +10,14 @@
 	text-align: center;
 	font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-weight: 700;
-	font-size: 2.25em;
+	font-size: 2.85em;
 
 	small {
 		display: block;
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		line-height: 1.3em;
 		text-transform: none;
-		font-size: 14px;
 		margin-top: 10px;
 	}
 }
@@ -26,9 +28,9 @@
 }
 
 #social {
-	padding-top: 15px;
 	float: right;
 	line-height: 30px;
+	padding-top: 15px;
 
 	> h2 {
 		float: left;
@@ -38,12 +40,12 @@
 	}
 
 	> a {
-		width: 24px;
-		height: 25px;
+		border: 1px solid #878787;
 		display: block;
 		float: left;
+		height: 21px;
 		margin: 0 5px;
-		border: 1px solid #878787;
+		width: 20px;
 
 		img {
 			width: 100%;

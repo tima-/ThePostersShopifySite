@@ -1,67 +1,65 @@
-$(document).ready(function(){
+$(document).ready(function () {
+    function addItem(form_id) {
+        $.ajax({
+            'type': 'POST',
+            'url': '/cart/add.js',
+            'dataType': 'json',
+            'data': $('#'+form_id).serialize(),
+            'success': Shopify.onSuccess,
+            'error': Shopify.onError
+        });
+    }
 
-   function addItem(form_id) {
-      $.ajax({
-        type: 'POST',
-        url: '/cart/add.js',
-        dataType: 'json',
-        data: $('#'+form_id).serialize(),
-        success: Shopify.onSuccess,
-        error: Shopify.onError
-      });
-   }
+    $(".addtocart").click(function (e) {
+        var elem = $(this);
+        $(elem).prop("disabled", true);
 
-   $(".addtocart").click(function(e){
-   
-      var elem = $(this)
-      $(elem).prop("disabled", true)
-
-      e.preventDefault();
-      addItem('add-item-form');
-     
-   });
+        e.preventDefault();
+        addItem('add-item-form');
+    });
   
-    Shopify.onSuccess = function(addedProduct, response) {
+    Shopify.onSuccess = function (addedProduct, response) {
+        var elem = $('.addtocart');
+        elem.removeAttr("disabled");
 
-      var elem = $('.addtocart');
-      elem.removeAttr("disabled");
-
-      $.ajax({
-        type: 'GET',
-        url: '/cart.js',
-        dataType: 'json',
-        success: function(response) {
-          renderCart(response);
-          openCartFlyout();
-        },
-        error: Shopify.onError
-      });
+        $.ajax({
+            'type': 'GET',
+            'url': '/cart.js',
+            'dataType': 'json',
+            success: function (response) {
+                renderCart(response);
+                openCartFlyout();
+            },
+            'error': Shopify.onError
+        });
     };
   
-    Shopify.onError = function(XMLHttpRequest, textStatus) {
-      // Shopify returns a description of the error in XMLHttpRequest.responseText.
-      // It is JSON.
-      // Example: {"description":"The product 'Amelia - Small' is already sold out.","status":500,"message":"Cart Error"}
-      var data = eval('(' + XMLHttpRequest.responseText + ')');
-      if (!!data.message) {
-        alert(data.message + '(' + data.status  + '): ' + data.description);
-      } else {
-        alert('Error : ' + Shopify.fullMessagesFromErrors(data).join('; ') + '.');
-      }
+    Shopify.onError = function (XMLHttpRequest, textStatus) {
+        // Shopify returns a description of the error in XMLHttpRequest.responseText.
+        // It is JSON.
+        // Example: {"description":"The product 'Amelia - Small' is already sold out.","status":500,"message":"Cart Error"}
+        var data = eval('(' + XMLHttpRequest.responseText + ')');
 
-      $('.addtocart').removeAttr("disabled");
+        if (!!data.message) {
+            alert(data.message + '(' + data.status  + '): ' + data.description);
+        } else {
+            alert('Error : ' + Shopify.fullMessagesFromErrors(data).join('; ') + '.');
+        }
+
+        $('.addtocart').removeAttr("disabled");
     };
 
     Shopify.fullMessagesFromErrors = function(errors) {
-      var fullMessages = [];
-      jQuery.each(errors, function(attribute, messages) {
-        jQuery.each(messages, function(index, message) {
-          fullMessages.push(attribute + ' ' + message);
+        var fullMessages = [];
+        
+        jQuery.each(errors, function (attribute, messages) {
+            jQuery.each(messages, function (index, message) {
+                fullMessages.push(attribute + ' ' + message);
+            });
         });
-      });
-      return fullMessages;
+        
+        return fullMessages;
     };
-
 });
 
 /**
@@ -120,14 +118,14 @@ function renderCart(response) {
   }
 }
 
-$(document).ready(function(){
-  $('.toggle-cart').on('click', function(e) {
+$(document).ready(function () {
+  $('.toggle-cart').on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
     
     var cartSlide = $('#cart-flyout');
 
-    if(cartSlide.hasClass('active')) {
+    if (cartSlide.hasClass('active')) {
       closeCartFlyout();
     } else {
       openCartFlyout();
@@ -135,21 +133,21 @@ $(document).ready(function(){
 
   });
 
-  $('#slide-cart').on('click', function(e){
+  $('#slide-cart').on('click', function (e){
     e.stopPropagation();
   });
 
-  $('html').on('click', function(e) {
+  $('html').on('click', function (e) {
     closeCartFlyout();
   });
 
-  $('body').on('click', '#cart-flyout .remove-item', function(e) {
+  $('body').on('click', '#cart-flyout .remove-item', function (e) {
     e.preventDefault();
     e.stopPropagation();
     updateCartItem($(this).closest('a').data('lid'), 0);
   });
 
-  $('body').on('click', '#cart-flyout .update-cart', function(e) {
+  $('body').on('click', '#cart-flyout .update-cart', function (e) {
     e.preventDefault();
     e.stopPropagation();
     var qty = $(this).closest('a').siblings('.item-quantity').val();
@@ -160,23 +158,24 @@ $(document).ready(function(){
 /**
  * Homepage Featured Product
  */
-
-$(document).ready(function(){
-  $(window).resize(function(){
-    homepageFeatureProductSize();
-  });
+$(document).ready(function () {
+  $(window).resize(homepageFeatureProductSize);
 
   function homepageFeatureProductSize() {
     var $image = $('.previewImage_container');
-    var ratio = $image.width()/$image.height();
+    var ratio = $image.width() / $image.height();
 
-    if((($(window).height() - 250) * ratio) <= 500 && (($(window).height() - 250) * ratio) <= $(window).height() - 250) {
-      $image.css({maxWidth: 'auto'});
-      $image.width(($(window).height() - 250) * ratio);
-      $image.height($image.width() * (1/ratio));
+    if ((($(window).height() - 280) * ratio) <= 500 && (($(window).height() - 280) * ratio) <= $(window).height() - 280) {
+      $image.css({
+        'maxWidth': 'auto'
+      });
+      
+      $image.width(($(window).height() - 280) * ratio);
+      $image.height($image.width() * (1 / ratio));
     }
   }
 
+  // Run on page load
   homepageFeatureProductSize();
 });
 
@@ -186,62 +185,65 @@ $(document).ready(function(){
  */
 
 function daysRemaining(expDate) {
-  var daysRemaining, ms;
+  var _daysRemaining;
+  var ms;
   var today = moment();
 
   expDate = moment(expDate, "YYYY-MM-DD");
   ms = expDate.diff(today);
-  daysRemaining = moment.duration(ms);
-  return (Math.floor(daysRemaining.asDays()) + 1);
+  _daysRemaining = moment.duration(ms);
+  
+  return (Math.floor(_daysRemaining.asDays()) + 1);
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   var days;
 
-  $('#active-products .product').each(function(index, value) {
-    if($(value).data('expdate') !== undefined) {
+  $('#active-products .product').each(function (index, value) {
+    if ($(value).data('expdate') !== undefined) {
       days = daysRemaining($(value).data('expdate'));
 
-      if(days < 0) {
+      if (days < 0) {
         $(this).hide();
       } else {
         $(this).find('.days-remaining').html(days);
       }
-    } 
+    }
   });
 
-  $('.artist-products .product').each(function(index, value) {
-    if($(value).data('expdate') !== undefined) {
+  $('.artist-products .product').each(function (index, value) {
+    if ($(value).data('expdate') !== undefined) {
       days = daysRemaining($(value).data('expdate'));
 
-      if(days < 0) {
+      if (days < 0) {
         $(this).find('.availability').hide();
       } else {
         $(this).find('.days-remaining').html(days);
       }
-    } 
+    }
   });
 
   
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
   var days;
-  if($('#product #details #availability').data('expdate') !== undefined) {
+  
+  if ($('#product #details #availability').data('expdate') !== undefined) {
     days = daysRemaining($('#product #details #availability').data('expdate'));
-    if(days > 0) {
+    
+    if (days > 0) {
       $('#product #details #availability').find('.days-remaining').html(days);
     } else {
       $('#product #details #availability').hide();
     }
-  } 
- 
+  }
 });
 
 /**
  * Image Swapping on Products
  */
-$(document).ready(function(){
+$(document).ready(function () {
   var $featuredImage = $('#featured-image');
   var $thumbnails = $('#thumbs');
   var $zoomModal = $('#zoom-image');
@@ -272,7 +274,7 @@ $(document).ready(function(){
       var y = ((e.pageY * 100) / $(window).height());
 
       $zoomModal.css({backgroundPosition: x + '% ' + y + '%'});
-      console.log($zoomModal.css('backgroundPosition'))
+      // console.log($zoomModal.css('backgroundPosition'));
     });
   }
 

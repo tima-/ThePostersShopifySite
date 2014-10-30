@@ -3,7 +3,7 @@
  */
 /* line 6, ../sass/index.scss */
 .previewImage_container {
-  border: 20px solid #fff;
+  border: 20px solid white;
   margin: 0 auto 80px auto;
   max-width: 500px;
   width: 100%;
@@ -145,42 +145,54 @@
 /**
  * We Are The Posters Section
  */
-/* line 155, ../sass/index.scss */
+/* line 156, ../sass/index.scss */
+#we-are-the-posters .we-are-the-posters-header {
+  margin: 0 auto;
+  width: 663px;
+}
+
+/* line 162, ../sass/index.scss */
 #we-are-the-posters-video {
-  background-position: center top;
+  background-position: center bottom;
   background-repeat: no-repeat;
   margin-bottom: 30px;
   padding-bottom: 50px;
+  padding-top: 95px;
 }
-/* line 161, ../sass/index.scss */
+/* line 169, ../sass/index.scss */
 #we-are-the-posters-video .video-container {
   background: white;
   border: 1px solid #000;
   margin: 0 auto;
   padding: 10px;
+  position: relative;
+  top: -75px;
   width: 580px;
 }
-/* line 168, ../sass/index.scss */
+/* line 178, ../sass/index.scss */
 #we-are-the-posters-video .video-container iframe {
   margin: 0;
   border: 0;
   display: block;
 }
-/* line 175, ../sass/index.scss */
+/* line 185, ../sass/index.scss */
 #we-are-the-posters-video .small-social {
-  width: 580px;
   margin: 0 auto;
+  position: relative;
+  right: -3px;
   text-align: right;
+  top: -80px;
+  width: 580px;
 }
-/* line 180, ../sass/index.scss */
+/* line 193, ../sass/index.scss */
 #we-are-the-posters-video .small-social a {
   margin: 0 3px;
 }
-/* line 184, ../sass/index.scss */
+/* line 197, ../sass/index.scss */
 #we-are-the-posters-video .small-social h2 {
   display: none;
 }
-/* line 188, ../sass/index.scss */
+/* line 201, ../sass/index.scss */
 #we-are-the-posters-video .small-social .pinterest {
   display: none;
 }
@@ -188,57 +200,57 @@
 /**
  * Mission Section with Countdown
  */
-/* line 198, ../sass/index.scss */
+/* line 211, ../sass/index.scss */
 #mission-section {
   text-align: center;
   padding: 75px 0;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
-/* line 203, ../sass/index.scss */
+/* line 216, ../sass/index.scss */
 #mission-section h2 {
   color: #999999;
   font-size: 1.8em;
   margin: 0;
   text-transform: uppercase;
 }
-/* line 209, ../sass/index.scss */
+/* line 222, ../sass/index.scss */
 #mission-section h2.mission-footer {
   font-size: 1.47em;
   margin-top: 5px;
 }
-/* line 215, ../sass/index.scss */
+/* line 228, ../sass/index.scss */
 #mission-section h3 {
-  color: #fff;
+  color: white;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
 }
-/* line 222, ../sass/index.scss */
+/* line 235, ../sass/index.scss */
 #mission-section hr {
   border-color: #888;
   min-width: 440px;
   width: 33%;
 }
-/* line 227, ../sass/index.scss */
+/* line 240, ../sass/index.scss */
 #mission-section hr.bottom {
   margin-top: 30px;
 }
-/* line 232, ../sass/index.scss */
+/* line 245, ../sass/index.scss */
 #mission-section p {
   margin-bottom: 35px;
   margin-top: 30px;
 }
-/* line 237, ../sass/index.scss */
+/* line 250, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 246, ../sass/index.scss */
+/* line 259, ../sass/index.scss */
 #mission-section .btn-default:hover {
   color: #333;
   background: #fff;
@@ -247,26 +259,26 @@
 /**
  * Press Section
  */
-/* line 257, ../sass/index.scss */
+/* line 270, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
-/* line 263, ../sass/index.scss */
+/* line 276, ../sass/index.scss */
 #press-section ul {
   list-style: none;
-  margin: 115px 0 0 0;
+  margin: 145px 0 0 0;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 263, ../sass/index.scss */
+  /* line 276, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 272, ../sass/index.scss */
+/* line 285, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -274,31 +286,46 @@
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 279, ../sass/index.scss */
+/* line 293, ../sass/index.scss */
+#press-section ul li:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+/* line 298, ../sass/index.scss */
+#press-section ul li:hover p {
+  color: black;
+}
+/* line 303, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 285, ../sass/index.scss */
+  /* line 309, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 291, ../sass/index.scss */
+/* line 315, ../sass/index.scss */
 #press-section ul li p {
+  color: #999;
   display: block;
+  font-size: 0.7em;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  line-height: 20px;
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 0.85em;
-  color: #666666;
-  line-height: 20px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
 }
-/* line 301, ../sass/index.scss */
+/* line 329, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid #fff;
-  margin-bottom: 5px;
+  border: 10px solid white;
+  margin-bottom: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }

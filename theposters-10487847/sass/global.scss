@@ -71,7 +71,7 @@ header#main-header {
 						border: 0;
 						bottom: initial;
 						height: 105px;
-						margin: 10px 0;
+						margin: 11px 0 0 0;
 						padding: 0;
 						text-indent: -9999px;
 						width: 81px;
@@ -129,7 +129,6 @@ header#main-header {
 }
 
 .shadow-header {
-	// text-shadow: 2px 2px 0px #e6e3e4, 3px 3px 0px #777, 1px 3px 0px #777,3px 1px 0px #777;
 	text-shadow: 1px 1px 0px #e6e3e4, 2px 2px 0px #777, 1px 2px 0px #777,2px 1px 0px #777;
 	
 	small {
@@ -137,14 +136,24 @@ header#main-header {
 	}
 }
 
+.shadow-header-grey {
+	border-color: #666;
+	color: #666;
+	text-shadow: 1px 1px 0px #e6e3e4, 2px 2px 0px #666, 1px 2px 0px #666,2px 1px 0px #666;
+	
+	small {
+		margin: 0 30px;
+		margin-top: 3px;
+		text-shadow: none;
+	}
+}
+
 .shadow-header-inverted {
-	// text-shadow: 2px 2px 0px #777, 3px 3px 0px #e6e3e4, 1px 3px 0px #e6e3e4,3px 1px 0px #e6e3e4;
-	// text-shadow: 1px 1px 0px #777, 2px 2px 0px #e6e3e4, 1px 2px 0px #e6e3e4,2px 1px 0px #e6e3e4;
 	text-shadow: 2px 2px 0px #333, 3px 3px 0px #9f9f9f;
 }
 
 #main-content {
-	padding: 60px 0;
+	padding: 60px 0 0 0;
 }
 
 footer#main-footer {
@@ -162,7 +171,7 @@ footer#main-footer {
 			border: 0;
 			color: #999;
 			display: block;
-			font-size: 0.9em;
+			font-size: 0.7em;
 			font-style: italic;
 			height: 45px;
 			padding: 10px;
@@ -226,7 +235,8 @@ footer#main-footer {
 		h2 {
 			color: #999;
 			display: inline-block;
-			font-size: 1em;
+			font-size: .7em;
+			font-weight: normal;
 			height: 50px;
 			letter-spacing: normal;
 			line-height: 50px;
@@ -258,7 +268,7 @@ footer#main-footer {
 				a {
 					color: #999;
 					display: block;
-					font-size: 0.8em;
+					font-size: 0.72em;
 					padding: 0 20px;
 					text-transform: uppercase;
 					

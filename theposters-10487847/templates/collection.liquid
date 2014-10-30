@@ -5,10 +5,10 @@
   <div id="active-products">
     <div class="container">
       <div class="row products">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="for-sale-header">
           <h1 class="shadow-header section-header">For Sale Now</h1>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-12 for-sale-collection">
           {% for product in collection.products %}
             {% if product.metafields.visibility.expirationdate %}
               {% include 'product-loop' with collection.handle %}
@@ -24,7 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
-          <h1 class="shadow-header section-header">The Archive<small>These postters is no longer for sale directly on our site,<br />but copies may be available in our vault or elsewhere around the globe.<br />Email us at anymore@theposters.co for help.</small></h1>
+          <h1 class="shadow-header-grey section-header">The Archive<small>These posters is no longer for sale directly on our site, but copies may be available in our vault or elsewhere around the globe. Email us at <a href="">anymore@theposters.co</a> for help.</small></h1>
         </div>
       </div>
 
