@@ -1,7 +1,12 @@
-<div id="mission-section" style="background-image: url({{ 'missionbg.png' | asset_url }})">
+{% if fundedhours == 'whitebg' %}
+	<div id="mission-section" class="mission-white-bg" style="background-image: url({{ 'fundedcount_bg.jpg' | asset_url }})">
+{% else %}
+	<div id="mission-section" style="background-image: url({{ 'missionbg.png' | asset_url }})">
+{% endif %}
+
     <hr class="top" />
     <h2 class="mission-title">The Posters Has Funded</h2>
-    <h3 class="shadow-header-inverted"><span class="funded-hours" style="display:none;">{{settings.hours_funded}}</span> Hours</h3>
+    <h3 class="{% if fundedhours == 'whitebg' %}shadow-header{% else %}shadow-header-inverted{% endif %}"><span class="funded-hours" style="display:none;">{{settings.hours_funded}}</span> Hours</h3>
     <h2 class="mission-footer">Of Art Class (And Counting!)</h2>
     <p><a href="/pages/mission" class="btn btn-default">Learn More About Our Mission</a></p>
     <hr class="bottom" />

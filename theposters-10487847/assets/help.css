@@ -44,3 +44,28 @@
 .help-section .section-header {
   margin: 40px 0;
 }
+
+/* line 48, ../sass/help.scss */
+.help-arrow {
+  width: 50px;
+  height: 120px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* line 54, ../sass/help.scss */
+.help-arrow.arrow-right {
+  float: right;
+  background-position: -50px 0;
+}
+/* line 59, ../sass/help.scss */
+.help-arrow.arrow-left {
+  background-position: 0 0;
+}
+/* line 64, ../sass/help.scss */
+.help-arrow:hover.arrow-right {
+  background-position: -50px -120px;
+}
+/* line 68, ../sass/help.scss */
+.help-arrow:hover.arrow-left {
+  background-position: 0 -120px;
+}

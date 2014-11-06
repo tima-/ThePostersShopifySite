@@ -54,15 +54,33 @@
   height: 21px;
   margin: 0 5px;
   width: 20px;
+  position: relative;
 }
-/* line 56, ../sass/typography.scss */
+/* line 57, ../sass/typography.scss */
 #social > a img {
   width: 100%;
   display: block;
+  position: absolute;
   margin: 0;
 }
+/* line 63, ../sass/typography.scss */
+#social > a img.hover-on {
+  display: none;
+}
+/* line 67, ../sass/typography.scss */
+#social > a img.hover-off {
+  display: block;
+}
+/* line 74, ../sass/typography.scss */
+#social > a:hover img.hover-on {
+  display: block;
+}
+/* line 78, ../sass/typography.scss */
+#social > a:hover img.hover-off {
+  display: none;
+}
 
-/* line 64, ../sass/typography.scss */
+/* line 86, ../sass/typography.scss */
 h1, h2, h3, h4 {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;

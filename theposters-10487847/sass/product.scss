@@ -37,6 +37,10 @@
 		line-height: 75px;
 		text-transform: uppercase;
 		font-weight: 700;
+
+		img {
+			vertical-align: inherit;
+		}
 	}
 	
 	> .container {

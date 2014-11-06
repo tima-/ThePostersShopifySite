@@ -52,11 +52,33 @@
 		height: 21px;
 		margin: 0 5px;
 		width: 20px;
+		position: relative;
 
 		img {
 			width: 100%;
 			display: block;
+			position: absolute;
 			margin: 0;
+
+			&.hover-on {
+				display: none;
+			}
+
+			&.hover-off {
+				display: block;
+			}
+		}
+
+		&:hover {
+			img {
+				&.hover-on {
+					display: block;
+				}
+
+				&.hover-off {
+					display: none;
+				}
+			}
 		}
 	}
 }

@@ -230,45 +230,112 @@ footer#main-footer .mailchimp-subscribe button {
 /* line 231, ../sass/global.scss */
 footer#main-footer .social-follow-us {
   position: relative;
-  text-align: right;
+  float: right;
   top: -4px;
 }
-/* line 236, ../sass/global.scss */
+@media screen and (max-width: 1200px) {
+  /* line 231, ../sass/global.scss */
+  footer#main-footer .social-follow-us {
+    top: -30px;
+  }
+}
+/* line 240, ../sass/global.scss */
 footer#main-footer .social-follow-us h2 {
   color: #999;
-  display: inline-block;
+  display: block;
+  float: left;
   font-size: .7em;
   font-weight: normal;
   height: 50px;
   letter-spacing: normal;
   line-height: 50px;
-  margin: 0;
+  margin: 0 5px 0 0;
   text-transform: uppercase;
 }
-/* line 248, ../sass/global.scss */
+@media screen and (max-width: 1200px) {
+  /* line 240, ../sass/global.scss */
+  footer#main-footer .social-follow-us h2 {
+    clear: both;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+/* line 259, ../sass/global.scss */
 footer#main-footer .social-follow-us a.social-icon {
   background-color: #eaeaea;
-  display: inline-block;
-  margin: 0 5px;
+  display: block;
+  float: left;
+  margin: 0 1px 1px;
   text-align: center;
+  position: relative;
+  width: 45px;
+  height: 45px;
 }
-/* line 256, ../sass/global.scss */
+@media screen and (max-width: 1200px) {
+  /* line 271, ../sass/global.scss */
+  footer#main-footer .social-follow-us a.social-icon:nth-child(2n) {
+    clear: both;
+  }
+}
+/* line 276, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon img {
+  position: absolute;
+}
+/* line 279, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon img.hover-on {
+  display: none;
+}
+/* line 283, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon img.hover-off {
+  display: block;
+}
+/* line 290, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon:hover img.hover-on {
+  display: block;
+}
+/* line 294, ../sass/global.scss */
+footer#main-footer .social-follow-us a.social-icon:hover img.hover-off {
+  display: none;
+}
+/* line 302, ../sass/global.scss */
 footer#main-footer nav {
   margin-bottom: 60px;
   margin-top: 60px;
   overflow: hidden;
 }
-/* line 261, ../sass/global.scss */
+@media screen and (max-width: 1200px) {
+  /* line 302, ../sass/global.scss */
+  footer#main-footer nav {
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+}
+/* line 312, ../sass/global.scss */
 footer#main-footer nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 266, ../sass/global.scss */
+/* line 317, ../sass/global.scss */
 footer#main-footer nav ul li {
   float: left;
 }
-/* line 269, ../sass/global.scss */
+@media screen and (max-width: 1200px) {
+  /* line 317, ../sass/global.scss */
+  footer#main-footer nav ul li {
+    width: 33%;
+  }
+  /* line 323, ../sass/global.scss */
+  footer#main-footer nav ul li:nth-child(3n + 1) {
+    clear: left;
+    text-align: right;
+  }
+  /* line 328, ../sass/global.scss */
+  footer#main-footer nav ul li:nth-child(3n + 2) {
+    text-align: center;
+  }
+}
+/* line 333, ../sass/global.scss */
 footer#main-footer nav ul li a {
   color: #999;
   display: block;
@@ -276,27 +343,27 @@ footer#main-footer nav ul li a {
   padding: 0 20px;
   text-transform: uppercase;
 }
-/* line 276, ../sass/global.scss */
+/* line 340, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
   color: #000;
 }
-/* line 282, ../sass/global.scss */
+/* line 346, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) a {
   padding-left: 0;
 }
-/* line 288, ../sass/global.scss */
+/* line 352, ../sass/global.scss */
 footer#main-footer nav ul li:last-child a {
   padding-right: 0;
 }
 
-/* line 297, ../sass/global.scss */
+/* line 361, ../sass/global.scss */
 #main-wrapper {
   left: 0;
   position: relative;
   width: 100%;
 }
 
-/* line 303, ../sass/global.scss */
+/* line 367, ../sass/global.scss */
 #cart-flyout {
   background-color: #eaeaeb;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1) inset;
@@ -308,7 +375,7 @@ footer#main-footer nav ul li:last-child a {
   top: 0;
   width: 20%;
 }
-/* line 314, ../sass/global.scss */
+/* line 378, ../sass/global.scss */
 #cart-flyout .cart-top-btn {
   background-color: #505050;
   box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
@@ -322,15 +389,15 @@ footer#main-footer nav ul li:last-child a {
   text-transform: uppercase;
   font-size: 1vw;
 }
-/* line 327, ../sass/global.scss */
+/* line 391, ../sass/global.scss */
 #cart-flyout .cart-top-btn#checkout {
   background-color: #fb0005;
 }
-/* line 332, ../sass/global.scss */
+/* line 396, ../sass/global.scss */
 #cart-flyout .empty-cart {
   text-align: center;
 }
-/* line 336, ../sass/global.scss */
+/* line 400, ../sass/global.scss */
 #cart-flyout .subtotal {
   background-color: #eaeaeb;
   box-shadow: inset 6px 0 22px -10px rgba(0, 0, 0, 0.5);
@@ -338,21 +405,21 @@ footer#main-footer nav ul li:last-child a {
   padding: 20px;
   width: 100%;
 }
-/* line 343, ../sass/global.scss */
+/* line 407, ../sass/global.scss */
 #cart-flyout .subtotal h2 {
   font-size: 1.2em;
 }
-/* line 346, ../sass/global.scss */
+/* line 410, ../sass/global.scss */
 #cart-flyout .subtotal h2 .subtotal-price {
   float: right;
 }
-/* line 350, ../sass/global.scss */
+/* line 414, ../sass/global.scss */
 #cart-flyout .subtotal h2 small {
   clear: both;
   display: block;
   font-size: 0.6em;
 }
-/* line 358, ../sass/global.scss */
+/* line 422, ../sass/global.scss */
 #cart-flyout .number-of-items {
   clear: both;
   background-color: #d6d6d6;
@@ -360,7 +427,7 @@ footer#main-footer nav ul li:last-child a {
   padding: 3px 0;
   text-align: center;
 }
-/* line 367, ../sass/global.scss */
+/* line 431, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item {
   background-color: #fff;
   border-bottom: 1px solid #eaeaeb;
@@ -369,43 +436,43 @@ footer#main-footer nav ul li:last-child a {
   font-size: 0.9em;
   color: #6c6c6c;
 }
-/* line 375, ../sass/global.scss */
+/* line 439, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image {
   width: 30%;
   float: left;
   padding: 20px 10px 20px 20px;
 }
-/* line 380, ../sass/global.scss */
+/* line 444, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .image img {
   width: 100%;
 }
-/* line 385, ../sass/global.scss */
+/* line 449, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info {
   float: right;
   width: 70%;
   padding: 20px 20px 20px 10px;
 }
-/* line 390, ../sass/global.scss */
+/* line 454, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .remove-item {
   float: right;
   width: 16px;
   height: 16px;
 }
-/* line 396, ../sass/global.scss */
+/* line 460, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info h3 {
   font-size: 1em;
   margin: 0 0 5px;
 }
-/* line 401, ../sass/global.scss */
+/* line 465, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty {
   margin: 0 0 5px;
 }
-/* line 404, ../sass/global.scss */
+/* line 468, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty input {
   width: 30px;
   text-align: center;
 }
-/* line 409, ../sass/global.scss */
+/* line 473, ../sass/global.scss */
 #cart-flyout .cart-items .cart-item .info .qty .update-cart {
   font-size: 0.75em;
 }

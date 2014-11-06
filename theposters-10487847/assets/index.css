@@ -257,30 +257,51 @@
   color: #333;
   background: #fff;
 }
+/* line 267, ../sass/index.scss */
+#mission-section.mission-white-bg {
+  text-align: center;
+  padding: 100px 0 50px 0;
+  margin-bottom: 0;
+  max-width: 550px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+/* line 275, ../sass/index.scss */
+#mission-section.mission-white-bg hr, #mission-section.mission-white-bg .btn-default {
+  display: none;
+}
+/* line 279, ../sass/index.scss */
+#mission-section.mission-white-bg h2 {
+  color: #262626;
+}
+/* line 283, ../sass/index.scss */
+#mission-section.mission-white-bg h3 {
+  color: #000;
+}
 
 /**
  * Press Section
  */
-/* line 272, ../sass/index.scss */
+/* line 293, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 10px;
 }
-/* line 278, ../sass/index.scss */
+/* line 299, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 145px 0 0 0;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 278, ../sass/index.scss */
+  /* line 299, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 287, ../sass/index.scss */
+/* line 308, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -288,28 +309,28 @@
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 295, ../sass/index.scss */
+/* line 316, ../sass/index.scss */
 #press-section ul li:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 300, ../sass/index.scss */
+/* line 321, ../sass/index.scss */
 #press-section ul li:hover p {
   color: black;
 }
-/* line 305, ../sass/index.scss */
+/* line 326, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 311, ../sass/index.scss */
+  /* line 332, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 317, ../sass/index.scss */
+/* line 338, ../sass/index.scss */
 #press-section ul li p {
   color: #999;
   display: block;
@@ -323,7 +344,7 @@
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 331, ../sass/index.scss */
+/* line 352, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
   border: 10px solid #fff;

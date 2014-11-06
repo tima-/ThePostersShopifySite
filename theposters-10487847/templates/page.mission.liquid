@@ -8,15 +8,29 @@
 <div class="container-fluid">
 
 {% for article in blogs.mission.articles %}	
-	<div class="mission-page-section row {% cycle 'section-left', 'section-right' %}">
-	  <div class="image"></div>
-	  <div class="info">
-	  	<div class="info-content">
-		  	<h2><span>{% cycle '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' %}</span>{{ article.title }}</h2>
-		    {{ article.content }}
+	{% if article.title == 'ART HELPS EVERYONE' %}
+		<div class="mission-page-section row {% cycle 'section-left', 'section-right' %}">
+		  <div class="image">
+		  	{% include 'fundedhours' with 'whitebg' %}
+		  </div>
+		  <div class="info">
+		  	<div class="info-content">
+			  	<h2><span>{% cycle '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' %}</span>{{ article.title }}</h2>
+			    {{ article.content }}
+			</div>
+		  </div>
 		</div>
-	  </div>
-	</div>
+	{% else %}
+		<div class="mission-page-section row {% cycle 'section-left', 'section-right' %}">
+		  <div class="image"></div>
+		  <div class="info">
+		  	<div class="info-content">
+			  	<h2><span>{% cycle '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' %}</span>{{ article.title }}</h2>
+			    {{ article.content }}
+			</div>
+		  </div>
+		</div>
+	{% endif %}
 {% endfor %} 
 </div>
 

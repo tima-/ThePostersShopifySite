@@ -9,15 +9,36 @@
 			{% endfor %}
 			</ul>
 		</div>
-
-		<div class="help-section col-sm-8 col-sm-offset-2">
+	</div>
+	<div class="row">
+		<div class="col-sm-2"><a href="#" class="help-arrow arrow-left" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></a></div>
+		<div class="help-section col-sm-8">
 
 			<h1 class="shadow-header section-header">{{ page.title }}</h1>
 
 			{{ page.content }}
 
 		</div>
+		<div class="col-sm-2"><a href="#" class="help-arrow arrow-right" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></a></div>
 	</div>
 </div>
 
 <div class="archive-border" style="background-image: url({{ 'archiveborder.png' | asset_url }})"></div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var currentLink = $('.help-tabs').find('.current');
+		var prevLink = currentLink.closest('li').prev().find('a');
+		if(!prevLink.length) {
+			prevLink = $('.help-tabs').find('li').last().find('a');
+		}
+
+		var nextLink = currentLink.closest('li').next().find('a');
+		if(!nextLink.length) {
+			nextLink = $('.help-tabs').find('li').first().find('a');
+		}
+
+		$('.arrow-left').attr('href', prevLink.attr('href'));
+		$('.arrow-right').attr('href', nextLink.attr('href'));
+	});
+</script>

@@ -44,3 +44,29 @@
 		margin: 40px 0;
 	}
 }
+
+.help-arrow {
+	width: 50px;
+	height: 120px;
+	display: block;
+	background-color: rgba(#fff, 0.75);
+
+	&.arrow-right {
+		float: right;
+		background-position: -50px 0;
+	}
+
+	&.arrow-left {
+		background-position: 0 0;
+	}
+
+	&:hover {
+		&.arrow-right {
+			background-position: -50px -120px;
+		}
+
+		&.arrow-left {
+			background-position: 0 -120px;
+		}
+	}
+}

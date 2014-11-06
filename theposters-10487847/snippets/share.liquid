@@ -1,13 +1,28 @@
 <div id="social" class="clearfix">
   <h2>Share</h2>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}" class="social-share facebook" onclick="window.open(this.href,'', 'width=650,height=400'); return false;"><img src="{{ 'facebook.jpg' | asset_url }}" alt="FaceBook" /></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}" class="social-share facebook" onclick="window.open(this.href,'', 'width=650,height=400'); return false;">
+  	<img src="{{ 'facebook.jpg' | asset_url }}" alt="FaceBook" class="hover hover-off" />
+  	<img src="{{ 'facebook_rollover.jpg' | asset_url }}" alt="FaceBook" class="hover hover-on" />
+  </a>
 
-  <a href="https://twitter.com/intent/tweet?text={{ product.title }}+' '+{{ product.vendor }}+' - '+{{ shop.url }}{{ product.url }}&url={{ shop.url }}{{ product.url }}&via=ThePosters" class="social-share twitter" onclick="window.open(this.href,'', 'width=650,height=400'); return false;" class="social-email"><img src="{{ 'twitter.jpg' | asset_url }}" alt="Twitter" /></a>
+  <a href="https://twitter.com/intent/tweet?text={{ product.title }}+' '+{{ product.vendor }}+' - '+{{ shop.url }}{{ product.url }}&url={{ shop.url }}{{ product.url }}&via=ThePosters" class="social-share twitter" onclick="window.open(this.href,'', 'width=650,height=400'); return false;" class="social-email">
+  	<img src="{{ 'twitter.jpg' | asset_url }}" alt="Twitter" class="hover hover-off" />
+  	<img src="{{ 'twitter_rollover.jpg' | asset_url }}" alt="Twitter" class="hover hover-on" />
+  </a>
 
-  <a href="https://plus.google.com/share?url={{ shop.url }}{{ product.url }}" class="social-share google" onclick="window.open(this.href,'', 'width=650,height=400'); return false;"><img src="{{ 'googleplus.jpg' | asset_url }}" alt="Google+" /></a>
+  <a href="https://plus.google.com/share?url={{ shop.url }}{{ product.url }}" class="social-share google" onclick="window.open(this.href,'', 'width=650,height=400'); return false;">
+  	<img src="{{ 'googleplus.jpg' | asset_url }}" alt="Google+" class="hover hover-off" />
+  	<img src="{{ 'gplus_rollover.gif' | asset_url }}" alt="Google+" class="hover hover-on" />
+  </a>
 
-  <a href="mailto:?body={{ product.title }} {{ product.vendor }} - {{ shop.url }}{{ product.url }}" class="social-share email"><img src="{{ 'email.jpg' | asset_url }}" alt="Email" /></a>
+  <a href="mailto:?body={{ product.title }} {{ product.vendor }} - {{ shop.url }}{{ product.url }}" class="social-share email">
+  	<img src="{{ 'email.jpg' | asset_url }}" alt="Email" class="hover hover-off" />
+  	<img src="{{ 'email_rollover.gif' | asset_url }}" alt="Email" class="hover hover-on" />
+  </a>
 
-  <a href="//pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&media={{ product.featured_image | product_img_url: 'large' }}" class="social-share pinterest" onclick="window.open(this.href,'', 'width=650,height=400'); return false;"><img src="{{ 'pinterest.jpg' | asset_url }}" alt="Pinterest" /></a>
+  <a href="//pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&media={{ product.featured_image | product_img_url: 'large' }}" class="social-share pinterest" onclick="window.open(this.href,'', 'width=650,height=400'); return false;">
+  	<img src="{{ 'pinterest.jpg' | asset_url }}" alt="Pinterest" class="hover hover-off" />
+  	<img src="{{ 'pinterest_rollover.gif' | asset_url }}" alt="Pinterest" class="hover hover-on" />
+  </a>
 </div>
