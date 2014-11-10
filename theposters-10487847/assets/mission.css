@@ -75,6 +75,7 @@
 .mission-page-section .info .info-content {
   max-width: 500px;
   margin: 35px 75px;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   /* line 66, ../sass/mission.scss */
@@ -84,7 +85,7 @@
     max-width: 100%;
   }
 }
-/* line 76, ../sass/mission.scss */
+/* line 77, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 {
   margin: 0 0 15px;
   padding: 15px 0;
@@ -94,7 +95,7 @@
   text-transform: uppercase;
   font-size: 1em;
 }
-/* line 85, ../sass/mission.scss */
+/* line 86, ../sass/mission.scss */
 .mission-page-section .info .info-content h2 span {
   width: 45px;
   height: 45px;
@@ -107,21 +108,21 @@
   margin-bottom: 15px;
   line-height: 45px;
 }
-/* line 99, ../sass/mission.scss */
+/* line 100, ../sass/mission.scss */
 .mission-page-section .info .info-content p {
   margin: 0;
   line-height: 30px;
 }
-/* line 107, ../sass/mission.scss */
+/* line 108, ../sass/mission.scss */
 .mission-page-section.section-right .image {
   float: right;
   text-align: left;
 }
-/* line 112, ../sass/mission.scss */
+/* line 113, ../sass/mission.scss */
 .mission-page-section.section-right .info {
   float: right;
 }
-/* line 115, ../sass/mission.scss */
+/* line 116, ../sass/mission.scss */
 .mission-page-section.section-right .info .info-content {
   float: right;
 }
