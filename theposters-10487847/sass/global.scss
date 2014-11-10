@@ -128,6 +128,16 @@ header#main-header {
 	}
 }
 
+/* http://www.dennisplucinik.com/blog/2007/09/01/css-hack-text-indent-10000px/ */
+.ir {
+	background-repeat: no-repeat;
+	direction: ltr;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+}
+
 .shadow-header {
 	text-shadow: 1px 1px 0px #e6e3e4, 2px 2px 0px #777, 1px 2px 0px #777,2px 1px 0px #777;
 	
@@ -150,6 +160,15 @@ header#main-header {
 
 .shadow-header-inverted {
 	text-shadow: 2px 2px 0px #333, 3px 3px 0px #9f9f9f;
+}
+
+.sprite {
+	background: no-repeat;
+	&.arrow-white-right {
+		background-image: url(arrow-white.png);
+		height: 22px;
+		width: 15px;
+	}
 }
 
 #main-content {
@@ -225,6 +244,11 @@ footer#main-footer {
 			border: 0;
 			position: relative;
 			z-index: 1;
+			
+			&.arrow-white-right {
+				background-color: #999;
+				background-position: 15px 11px;
+			}
 		}
 	}
 
@@ -383,13 +407,43 @@ footer#main-footer {
 		float: left;
 		height: 131px;
 		line-height: 131px;
+		position: relative;
 		text-align: center;
 		width: 50%;
 		text-transform: uppercase;
 		font-size: 1vw;
 
+		&:before {
+			content: '';
+			display: block;
+			background: url('arrow-white-small.png');
+			float: left;
+			height: 11px;
+			left: 20px;
+			position: relative;
+			top: 59px;
+			width: 7px;
+		}
+
 		&#checkout {
 			background-color: #fb0005;
+			
+			&:after {
+				content: '';
+				display: block;
+				background: url('arrow-white-small.png');
+				float: right;
+				height: 11px;
+				right: 43px;
+				position: relative;
+				top: 59px;
+				width: 7px;
+				-webkit-transform: rotate(180deg);
+			}
+			
+			&:before {
+				display: none;
+			}
 		}
 	}
 
