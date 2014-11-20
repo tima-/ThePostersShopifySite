@@ -77,7 +77,7 @@
 .artist-profile .artist-header .artist-image {
   background-position: right top;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   float: left;
   height: 400px;
   width: 50%;
