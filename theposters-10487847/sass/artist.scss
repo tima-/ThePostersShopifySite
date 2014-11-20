@@ -12,18 +12,19 @@
 		&:nth-child(4n+1) {
 			float: left;
 			margin-left: 0;
+			
+			&#join-posters {
+				a {
+					left: 0;
+					top: 0;
+				}
+			}
 		}
 		
 		&:nth-child(4n+4) {
 			margin-right: 0;
 		}
 		
-		&#join-posters {
-			a {
-				left: 0;
-				top: 0;
-			}
-		}
 	}
 
 	.artist {
