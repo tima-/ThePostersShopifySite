@@ -39,6 +39,6 @@
 /* line 38, ../sass/press.scss */
 #press-blog ul li img {
   width: 100%;
-  border: 10px solid #fff;
+  border: 10px solid white;
   margin-bottom: 5px;
 }

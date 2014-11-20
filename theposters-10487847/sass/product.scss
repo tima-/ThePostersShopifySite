@@ -193,6 +193,7 @@
 		}
 
 		h1.title {
+			color: #999;
 			font-size: 1.2em;
 			font-weight: 300;
 			margin: 0 0 5px;
@@ -209,29 +210,28 @@
 		}
 
 		#availability {
-			clear: both;
-			display: inline-block;
-			padding: 0 4px;
 			background-color: $white;
-			text-transform: uppercase;
+			clear: both;
+			color: $darkGray;
+			display: inline-block;
 			font-size: 0.75em;
 			font-weight: 700;
 			font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 			font-weight: 700;
-			color: $darkGray;
-			letter-spacing: -0.3px;
 			height: 18px;
 			line-height: 19px;
+			letter-spacing: -0.3px;
+			padding: 0 4px;
+			text-transform: uppercase;
 
 			.days-remaining {
 				color: #f00;
-				position: relative;
-				top: -2px;
 			}
 		}
 
 		.description {
 			font-size: 0.85em;
+			line-height: 1.1em;
 			margin: $gap 0;
 		}
 
@@ -241,22 +241,31 @@
 				float: left;
 
 				input {
-					width: 50px;
 					text-align: center;
+					width: 50px;
+				}
+				
+				label {
+					color: #999;
+					font-size: .8em;
+					left: 4px;
+					position: relative;
+					top: -2px;
 				}
 			}
 
 			.add-to-cart-info {
 				float: right;
-				width: 60%;
 				text-align: right;
+				width: 60%;
 
 				#price {
 					display: inline-block;
-					font-weight: 700;
-					margin-right: 15px;
-					line-height: 30px;
 					font-size: 1.25em;
+					font-weight: 700;
+					letter-spacing: normal;
+					line-height: 30px;
+					margin-right: 15px;
 				}
 
 				#add-to-cart {
@@ -264,11 +273,7 @@
 					background-color: #f00;
 					text-transform: uppercase;
 				}
-			}
-
-
-
-			
+			}			
 		}
 	}
 }
