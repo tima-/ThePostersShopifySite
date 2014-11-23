@@ -4,13 +4,13 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <div class="previewImage_container anim2">
+      <div class="previewImage_container anim2" data-expdate="{{featuredproduct.metafields.visibility.expirationdate}}">
         <img src="{{ featuredproduct.featured_image | product_img_url: 'grande' }}" alt="{{ featuredproduct.title }}" />
         <hr class="top" />
         <hr class="bottom" />
-        <div class="copy date">{{ featuredproduct.title }}</div>
+        <div class="copy date">{{ featuredproduct.vendor }}</div>
         <div class="copy title">{{ featuredproduct.title }}</div>
-        <div class="copy availability">Available for <span>--</span> more days</div>
+        <div class="copy availability">Available for <span class="days-remaining">--</span> more days</div>
         <a href="{{ featuredproduct.url }}" class="button action">See Poster</a>
         <div class="blackscreen"></div>
       </div>
@@ -21,7 +21,9 @@
 
 {% include 'we-are-posters' %}
 
-{% include 'fundedhours' %}
+<div class="googly">
+  <img src="{{ 'theposters350804.jpg' | asset_url }}" />
+</div>
 
 <div id="press-section" style="background-image: url({{ 'presssat.png' | asset_url }})">
   <div class="container">

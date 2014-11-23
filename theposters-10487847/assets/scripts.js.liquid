@@ -232,6 +232,18 @@ $(document).ready(function () {
     }
   });
 
+  $('.previewImage_container').each(function (index, value) {
+    if ($(value).data('expdate') !== undefined) {
+      days = daysRemaining($(value).data('expdate'));
+
+      if (days < 0) {
+        $(this).find('.availability').hide();
+      } else {
+        $(this).find('.days-remaining').html(days);
+      }
+    }
+  });
+
   
 });
 

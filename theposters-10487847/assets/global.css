@@ -17,13 +17,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -180,7 +180,7 @@ header#main-header #cart-info .toggle-cart {
 /* line 178, ../sass/global.scss */
 footer#main-footer {
   padding-top: 60px;
-  background-color: white;
+  background-color: #fff;
   margin-top: 0;
   overflow: hidden;
 }
@@ -372,7 +372,7 @@ footer#main-footer nav ul li a {
 }
 /* line 364, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
-  color: black;
+  color: #000;
 }
 /* line 370, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) a {

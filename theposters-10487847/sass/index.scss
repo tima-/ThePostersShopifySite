@@ -382,6 +382,10 @@
 			border: 0;
 			display: block;
 		}
+
+    img {
+      width: 100%;
+    }
 	}
 
   .small-social {
@@ -483,6 +487,20 @@
     h3 {
       color: $black;
     }
+  }
+}
+
+.googly {
+  background-color: #4b4b4b;
+  padding: 50px 0;
+  text-align: center;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+  margin-bottom: 50px;
+
+  img {
+    width: 400px;
+    border: 10px solid #fff;
   }
 }
 

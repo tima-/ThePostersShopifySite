@@ -123,6 +123,10 @@
 #active-products {
 	.for-sale-collection {
 		text-align: center;
+
+		.product:nth-child(2n) {
+			
+		}
 	}
 	
 	.for-sale-header {
@@ -226,7 +230,7 @@
 			.days-remaining {
 				color: #f00;
 				position: relative;
-				top: -2px;
+				top: 0;
 			}
 		}
 

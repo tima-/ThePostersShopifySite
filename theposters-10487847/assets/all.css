@@ -105,13 +105,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -268,7 +268,7 @@ header#main-header #cart-info .toggle-cart {
 /* line 178, ../sass/global.scss */
 footer#main-footer {
   padding-top: 60px;
-  background-color: white;
+  background-color: #fff;
   margin-top: 0;
   overflow: hidden;
 }
@@ -460,7 +460,7 @@ footer#main-footer nav ul li a {
 }
 /* line 364, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
-  color: black;
+  color: #000;
 }
 /* line 370, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) a {
@@ -627,7 +627,7 @@ footer#main-footer nav ul li:last-child a {
  */
 /* line 6, ../sass/index.scss */
 .previewImage_container {
-  border: 20px solid white;
+  border: 20px solid #fff;
   margin: 0 auto 80px auto;
   max-width: 500px;
   width: 100%;
@@ -903,60 +903,44 @@ footer#main-footer nav ul li:last-child a {
 }
 
 @-webkit-keyframes availabilityslide {
-  /* line 308, ../sass/index.scss */
   from {
     opacity: 0;
     top: 43.5%;
   }
-
-  /* line 313, ../sass/index.scss */
   to {
     opacity: 1;
     top: 46.5%;
   }
 }
-
 @-webkit-keyframes buttonfade {
-  /* line 320, ../sass/index.scss */
   from {
     opacity: 0;
   }
-
-  /* line 324, ../sass/index.scss */
   to {
     bottom: 40%;
     opacity: 1;
   }
 }
-
 @-webkit-keyframes dateslide {
-  /* line 331, ../sass/index.scss */
   from {
     opacity: 0;
     top: 34%;
   }
-
-  /* line 336, ../sass/index.scss */
   to {
     opacity: 1;
     top: 37%;
   }
 }
-
 @-webkit-keyframes titleslide {
-  /* line 343, ../sass/index.scss */
   from {
     opacity: 0;
     top: 37%;
   }
-
-  /* line 348, ../sass/index.scss */
   to {
     opacity: 1;
     top: 41.5%;
   }
 }
-
 /**
  * We Are The Posters Section
  */
@@ -990,7 +974,11 @@ footer#main-footer nav ul li:last-child a {
   border: 0;
   display: block;
 }
-/* line 387, ../sass/index.scss */
+/* line 386, ../sass/index.scss */
+#we-are-the-posters-video .video-container img {
+  width: 100%;
+}
+/* line 391, ../sass/index.scss */
 #we-are-the-posters-video .small-social {
   margin: 0 auto;
   position: relative;
@@ -999,15 +987,15 @@ footer#main-footer nav ul li:last-child a {
   top: -80px;
   width: 580px;
 }
-/* line 395, ../sass/index.scss */
+/* line 399, ../sass/index.scss */
 #we-are-the-posters-video .small-social a {
   margin: 0 3px;
 }
-/* line 399, ../sass/index.scss */
+/* line 403, ../sass/index.scss */
 #we-are-the-posters-video .small-social h2 {
   display: none;
 }
-/* line 403, ../sass/index.scss */
+/* line 407, ../sass/index.scss */
 #we-are-the-posters-video .small-social .pinterest {
   display: none;
 }
@@ -1015,62 +1003,62 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Mission Section with Countdown
  */
-/* line 413, ../sass/index.scss */
+/* line 417, ../sass/index.scss */
 #mission-section {
   text-align: center;
   padding: 75px 0;
   margin-bottom: 60px;
 }
-/* line 418, ../sass/index.scss */
+/* line 422, ../sass/index.scss */
 #mission-section h2 {
   color: #999999;
   font-size: 1.8em;
   margin: 0;
   text-transform: uppercase;
 }
-/* line 424, ../sass/index.scss */
+/* line 428, ../sass/index.scss */
 #mission-section h2.mission-footer {
   font-size: 1.47em;
   margin-top: 5px;
 }
-/* line 430, ../sass/index.scss */
+/* line 434, ../sass/index.scss */
 #mission-section h3 {
-  color: white;
+  color: #fff;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
 }
-/* line 437, ../sass/index.scss */
+/* line 441, ../sass/index.scss */
 #mission-section hr {
   border-color: #888;
   min-width: 440px;
   width: 33%;
 }
-/* line 442, ../sass/index.scss */
+/* line 446, ../sass/index.scss */
 #mission-section hr.bottom {
   margin-top: 30px;
 }
-/* line 447, ../sass/index.scss */
+/* line 451, ../sass/index.scss */
 #mission-section p {
   margin-bottom: 35px;
   margin-top: 30px;
 }
-/* line 452, ../sass/index.scss */
+/* line 456, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
 }
-/* line 461, ../sass/index.scss */
+/* line 465, ../sass/index.scss */
 #mission-section .btn-default:hover {
   color: #333;
   background: #fff;
 }
-/* line 467, ../sass/index.scss */
+/* line 471, ../sass/index.scss */
 #mission-section.mission-white-bg {
   text-align: center;
   padding: 100px 0 50px 0;
@@ -1079,42 +1067,57 @@ footer#main-footer nav ul li:last-child a {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-/* line 475, ../sass/index.scss */
+/* line 479, ../sass/index.scss */
 #mission-section.mission-white-bg hr, #mission-section.mission-white-bg .btn-default {
   display: none;
 }
-/* line 479, ../sass/index.scss */
+/* line 483, ../sass/index.scss */
 #mission-section.mission-white-bg h2 {
   color: #262626;
 }
-/* line 483, ../sass/index.scss */
+/* line 487, ../sass/index.scss */
 #mission-section.mission-white-bg h3 {
-  color: black;
+  color: #000;
+}
+
+/* line 493, ../sass/index.scss */
+.googly {
+  background-color: #4b4b4b;
+  padding: 50px 0;
+  text-align: center;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+  margin-bottom: 50px;
+}
+/* line 501, ../sass/index.scss */
+.googly img {
+  width: 400px;
+  border: 10px solid #fff;
 }
 
 /**
  * Press Section
  */
-/* line 493, ../sass/index.scss */
+/* line 511, ../sass/index.scss */
 #press-section {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 10px;
 }
-/* line 499, ../sass/index.scss */
+/* line 517, ../sass/index.scss */
 #press-section ul {
   list-style: none;
   margin: 145px 0 0 0;
   padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 499, ../sass/index.scss */
+  /* line 517, ../sass/index.scss */
   #press-section ul {
     margin: 375px 0 0 0;
   }
 }
-/* line 508, ../sass/index.scss */
+/* line 526, ../sass/index.scss */
 #press-section ul li {
   float: left;
   width: 200px;
@@ -1122,28 +1125,28 @@ footer#main-footer nav ul li:last-child a {
   margin-bottom: 20px;
   margin-right: 28px;
 }
-/* line 516, ../sass/index.scss */
+/* line 534, ../sass/index.scss */
 #press-section ul li:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 521, ../sass/index.scss */
+/* line 539, ../sass/index.scss */
 #press-section ul li:hover p {
   color: black;
 }
-/* line 526, ../sass/index.scss */
+/* line 544, ../sass/index.scss */
 #press-section ul li:nth-child(2) {
   margin-left: 683px;
   margin-right: 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 532, ../sass/index.scss */
+  /* line 550, ../sass/index.scss */
   #press-section ul li:nth-child(2) {
     margin-left: 0;
     margin-right: 28px;
   }
 }
-/* line 538, ../sass/index.scss */
+/* line 556, ../sass/index.scss */
 #press-section ul li p {
   color: #999;
   display: block;
@@ -1157,10 +1160,10 @@ footer#main-footer nav ul li:last-child a {
   -webkit-transition: color .2s;
   transition: color .2s;
 }
-/* line 552, ../sass/index.scss */
+/* line 570, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 10px;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -1197,7 +1200,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 30, ../sass/product.scss */
 #archived-products .archive-section-header {
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 3em;
   width: 255px;
   height: 372px;
@@ -1266,7 +1269,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 101, ../sass/product.scss */
 .product .details .availability {
-  background-color: white;
+  background-color: #fff;
   clear: both;
   color: #666;
   display: inline-block;
@@ -1289,7 +1292,7 @@ footer#main-footer nav ul li:last-child a {
 #active-products .for-sale-collection {
   text-align: center;
 }
-/* line 128, ../sass/product.scss */
+/* line 132, ../sass/product.scss */
 #active-products .for-sale-header {
   margin: 0 auto;
   width: 463px;
@@ -1298,7 +1301,7 @@ footer#main-footer nav ul li:last-child a {
 /**
  * Product Detail Page
  */
-/* line 137, ../sass/product.scss */
+/* line 141, ../sass/product.scss */
 #zoom-image {
   position: fixed;
   z-index: 100;
@@ -1314,53 +1317,53 @@ footer#main-footer nav ul li:last-child a {
   background-repeat: no-repeat;
 }
 
-/* line 154, ../sass/product.scss */
+/* line 158, ../sass/product.scss */
 #product #product-images #featured-image {
   text-align: center;
 }
-/* line 157, ../sass/product.scss */
+/* line 161, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
 }
-/* line 163, ../sass/product.scss */
+/* line 167, ../sass/product.scss */
 #product #product-images #thumbs {
   clear: both;
 }
-/* line 166, ../sass/product.scss */
+/* line 170, ../sass/product.scss */
 #product #product-images #thumbs .image {
-  border: 10px solid white;
+  border: 10px solid #fff;
   width: 200px;
   height: 200px;
   overflow: hidden;
   float: left;
   margin: 26px 26px 0 0;
 }
-/* line 174, ../sass/product.scss */
+/* line 178, ../sass/product.scss */
 #product #product-images #thumbs .image:last-child {
   margin: 26px 0 0 0;
 }
-/* line 178, ../sass/product.scss */
+/* line 182, ../sass/product.scss */
 #product #product-images #thumbs .image img {
   min-width: 200px;
   min-height: 200px;
 }
-/* line 185, ../sass/product.scss */
+/* line 189, ../sass/product.scss */
 #product #product-images .social {
   clear: both;
 }
-/* line 191, ../sass/product.scss */
+/* line 195, ../sass/product.scss */
 #product #details hr {
   border-top: 1px solid #262626;
 }
-/* line 195, ../sass/product.scss */
+/* line 199, ../sass/product.scss */
 #product #details h1.title {
   font-size: 1.2em;
   font-weight: 300;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 202, ../sass/product.scss */
+/* line 206, ../sass/product.scss */
 #product #details #artist {
   font-size: 2em;
   font-weight: 700;
@@ -1369,12 +1372,12 @@ footer#main-footer nav ul li:last-child a {
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 211, ../sass/product.scss */
+/* line 215, ../sass/product.scss */
 #product #details #availability {
   clear: both;
   display: inline-block;
   padding: 0 4px;
-  background-color: white;
+  background-color: #fff;
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: 700;
@@ -1385,34 +1388,34 @@ footer#main-footer nav ul li:last-child a {
   height: 18px;
   line-height: 19px;
 }
-/* line 226, ../sass/product.scss */
+/* line 230, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
-  top: -2px;
+  top: 0;
 }
-/* line 233, ../sass/product.scss */
+/* line 237, ../sass/product.scss */
 #product #details .description {
   font-size: 0.85em;
   margin: 40px 0;
 }
-/* line 239, ../sass/product.scss */
+/* line 243, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 243, ../sass/product.scss */
+/* line 247, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
   width: 50px;
   text-align: center;
 }
-/* line 249, ../sass/product.scss */
+/* line 253, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
   width: 60%;
   text-align: right;
 }
-/* line 254, ../sass/product.scss */
+/* line 258, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
   font-weight: 700;
@@ -1420,14 +1423,14 @@ footer#main-footer nav ul li:last-child a {
   line-height: 30px;
   font-size: 1.25em;
 }
-/* line 262, ../sass/product.scss */
+/* line 266, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
   text-transform: uppercase;
 }
 
-/* line 276, ../sass/product.scss */
+/* line 280, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
 }
@@ -1944,6 +1947,6 @@ body {
 /* line 38, ../sass/press.scss */
 #press-blog ul li img {
   width: 100%;
-  border: 10px solid white;
+  border: 10px solid #fff;
   margin-bottom: 5px;
 }

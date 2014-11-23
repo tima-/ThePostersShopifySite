@@ -16,7 +16,7 @@
     </a>
   </div>
   <div class="details">
-    <a href="{{ url }}">{{ product.title }}</a>
+    <a href="{{ url }}"><small>{{ product.vendor }}</small><br />{{ product.title }}</a>
     {% if product.metafields.visibility.expirationdate %}
       <div class="availability">Available for <span class="days-remaining">--</span> more days</div>
     {% endif %}
