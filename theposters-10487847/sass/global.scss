@@ -164,11 +164,16 @@ header#main-header {
 
 .sprite {
 	background: no-repeat;
+	
 	&.arrow-white-right {
 		background-image: url(arrow-white.png);
 		height: 22px;
 		width: 15px;
 	}
+}
+
+.text-center {
+	text-align: center;
 }
 
 #main-content {
@@ -339,7 +344,10 @@ footer#main-footer {
 			padding: 0;
 
 			li {
+				display: inline;
 				float: left;
+				padding: 0 10px;
+				white-space: nowrap;
 
 				@media screen and (max-width: 1200px) {
 					width: 33%;
@@ -367,12 +375,16 @@ footer#main-footer {
 				}
 				
 				&:nth-child(1) {
+					padding-left: 0;
+					
 					a {
 						padding-left: 0;
 					}
 				}
 				
 				&:last-child {
+					padding-right: 0;
+					
 					a {
 						padding-right: 0;
 					}

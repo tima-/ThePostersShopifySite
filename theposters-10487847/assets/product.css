@@ -187,12 +187,13 @@
 }
 /* line 199, ../sass/product.scss */
 #product #details h1.title {
+  color: #999;
   font-size: 1.2em;
   font-weight: 300;
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 206, ../sass/product.scss */
+/* line 207, ../sass/product.scss */
 #product #details #artist {
   font-size: 2em;
   font-weight: 700;
@@ -201,65 +202,75 @@
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/* line 215, ../sass/product.scss */
+/* line 216, ../sass/product.scss */
 #product #details #availability {
-  clear: both;
-  display: inline-block;
-  padding: 0 4px;
   background-color: #fff;
-  text-transform: uppercase;
+  clear: both;
+  color: #666666;
+  display: inline-block;
   font-size: 0.75em;
   font-weight: 700;
   font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
-  color: #666666;
-  letter-spacing: -0.3px;
   height: 18px;
   line-height: 19px;
+  letter-spacing: -0.3px;
+  padding: 0 4px;
+  text-transform: uppercase;
 }
-/* line 230, ../sass/product.scss */
+/* line 231, ../sass/product.scss */
 #product #details #availability .days-remaining {
   color: #f00;
   position: relative;
   top: 0;
 }
-/* line 237, ../sass/product.scss */
+/* line 238, ../sass/product.scss */
 #product #details .description {
   font-size: 0.85em;
+  line-height: 1.1em;
   margin: 40px 0;
 }
-/* line 243, ../sass/product.scss */
+/* line 245, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper {
   width: 40%;
   float: left;
 }
-/* line 247, ../sass/product.scss */
+/* line 249, ../sass/product.scss */
 #product #details #add-item-form .quantity-wrapper input {
-  width: 50px;
   text-align: center;
+  width: 50px;
 }
-/* line 253, ../sass/product.scss */
+/* line 254, ../sass/product.scss */
+#product #details #add-item-form .quantity-wrapper label {
+  color: #999;
+  font-size: .8em;
+  left: 4px;
+  position: relative;
+  top: -2px;
+}
+/* line 263, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info {
   float: right;
-  width: 60%;
   text-align: right;
+  width: 60%;
 }
-/* line 258, ../sass/product.scss */
+/* line 268, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #price {
   display: inline-block;
-  font-weight: 700;
-  margin-right: 15px;
-  line-height: 30px;
   font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 30px;
+  margin-right: 15px;
 }
-/* line 266, ../sass/product.scss */
+/* line 277, ../sass/product.scss */
 #product #details #add-item-form .add-to-cart-info #add-to-cart {
   display: inline-block;
   background-color: #f00;
   text-transform: uppercase;
 }
 
-/* line 280, ../sass/product.scss */
+/* line 287, ../sass/product.scss */
 #about-the-artist {
   background-color: #eeeeef;
 }

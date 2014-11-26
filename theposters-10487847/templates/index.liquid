@@ -1,23 +1,32 @@
-{% assign featuredproduct = collections[settings.frontpage_collection].products.first %}
-
-{% if featuredproduct.handle != blank  %}
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div class="previewImage_container anim2" data-expdate="{{featuredproduct.metafields.visibility.expirationdate}}">
-        <img src="{{ featuredproduct.featured_image | product_img_url: 'grande' }}" alt="{{ featuredproduct.title }}" />
-        <hr class="top" />
-        <hr class="bottom" />
-        <div class="copy date">{{ featuredproduct.vendor }}</div>
-        <div class="copy title">{{ featuredproduct.title }}</div>
-        <div class="copy availability">Available for <span class="days-remaining">--</span> more days</div>
-        <a href="{{ featuredproduct.url }}" class="button action">See Poster</a>
-        <div class="blackscreen"></div>
-      </div>
+    <div class="col-sm-12">
+    <div class="product-slideshow">
+      <div class="left control" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></div>
+      <div class="right control" style="background-image: url({{ 'helparrowsprite.png' | asset_url }})"></div>
+
+      {% for product in collections[settings.frontpage_collection].products %}
+      {% assign featuredproduct = product %}
+      {% if featuredproduct.handle != blank  %}
+
+        <div class="previewImage_container anim2" data-expdate="{{featuredproduct.metafields.visibility.expirationdate}}">
+          <img src="{{ featuredproduct.featured_image | product_img_url: 'grande' }}" alt="{{ featuredproduct.title }}" />
+          <hr class="top" />
+          <hr class="bottom" />
+          <div class="copy date">{{ featuredproduct.vendor }}</div>
+          <div class="copy title">{{ featuredproduct.title }}</div>
+          <div class="copy availability">Available for <span class="days-remaining">--</span> more days</div>
+          <a href="{{ featuredproduct.url }}" class="button action">See Poster</a>
+          <div class="blackscreen"></div>
+        </div>
+
+      {% endif %}
+      {% endfor %}
+
+    </div>
     </div>
   </div>
 </div>
-{% endif %}
 
 {% include 'we-are-posters' %}
 

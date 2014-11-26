@@ -1,16 +1,23 @@
 @import "vars";
 
 .section-header {
-	text-transform: uppercase;
-	padding: $gap/2 0;
-	margin: 0 40px 40px 40px;
 	border-top: 1px solid $foreColor;
 	border-bottom: 1px solid $foreColor;
 	color: $foreColor;
-	text-align: center;
+	display: inline-block;
 	font-family: 'FranklinGothicMdCd', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-weight: 700;
 	font-size: 2.85em;
+	margin: 0 40px 40px 40px;
+	padding: 15px 30px;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	
+	&.full-width {
+		display: block;
+		padding: 15px 0;
+	}
 
 	small {
 		display: block;
@@ -39,10 +46,12 @@
 	padding-top: 15px;
 
 	> h2 {
-		float: left;
-		font-size: 1em;
-		margin: 3px 10px 0 0;
 		color: $lightGray;
+		float: left;
+		font-size: .8em;
+		letter-spacing: normal;
+		margin: 3px 10px 0 0;
+		text-transform: uppercase;
 	}
 
 	> a {

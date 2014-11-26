@@ -3,6 +3,39 @@
 /**
  * Homepage Featured Product
  */
+
+.control {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -60px;
+  width: 50px;
+  height: 120px;
+  text-align: center;
+  cursor: pointer;
+
+  &.left {
+    right: auto;
+    left: 0;
+    background-position: 0 0;
+
+    &:hover {
+      background-position: 0 -120px;
+    }
+  }
+
+  &.right {
+    right: 0;
+    left: auto;
+    background-position: -50px 0;
+
+     &:hover {
+      background-position: -50px -120px;
+    }
+  }
+
+}
+
 .previewImage_container {
   border: 20px solid $white;
   margin: 0 auto $gap*2 auto;

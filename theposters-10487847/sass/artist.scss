@@ -8,31 +8,63 @@
 	margin: 0;
 	padding: 0;
 
+	li {
+		&:nth-child(4n+1) {
+			float: left;
+			margin-left: 0;
+			
+			&#join-posters {
+				a {
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+		
+		&:nth-child(4n+4) {
+			margin-right: 0;
+		}
+		
+	}
+
 	.artist {
-		width: 286px;
-		height: 286px;
-		border: 10px solid #fff;
-		float: left;
-		margin: 15px;
-		line-height: 266px;
-		font-size: 2em;
-		text-align: center;
 		background-position: center center;
 		background-size: cover;
+		border: 9px solid #fff;
+		float: left;
+		font-size: 2em;
+		height: 273px;
+		line-height: 266px;
+		margin: 8px;
+		overflow: hidden;
+		text-align: center;
+		width: 273px;
 		-webkit-filter: grayscale(100%);
 		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
 		filter: grayscale(100%);
 
 		a {
-			margin: 0;
-			display: block;
 			background-color: rgba(#fff, 0.75);
 			color: #000;
+			display: block;
+			font-size: 0.8em;
+			margin: 0;
+			text-transform: uppercase;
 		}
 	}
 
 	#join-posters {
 		padding-top: 15px;
+		
+		a {
+			float: left;
+			left: 15px;
+			overflow: hidden;
+			position: relative;
+			top: 15px;
+		}
 	}
 }
 
@@ -42,40 +74,42 @@
 
 .artist-profile {
 	.artist-header {
-		border-top: 10px solid #fff;
-		border-bottom: 10px solid #fff;
-		overflow: hidden;
 		background-color: #eeeeef;
+		border-bottom: 10px solid #fff;
+		border-top: 10px solid #fff;
+		overflow: hidden;
 
 		.artist-image {
-			width: 50%;
-			height: 400px;
-			float: left;
-			background-size: auto 100%;
-			background-repeat: no-repeat;
 			background-position: right top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			float: left;
+			height: 400px;
+			width: 50%;
 		}
 
 		.artist-title {
-			width: 50%;
 			float: left;
+			text-align: center;
+			width: 50%;
 
 			h1 {
 				border-top: 1px solid #000;
 				border-bottom: 1px solid #000;
-				text-align: center;
-				padding: 15px;
+				display: inline-block;
 				margin: 170px auto 0 auto;;
-				width: 65%;
-				display: block;
+				padding: 15px 30px;
+				text-align: center;
 				text-transform: uppercase;
 			}
 		}
 	}
 
 	.artist-description {
+		font-size: .8em;
+		line-height: 1.4em;
 		margin: 50px 0;
-		padding: 15px;
+		padding: 15px 0;
 	}
 
 	.artist-products {

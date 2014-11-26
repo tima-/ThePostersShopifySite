@@ -189,6 +189,49 @@ $(document).ready(function () {
 });
 
 /**
+* Homepage slideshow
+*/
+
+$(document).ready(function(){
+
+  if($('.product-slideshow').length > 0) {
+    $('.product-slideshow').each(function(index, value){
+      var leftControl = $(this).find('.left.control');
+      var rightControl = $(this).find('.right.control');
+      var slideshow = $(this);
+
+      slideshow.find('.previewImage_container').hide().first().show().addClass('active-product');
+
+      leftControl.on('click', function(){
+        var current = slideshow.find('.active-product');
+        var next = slideshow.find('.active-product').prev().filter('.previewImage_container');
+        
+        if(next.length > 0) {
+          current.removeClass('active-product').fadeOut(300, function(){
+            next.addClass('active-product').fadeIn(300);
+          });
+        }
+        
+      });
+
+      rightControl.on('click', function(){
+        var current = slideshow.find('.active-product');
+        var next = slideshow.find('.active-product').next().filter('.previewImage_container');
+
+        if(next.length > 0) {
+
+          current.removeClass('active-product').fadeOut(300, function(){
+            next.addClass('active-product').fadeIn(300);
+          });
+        }
+      });
+
+    });
+  }
+
+});
+
+/**
  * Product Expiration Dates
  * Expected expDate format "YYYY-MM-DD"
  */
