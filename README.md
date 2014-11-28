@@ -1,4 +1,4 @@
 ThePostersShopifySite
 =====================
 
-ThePosters Company Shopify Website
+ThePosters Company Shopify Website.
