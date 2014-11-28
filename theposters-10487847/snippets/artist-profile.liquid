@@ -1,8 +1,11 @@
+<script src="{{ 'artistprofile.js' | asset_url }}"></script>
 <div id="collection" class="artist-profile">
 
   <div class="artist-header">
     {% if collection.image %}
-      <div class="artist-image" style="background-image: url({{ collection | img_url: 'original' }})">&nbsp;</div>
+      <div class="artist-image-wrapper">
+        <div class="artist-image" style="background-image: url({{ collection | img_url: 'original' }})"></div>
+      </div>
     {% endif %}
     <div class="artist-title">
       <h1 class="shadow-header section-header">{{collection.title}}</h1>

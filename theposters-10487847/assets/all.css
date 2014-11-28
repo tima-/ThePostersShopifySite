@@ -114,13 +114,13 @@ a {
 }
 /* line 18, ../sass/global.scss */
 a:hover {
-  color: #000;
+  color: black;
   text-decoration: none;
 }
 
 /* line 24, ../sass/global.scss */
 header#main-header {
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -282,7 +282,7 @@ header#main-header #cart-info .toggle-cart {
 /* line 183, ../sass/global.scss */
 footer#main-footer {
   padding-top: 60px;
-  background-color: #fff;
+  background-color: white;
   margin-top: 0;
   overflow: hidden;
 }
@@ -477,7 +477,7 @@ footer#main-footer nav ul li a {
 }
 /* line 372, ../sass/global.scss */
 footer#main-footer nav ul li a:hover {
-  color: #000;
+  color: black;
 }
 /* line 377, ../sass/global.scss */
 footer#main-footer nav ul li:nth-child(1) {
@@ -684,7 +684,7 @@ footer#main-footer nav ul li:last-child a {
 
 /* line 39, ../sass/index.scss */
 .previewImage_container {
-  border: 20px solid #fff;
+  border: 20px solid white;
   margin: 0 auto 80px auto;
   max-width: 500px;
   width: 100%;
@@ -960,44 +960,60 @@ footer#main-footer nav ul li:last-child a {
 }
 
 @-webkit-keyframes availabilityslide {
+  /* line 341, ../sass/index.scss */
   from {
     opacity: 0;
     top: 43.5%;
   }
+
+  /* line 346, ../sass/index.scss */
   to {
     opacity: 1;
     top: 46.5%;
   }
 }
+
 @-webkit-keyframes buttonfade {
+  /* line 353, ../sass/index.scss */
   from {
     opacity: 0;
   }
+
+  /* line 357, ../sass/index.scss */
   to {
     bottom: 40%;
     opacity: 1;
   }
 }
+
 @-webkit-keyframes dateslide {
+  /* line 364, ../sass/index.scss */
   from {
     opacity: 0;
     top: 34%;
   }
+
+  /* line 369, ../sass/index.scss */
   to {
     opacity: 1;
     top: 37%;
   }
 }
+
 @-webkit-keyframes titleslide {
+  /* line 376, ../sass/index.scss */
   from {
     opacity: 0;
     top: 37%;
   }
+
+  /* line 381, ../sass/index.scss */
   to {
     opacity: 1;
     top: 41.5%;
   }
 }
+
 /**
  * We Are The Posters Section
  */
@@ -1080,7 +1096,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 467, ../sass/index.scss */
 #mission-section h3 {
-  color: #fff;
+  color: white;
   font-size: 2.75em;
   margin: -3px 0 -2px;
   text-transform: uppercase;
@@ -1103,7 +1119,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 489, ../sass/index.scss */
 #mission-section .btn-default {
   background-color: #535353;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -1134,7 +1150,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 520, ../sass/index.scss */
 #mission-section.mission-white-bg h3 {
-  color: #000;
+  color: black;
 }
 
 /* line 526, ../sass/index.scss */
@@ -1220,7 +1236,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 603, ../sass/index.scss */
 #press-section ul li img {
   width: 100%;
-  border: 10px solid #fff;
+  border: 10px solid white;
   margin-bottom: 10px;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -1257,7 +1273,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 30, ../sass/product.scss */
 #archived-products .archive-section-header {
   text-align: center;
-  color: #fff;
+  color: white;
   font-size: 3em;
   width: 255px;
   height: 372px;
@@ -1326,7 +1342,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 101, ../sass/product.scss */
 .product .details .availability {
-  background-color: #fff;
+  background-color: white;
   clear: both;
   color: #666;
   display: inline-block;
@@ -1381,7 +1397,7 @@ footer#main-footer nav ul li:last-child a {
 /* line 161, ../sass/product.scss */
 #product #product-images #featured-image img {
   width: 100%;
-  border: 10px solid #fff;
+  border: 10px solid white;
 }
 /* line 167, ../sass/product.scss */
 #product #product-images #thumbs {
@@ -1389,7 +1405,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 170, ../sass/product.scss */
 #product #product-images #thumbs .image {
-  border: 10px solid #fff;
+  border: 10px solid white;
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -1432,7 +1448,7 @@ footer#main-footer nav ul li:last-child a {
 }
 /* line 216, ../sass/product.scss */
 #product #details #availability {
-  background-color: #fff;
+  background-color: white;
   clear: both;
   color: #666666;
   display: inline-block;
@@ -1576,54 +1592,65 @@ footer#main-footer nav ul li:last-child a {
   background-color: #eeeeef;
   border-bottom: 10px solid #fff;
   border-top: 10px solid #fff;
+  height: 400px;
   overflow: hidden;
 }
-/* line 82, ../sass/artist.scss */
+/* line 83, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image {
-  background-position: right top;
-  background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+}
+/* line 89, ../sass/artist.scss */
+.artist-profile .artist-header .artist-image-wrapper {
   float: left;
-  height: 400px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 50%;
 }
-/* line 91, ../sass/artist.scss */
+/* line 97, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title {
   float: left;
+  height: 100%;
   text-align: center;
+  position: relative;
   width: 50%;
 }
-/* line 96, ../sass/artist.scss */
+/* line 104, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title h1 {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   display: inline-block;
-  margin: 170px auto 0 auto;
+  margin: 0 auto;
+  margin-top: -47px;
   padding: 15px 30px;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
+  top: 50%;
 }
-/* line 108, ../sass/artist.scss */
+/* line 119, ../sass/artist.scss */
 .artist-profile .artist-description {
   font-size: .8em;
   line-height: 1.4em;
   margin: 50px 0;
   padding: 15px 0;
 }
-/* line 115, ../sass/artist.scss */
+/* line 126, ../sass/artist.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
 }
-/* line 118, ../sass/artist.scss */
+/* line 129, ../sass/artist.scss */
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 123, ../sass/artist.scss */
+/* line 134, ../sass/artist.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #eeeeef;
 }
-/* line 127, ../sass/artist.scss */
+/* line 138, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-description {
   padding: 110px 0;
   text-align: right;
@@ -1631,13 +1658,13 @@ footer#main-footer nav ul li:last-child a {
   float: right;
   font-size: 0.9em;
 }
-/* line 135, ../sass/artist.scss */
+/* line 146, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 140, ../sass/artist.scss */
+/* line 151, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;
@@ -2044,6 +2071,6 @@ body {
 /* line 38, ../sass/press.scss */
 #press-blog ul li img {
   width: 100%;
-  border: 10px solid #fff;
+  border: 10px solid white;
   margin-bottom: 5px;
 }

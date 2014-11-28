@@ -77,30 +77,41 @@
 		background-color: #eeeeef;
 		border-bottom: 10px solid #fff;
 		border-top: 10px solid #fff;
+		height: 400px;
 		overflow: hidden;
 
 		.artist-image {
-			background-position: right top;
-			background-repeat: no-repeat;
 			background-size: cover;
+			min-height: 100%;
+			min-width: 100%;
+		}
+		
+		.artist-image-wrapper {
 			float: left;
-			height: 400px;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
 			width: 50%;
 		}
 
 		.artist-title {
 			float: left;
+			height: 100%;
 			text-align: center;
+			position: relative;
 			width: 50%;
 
 			h1 {
 				border-top: 1px solid #000;
 				border-bottom: 1px solid #000;
 				display: inline-block;
-				margin: 170px auto 0 auto;;
+				margin: 0 auto;
+				margin-top: -47px;
 				padding: 15px 30px;
+				position: relative;
 				text-align: center;
 				text-transform: uppercase;
+				top: 50%;
 			}
 		}
 	}

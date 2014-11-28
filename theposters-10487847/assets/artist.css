@@ -71,54 +71,65 @@
   background-color: #eeeeef;
   border-bottom: 10px solid #fff;
   border-top: 10px solid #fff;
+  height: 400px;
   overflow: hidden;
 }
-/* line 82, ../sass/artist.scss */
+/* line 83, ../sass/artist.scss */
 .artist-profile .artist-header .artist-image {
-  background-position: right top;
-  background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+}
+/* line 89, ../sass/artist.scss */
+.artist-profile .artist-header .artist-image-wrapper {
   float: left;
-  height: 400px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 50%;
 }
-/* line 91, ../sass/artist.scss */
+/* line 97, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title {
   float: left;
+  height: 100%;
   text-align: center;
+  position: relative;
   width: 50%;
 }
-/* line 96, ../sass/artist.scss */
+/* line 104, ../sass/artist.scss */
 .artist-profile .artist-header .artist-title h1 {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   display: inline-block;
-  margin: 170px auto 0 auto;
+  margin: 0 auto;
+  margin-top: -47px;
   padding: 15px 30px;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
+  top: 50%;
 }
-/* line 108, ../sass/artist.scss */
+/* line 119, ../sass/artist.scss */
 .artist-profile .artist-description {
   font-size: .8em;
   line-height: 1.4em;
   margin: 50px 0;
   padding: 15px 0;
 }
-/* line 115, ../sass/artist.scss */
+/* line 126, ../sass/artist.scss */
 .artist-profile .artist-products {
   margin-top: 25px;
 }
-/* line 118, ../sass/artist.scss */
+/* line 129, ../sass/artist.scss */
 .artist-profile .artist-products:nth-child(4) {
   clear: right;
 }
-/* line 123, ../sass/artist.scss */
+/* line 134, ../sass/artist.scss */
 .artist-profile .artist-video {
   clear: both;
   background-color: #eeeeef;
 }
-/* line 127, ../sass/artist.scss */
+/* line 138, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-description {
   padding: 110px 0;
   text-align: right;
@@ -126,13 +137,13 @@
   float: right;
   font-size: 0.9em;
 }
-/* line 135, ../sass/artist.scss */
+/* line 146, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content {
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
 }
-/* line 140, ../sass/artist.scss */
+/* line 151, ../sass/artist.scss */
 .artist-profile .artist-video .artist-video-content iframe {
   margin: 0 2px 0 15px;
   float: left;
